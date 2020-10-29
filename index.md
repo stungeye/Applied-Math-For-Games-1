@@ -5,27 +5,23 @@ nav_order: 1
 permalink: /
 ---
 
-# Programming 1
+# Applied Mathematics for Games 1 
 
-This is the first course in a two-part introduction to object-oriented programming and design in the context of graphics and sound programming. Assignments will pull from real-world game development problems with an emphasis on modern tooling and coding best practices.
+This course covers the foundational mathematics required for video game development. Learners will solve common game development problems by applying mathematical and logical solutions. Numeral systems, trigonometry, probability, precision, and the basics of 2D vectors and geometry will also be covered. 
 
 ## Course Outcomes
 
-By the end of this course of study, using the C++ programming language, the student should be able to:
+By the end of this course, students should be able to: 
 
-- Write and compile procedural and object-oriented programs.
-- Design programs that make use of:
-  - Standard library container classes.
-  - I/O Streams and text formatting.
-  - User defined types.
-  - Functions and lambda expressions.
-  - Custom object hierarchies using classes, inheritance and polymorphism.
-- Debug complex error situations involving logical, compile-time, link-time, and run-time errors.
-- Make use of 3rd party object-oriented graphics and sound libraries to solve game development problems.
+* Compare, contrast and convert between common numeral systems. 
+* Distinguish between types of numbers and how they are represented in computer languages. 
+* Employ trigonometry to solve basic rotation and distance problems. 
+* Use vector mathematics to simulate forces, acceleration, and motion on a 2D plane. 
+* Analyze and predict events occurring in systems and games using statistics and probability. 
 
 ## Course Notes
 
-All of your programming 1 course notes can be found on this site. A list of all available modules is shown on the left (or via the menu for smaller screens).
+All of your Applied Math for Games 1 course notes can be found on this site. A list of all available modules is shown on the left (or via the menu for smaller screens).
 
 You can use the search bar at the top to search the notes for specific topics.
 
