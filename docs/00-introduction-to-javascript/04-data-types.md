@@ -8,7 +8,7 @@ nav_order: 3
 # Data Types
 {: .no_toc }
 
-There are eight data types that can be used in Javascript. We'll quickly explore them all in this section.
+Javascript has eight main data types. We'll quickly explore these types in this section.
 
 ### Table of Contents
 {: .no_toc }
@@ -115,26 +115,22 @@ Non-boolean values can all be converted to booleans according to the following r
 - 0, empty strings, `NaN`, `null`, and `undefined` are all falsy.
 - Everything else is considered truth.
 
+We'll take a closer look at booleans when we look at decision structures in a later section.
+
 ## Null & Undefined
 
 A variable that has not yet been assigned any data has a value of `undefined`.
 
-The value `null` on the other hand is meant to be used as a special value to represents nothing.
+On the other hand, if you wish to purposefully mark a variable's value as "empty" or "unknown" you can assign a value of `null`.
 
+```javascript
+let theAnswerToLifeTheUniverseAndEverything; // undefined
+let theSoundOfOneHandClapping = null; // Defined, but null.
+theAnswerToLifeTheUniverseAndEverything = 42; // No longer undefined.
 ```
 
 ## Objects & Symbols
 
-## More To Come
+As opposed to the other types of variables defined above, objects are used to store collections of information. Arrays and functions are special types of objects. Symbols are special types of unique identifiers for objects.
 
-As mentioned above, things like arrays and functions are considered special types of objects. We'll cover them in later sections.
-
-```
-
-```
-
-```
-
-```
-
-```
+We'll look at all of these in more detail in later sections.
