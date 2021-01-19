@@ -1,6 +1,6 @@
 ---
 title: Objectives
-parent: React Prerequisites (Draft)
+parent: Advanced JS Techniques
 nav_order: 1
 ---
 

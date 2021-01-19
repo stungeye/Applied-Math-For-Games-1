@@ -1,6 +1,6 @@
 ---
 title: Loop Da Loop
-parent: React Prerequisites (Draft)
+parent: Advanced JS Techniques
 nav_order: 3
 ---
 
@@ -36,7 +36,10 @@ for (const fruit of fruitBasket) {
 
 The `fruit` variable is scoped to the curly-braced code block.
 
-**☑️ Best Practice:** Define your loop variables as `const` to prevent accidental modification of array elements.
+💡 Best Practice:
+{: .label .label-green }
+Loop variables set as `const` prevent accidental modification of array elements.
+{: .d-inline-block }
 
 ## forEach Callback Loop
 

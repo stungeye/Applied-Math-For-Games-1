@@ -1,6 +1,6 @@
 ---
 title: Hurray for Arrays
-parent: React Prerequisites (Draft)
+parent: Advanced JS Techniques
 nav_order: 4
 ---
 

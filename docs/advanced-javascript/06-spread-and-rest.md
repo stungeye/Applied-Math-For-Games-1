@@ -1,6 +1,6 @@
 ---
 title: Spread and Rest Syntax
-parent: React Prerequisites (Draft)
+parent: Advanced JS Techniques
 nav_order: 6
 ---
 
