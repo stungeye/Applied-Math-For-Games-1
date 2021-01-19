@@ -1,11 +1,11 @@
 ---
-title: Dynamic Content with AJAX
-nav_order: 9
+title: Fetching Data
+nav_order: 5
 ---
 
 <!-- prettier-ignore-start -->
 
-# Dynamic Content with AJAX
+# Fetching Data with the Fetch API 
 {: .no_toc }
 
 In this module we'll explore a client-side Javascript technique called AJAX that allows us to make our applications more dynamic by fetching data directly from an URL or an API. 
