@@ -39,7 +39,7 @@ We can also separate the definition of a variable from its assignment.
 ```javascript
 let greeting; // The greeting variable is current undefined.
 // Let's assign greeting a value:
-gretting = "Greetings and salutations.";
+greeting = "Greetings and salutations.";
 ```
 
 ## Variable Names
@@ -59,8 +59,12 @@ Sometimes it is handy to mark a variable as "never changing". We do this in Java
 const PI = 3.1415926;
 ```
 
-If we attempt to change the value of a constant our Javascript code will throw an error.
+The `const` keyword marks a variable as immutable. If we attempt to change the value of a constant our code will throw an error.
 
 ```javascript
 PI = 3; // Uncaught TypeError: invalid assignment to const 'PI'
 ```
+
+## Further Reading
+
+- [Type Conversions in Javascript](https://javascript.info/type-conversions)

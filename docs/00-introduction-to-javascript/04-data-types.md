@@ -31,7 +31,7 @@ The eight types of data we can use in our Javascript programs:
 - Object
 - Symbol
 
-Note:
+🎵 Note:
 {: .label .label-yellow}
 
 Arrays, functions, dates, and regular expressions are all special types of objects.
@@ -47,30 +47,59 @@ Which means your math will never default to "integer math":
 const threePointFive = 7 / 2; // The variable will be assigned 3.5, not 1 as you might expect.
 ```
 
+## Big Numbers, Small Numbers
+
 IEEE 64-bit doubles can represent whole and floating point numbers from -(2^53 - 1) to (2^53 - 1), or in other words from -9,007,199,254,740,991 to +9,007,199,254,740,991.
 
-## Safe Math
+We can use underscores and scientific notation to make writing and reading big numbers easier:
+
+```javascript
+let biggieOne = 6_700_000_000; // 6.7 billion
+let biggieTwo = 6.7e9; // Also 6.7 billion
+```
+
+The `e` multiples the number on the left by 10-to-the-power-of the number on the right:
+
+`6.7e9` is another way of writing `6.7 * 1_000_000_000`.
+
+Tiny numbers can also be written this way:
+
+```javascript
+const plankLength = 1.616255e−35; // 1.616255 times 10-to-the-power-of -35
+```
+
+## Bigger Numbers: BigInt
+
+If you need an integer larger than the maximum supported double you can use the new `BigInt` data type.
+
+Numbers are flags as `BigInt`s by putting an `n` at the end of the number:
+
+```javascript
+const reallyBigNumber = 999888777666555444333222111n;
+```
+
+## Safe Math But Weird Math
 
 Javascript math operations will never cause your program to crash.
 
-Instead, your variables will be assigned special placeholder values:
+Instead, your variables will be assigned special placeholder values, like `NaN` and `Infinity`:
 
 ```javascript
 // Dividing by zero causes many programming languages to crash.
 console.log(1 / 0); // The placeholder value "Infinity" will be returned.
 
 // Performing a mathematical operation on a non-numeric value won't crash your programs either.
-console.log("wat" / 42); // The placeholder vaule "NaN" will be returned, which stands for "Not a Number".
+console.log("wat" / 42); // "NaN" will be returned, which stands for "Not a Number".
 ```
 
-## BigInt
+⚡ Warning:
+{: .label .label-red}
 
-If you need a whole number larger than the maximum supported double you can use the new `BigInt` data type.
-
-Numbers are flags as `BigInt`s by putting an `n` at the end of the number:
+Doubles do, however, have some weird behavior when it comes to approximation:
+{: .d-inline-block }
 
 ```javascript
-const reallyBigNumber = 999888777666555444333222111n;
+let weirdo = 0.2 + 0.3; // 0.30000000000000004
 ```
 
 ## String
@@ -97,10 +126,19 @@ A quick overview of a few handy string properties and functions:
 
 ```javascript
 let msg = "Learn to Question.\nQuestion to Learn."; // The \n represents a "new line" character.
-console.log(`The message is ${msg.length} characters in long.`); // Strings all have a length property.
-console.log(`The first character in our message: ${msg.charAt(0)}`); // charAt retrieves characters by position.
-console.log(`The last character in our message: ${msg[msg.length - 1]}`); // Square braces work for this too.
-console.log(`Let's shout our message: ${msg.toUpperCase()}`); // There is also a .toLowerCase() function.
+
+// Strings all have a length property.
+console.log(`The message is ${msg.length} characters in long.`);
+
+// charAt() retrieves characters by position.
+console.log(`The first character in our message: ${msg.charAt(0)}`);
+// Square braces work to retrieve characters for too.
+console.log(`The last character in our message: ${msg[msg.length - 1]}`);
+
+// There is toUpperCase() and toLowerCase() for case manipulation.
+console.log(`Let's shout our message: ${msg.toUpperCase()}`);
+
+// And replace() and replaceAll() for substitution.
 let newMessage = msg.replaceAll("Question", "Sing"); // "Learn to Sing.\nSing to Learn."
 ```
 
@@ -121,7 +159,7 @@ We'll take a closer look at booleans when we look at decision structures in a la
 
 A variable that has not yet been assigned any data has a value of `undefined`.
 
-On the other hand, if you wish to purposefully mark a variable's value as "empty" or "unknown" you can assign a value of `null`.
+On the other hand, if you wish to purposefully mark a variable as "empty" or "value unknown" you can assign a value of `null`.
 
 ```javascript
 let theAnswerToLifeTheUniverseAndEverything; // undefined
@@ -131,6 +169,6 @@ theAnswerToLifeTheUniverseAndEverything = 42; // No longer undefined.
 
 ## Objects & Symbols
 
-As opposed to the other types of variables defined above, objects are used to store collections of information. Arrays and functions are special types of objects. Symbols are special types of unique identifiers for objects.
+All the types we've mentioned so far are primitives, meaning they represent a single value. Objects, on the other hand, are used to store collections of information. Arrays and functions are special types of objects. Symbols are special types of unique identifiers for objects.
 
 We'll look at all of these in more detail in later sections.
