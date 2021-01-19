@@ -23,15 +23,17 @@ In this section we'll look at our learning goals for this module and take a quic
 Upon completion of this module, you should be able to:
 
 - Add executable Javascript to HTML files.
-- Store data in variables and constants.
-- Output strings to the debugging console.
-- Interpolate variables in strings using template literals.
 - Use comments in your Javascript code.
-- Define your own named and anonymous functions.
+- Store data in variables and constants.
+- Interpolate variables in strings using template literals.
+- Output strings to the debugging console.
+- Perform math operations on numbers and numeric variables.
+- Code various conditional and looping structures.
 - Store and retrieve single and multi-dimensional array data.
 - Store and retrieve values in objects by key.
-- Code various conditional and looping structures.
+- Define your own named and anonymous functions.
 - Understand Javascript scoping rules.
+- Define and instantiate classes.
 
 ## Conventions
 

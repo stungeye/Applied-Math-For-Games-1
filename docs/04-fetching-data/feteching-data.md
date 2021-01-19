@@ -1,6 +1,6 @@
 ---
 title: Fetching Data
-nav_order: 5
+nav_order: 6
 ---
 
 <!-- prettier-ignore-start -->

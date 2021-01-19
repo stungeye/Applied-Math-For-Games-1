@@ -1,11 +1,10 @@
 ---
-title: Arrays and Objects
-parent: Introduction to Javascript
-nav_order: 9
+title: Introduction to Processing
+nav_order: 3
 ---
 
 <!--prettier-ignore-start-->
-# Arrays and Objects
+# Introduction to Processing
 {: .no_toc }
 
 TBD
