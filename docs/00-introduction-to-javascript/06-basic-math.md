@@ -8,7 +8,7 @@ nav_order: 6
 # Basic Math
 {: .no_toc }
 
-TBD
+This section is a run-through of the basic math operators available in Javascript.
 
 ### Table of Contents
 {: .no_toc }
@@ -20,7 +20,7 @@ TBD
 
 ## Available Math Operators
 
-Like most programming languages Javascript using the following symbols for the basic math operations:
+Like most programming languages, Javascript uses the following symbols for the basic math operations:
 
 - Addition: `+`
 - Subtractions: `-`
@@ -28,13 +28,13 @@ Like most programming languages Javascript using the following symbols for the b
 - Division: `\`
 - Exponent (To The Power Of): `**`
 - Remainder (Modulus): `%`
-- Grouping Parenthese: `()`
+- Grouping Parenthesis: `()`
 
 ## Order of Operations
 
 PEMMDAS order of operations rules are applied:
 
-- P: **P**arenthese First
+- P: **P**arenthesis First
 - E: **E**xponents Next
 - MMD: **M**odulus, **M**ultiplication, **D**ivision (From Left to Right)
 - AS: **A**ddition and **S**ubstraction (From Left to Right)
@@ -42,7 +42,7 @@ PEMMDAS order of operations rules are applied:
 🎵 Note:
 {: .label .label-yellow}
 
-This is a highly simplified precedence table. [See the complete table here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
+This is a simplified version of the precedence rules. [See the complete table here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
 {: .d-inline-block }
 
 ## Exponents
@@ -59,7 +59,7 @@ We can write `3 * 10**23` as `3e23` using scientific notation.
 
 Negative exponents are used to perform the reciprocal of an exponent.
 
-Meaning that `a**-b` is another way of writing `1 / a**b`.
+By this I mean that `a**-b` is another way of writing `1 / a**b`.
 
 For example, `2**-4` is a short-form for `1 / (2 * 2 * 2 * 2)`.
 
@@ -74,7 +74,7 @@ let cubeRootofEight = 8 ** (1 / 3); // Cube root of 8
 
 ## Modify-and-Assign Operators
 
-The equals operator can be paired all the math operators we've seen so far to modify and assign the result back to a variable.
+We can pair the equals operator with other math operators to modify and assign the result back to a variable.
 
 ```javascript
 let dreams = 4;
