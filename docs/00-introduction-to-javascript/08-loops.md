@@ -8,7 +8,7 @@ nav_order: 8
 # Loops
 {: .no_toc }
 
-Loops allow us to automate repetition. In this sections we'll review `while`, `do while`, and `for` loops.
+Loops allow us to automate repetition. In this section we'll review `while`, `do while`, and `for` loops.
 
 ### Table of Contents
 {: .no_toc }
@@ -46,7 +46,7 @@ for (let apples = 10; apples <= 20; apples++) {
 
 Javascript includes other types of `for` loops like `for of`, `for in`, and `forEach` loops.
 
-We won't review these special case loops until after we cover objects and arrays.
+We won't review these special-case loops until after we cover objects and arrays.
 
 ## Further Reading
 

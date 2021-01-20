@@ -1,11 +1,11 @@
 ---
-title: Arrays and Objects
+title: Scope
 parent: Introduction to Javascript
-nav_order: 9
+nav_order: 12
 ---
 
 <!--prettier-ignore-start-->
-# Arrays and Objects
+# Variable Scope
 {: .no_toc }
 
 TBD
