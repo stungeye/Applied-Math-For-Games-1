@@ -8,7 +8,7 @@ nav_order: 10
 # Javascript Objects
 {: .no_toc }
 
-Objects are composite data type used to store collections of key/value pairs.
+Arrays are a composite data type used to store ordered collections of information.
 
 ### Table of Contents
 {: .no_toc }
@@ -18,95 +18,100 @@ Objects are composite data type used to store collections of key/value pairs.
 
 <!--prettier-ignore-end-->
 
-## Objects
+## Arrays
 
-We can use objects in Javascript to store collections of key-value pairs.
+We can use arrays in Javascript to store collections information.
 
-They are similar to what other languages call dictionaries, maps, hashes, or associative arrays.
+Javascript arrays are a special type of Object with auto-assigned number keys and a special `length` property.
 
-Javascript programmers will often refer to objects keys as object properties.
+## Array Literals
 
-## Object Literals
-
-Object literals are defined using curly braces. Keys and their associated values are assigned in comma-delimited pairs separated by semicolons:
+Arrays and their contents can be defined using square braces:
 
 ```javascript
-let emptyObject = {};
-let hero = {
-  name: "Wally Glutton",
-  hitPoints: 45,
-  mana: 120,
-  weirdingFactor: 1.4,
-};
+let emptyArray = [];
+
+let fruitBasket = ["Apple 🍎", "Cherries 🍒", "Grapes 🍇"];
 ```
 
-## Retrieving Object Values by Key
-
-Object values can be retrieved using key using `[]` square-brace indices or `.` dot properties:
+## Array Length
 
 ```javascript
-console.log(`${hero["name"]} has ${hero.hitPoints}.`);
+console.log(`There are ${fruitBasket.length} fruit in the basket.`);
 ```
 
-## Updating Values and Adding Key/Value Pairs
+## Retrieving Array Values
 
-New values can be over-written and new key/value pairs can be added using both `[]` and `.` style access:
+We can retrieve array elements using `[]` square-braces and zero-based indexes:
 
 ```javascript
-hero["name"] = "Walter S. Glutton"; // Change the value associated with the name key.
-hero.hitPoints--; // Change the decrement the value associated with the hitPoints key.
-
-// Add new key value pairs to the hero object:
-hero.grinsPerHour = 14;
-hero["pets"] = 3;
+console.log(fruitBasket[0]); // Apple 🍎
 ```
 
-## Deleting Key/Value Pairs
+## Updating Array Elements
 
-The `delete` keyword is used to remove key/value pairs from an object.
+Elements can be overwritten using square braces too:
 
 ```javascript
-delete hero.grinsPerHour;
-delete hero["pets"];
+fruitBasket[0] = "Green Apple 🍏"; // Overwrite the zero-th element.
 ```
 
-## Testing for Keys
+## Arrays as Queues
 
-The `in` keyword can be used to test if a property exists in an object:
+We often use arrays as First-In-First-Out queues using `push` and `shift`.
+
+A queue is like a line-up at a grocery store.
 
 ```javascript
-// The property name needs to be quoted.
-if ("grinsPerHour" in hero) {
-  console.log("The hero flashes a grin.");
-}
+let sportBalls = ["🏀", "⚽", "⚾"];
+
+// Add football to the end of the queue:
+sportBalls.push("🏈");
+
+// sportBalls is now ["🏀", "⚽", "⚾", "🏈"]
+
+// Remove and return basketball and soccer ball from the front of the queue;
+let basketball = sportBalls.shift();
+let soccerball = sportBalls.shift();
+
+// sportBalls is now ["⚾", "🏈"]
 ```
 
-## Looping over Key/Value Pairs
+## Arrays as Stacks
+
+We often use arrays as Last-In-First-Out stacks using `push` and `pop`.
+
+A stack is like a pile of dinner plates. (Except the end of the array is consider the top of the stack.)
+
+```javascript
+let sportBalls = ["🏀", "⚽", "⚾"];
+
+// Add football to the end of the stack:
+sportBalls.push("🏈");
+
+// sportBalls is now ["🏀", "⚽", "⚾", "🏈"]
+
+// Remove and return football and baseball from the end of the stack:
+let football = sportBalls.pop();
+let baseball = sportBalls.pop();
+
+// sportBalls is now ["🏀", "⚽"];
+```
+
+🎵 Note:
+{: .label .label-yellow}
+
+`unshift` also exists to place elements at the start of an array, shifting existing elements over.
+{: .d-inline-block}
+
+## Looping over Array Elements
 
 Here's how we can loop over the key/value pairs of an object:
 
 ```javascript
-const games = { soccer: "⚽", baseball: `⚾` };
-for (const [game, ball] of Object.entries(games)) {
-  console.log(`We use a ${ball} to play ${game}.`);
-}
 
-// We use a ⚽ to play soccer.
-// We use a ⚾ to play baseball.
 ```
-
-This works because `Object.entries(games)` returns an array of arrays:
-
-```json
-[
-  ["soccer", "⚽"],
-  ["baseball", "⚾"],
-];
-```
-
-We’ll learn other similar techniques when we get to "Destructuring" in a later module.
 
 ## Further Reading
 
-- (Objects in Details @ Javascript.info)[https://javascript.info/object-basics]
--
+- [Treating Javascript Arrays like Stacks and Queues](https://javascript.info/array#methods-pop-push-shift-unshift) - More details on `push`, `pop`, `shift` and `unshift`.

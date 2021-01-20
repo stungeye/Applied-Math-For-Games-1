@@ -8,7 +8,7 @@ nav_order: 9
 # Javascript Objects
 {: .no_toc }
 
-Objects are composite data type used to store collections of key/value pairs.
+Objects are a composite data type used to store collections of key/value pairs.
 
 ### Table of Contents
 {: .no_toc }
@@ -42,7 +42,7 @@ let hero = {
 
 ## Retrieving Object Values by Key
 
-Object values can be retrieved using key using `[]` square-brace indices or `.` dot properties:
+Object values can be retrieved using key using `[]` square-brace indexes or `.` dot properties:
 
 ```javascript
 console.log(`${hero["name"]} has ${hero.hitPoints}.`);
