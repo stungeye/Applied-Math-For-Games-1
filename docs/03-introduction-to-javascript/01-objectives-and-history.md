@@ -35,22 +35,6 @@ Upon completion of this module, you should be able to:
 - Understand Javascript scoping rules.
 - Define and instantiate classes.
 
-## Conventions
-
-All source code in the notes will be syntax highlighted like so:
-
-```javascript
-const ghost_quota = 37;
-const caught_ghost = 12;
-
-if (caughtGhosts > ghostQuota) {
-  console.log("You are done for the day.");
-} else {
-  const ghostsRequired = ghostQuota - caughtGhosts;
-  console.log(`You need to find ${ghostsRequired} more ghosts.`);
-}
-```
-
 ## History of Javascript
 
 Javascript was created over 25 years ago as a way to add scripting to the Netscape web browser. Prior to this there was no way to add scripted behaviour to an HTML webpage. The first version of Javscript was created by Brendan Eich over a period of 10 days in 1995. The language was first known as Mocha, then Livescript, and finally Javascript. The final name was a marketing ploy, as Java had recently been released by Sun Microsystems.
