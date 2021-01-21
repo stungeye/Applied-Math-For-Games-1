@@ -1,7 +1,7 @@
 ---
 title: Advanced JS Techniques
 has_children: true
-nav_order:
+nav_order: 5
 ---
 
 # Advanced Javascript Techniques

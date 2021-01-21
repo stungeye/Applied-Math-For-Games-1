@@ -1,60 +1,22 @@
 ---
-title: Arrays
-parent: Introduction to Javascript
-nav_order: 10
+title: Queues and Stacks
+parent: Advanced JS Techniques
+nav_order: 3
 ---
 
 <!--prettier-ignore-start-->
-# Javascript Objects
+## Loop Da Loop
 {: .no_toc }
 
-Arrays are a composite data type used to store ordered collections of information.
+TBD
 
-### Table of Contents
-{: .no_toc }
+## Table of Contents
+{: .no_toc .text-delta }  
 
 1. TOC
 {:toc}
 
 <!--prettier-ignore-end-->
-
-## Arrays
-
-We can use arrays in Javascript to store collections information.
-
-Javascript arrays are a special type of Object with auto-assigned number keys and a special `length` property.
-
-## Array Literals
-
-Arrays and their contents can be defined using square braces:
-
-```javascript
-let emptyArray = [];
-
-let fruitBasket = ["Apple 🍎", "Cherries 🍒", "Grapes 🍇"];
-```
-
-## Array Length
-
-```javascript
-console.log(`There are ${fruitBasket.length} fruit in the basket.`);
-```
-
-## Retrieving Array Values
-
-We can retrieve array elements using `[]` square-braces and zero-based indexes:
-
-```javascript
-console.log(fruitBasket[0]); // Apple 🍎
-```
-
-## Updating Array Elements
-
-Elements can be overwritten using square braces too:
-
-```javascript
-fruitBasket[0] = "Green Apple 🍏"; // Overwrite the zero-th element.
-```
 
 ## Arrays as Queues
 
@@ -103,14 +65,6 @@ let baseball = sportBalls.pop();
 
 `unshift` also exists to place elements at the start of an array, shifting existing elements over.
 {: .d-inline-block}
-
-## Looping over Array Elements
-
-Here's how we can loop over the key/value pairs of an object:
-
-```javascript
-
-```
 
 ## Further Reading
 

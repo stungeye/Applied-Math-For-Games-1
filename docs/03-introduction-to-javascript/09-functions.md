@@ -1,11 +1,11 @@
 ---
-title: Scope
+title: Functions
 parent: Introduction to Javascript
-nav_order: 12
+nav_order: 9
 ---
 
 <!--prettier-ignore-start-->
-# Variable Scope
+# Functions
 {: .no_toc }
 
 TBD
