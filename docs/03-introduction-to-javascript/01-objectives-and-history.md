@@ -29,11 +29,10 @@ Upon completion of this module, you should be able to:
 - Output strings to the debugging console.
 - Perform math operations on numbers and numeric variables.
 - Code various conditional and looping structures.
+- Define and use your own functions.
+- Understand Javascript scoping rules.
 - Store and retrieve single and multi-dimensional array data.
 - Store and retrieve values in objects by key.
-- Define your own named and anonymous functions.
-- Understand Javascript scoping rules.
-- Define and instantiate classes.
 
 ## History of Javascript
 

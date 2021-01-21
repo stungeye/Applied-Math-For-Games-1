@@ -56,6 +56,41 @@ Elements can be overwritten using square braces too:
 treats[0] = "Green Apple 🍏"; // Overwrite the zero-th element.
 ```
 
+## Multi-Dimension Arrays
+
+Arrays can be made to hold other arrays. Square braces are chained to index into nested arrays.
+
+```javascript
+let emojiWithNames = [
+  ["💌", "Love Letter"],
+  ["🏺", "Amphora"],
+  ["🧭", "Compass"],
+];
+
+console.log(emojiWithNames[1][0]); // Prints: 🏺
+```
+
+💡 Best Practice:
+{: .label .label-green }
+
+Place a trailing comma after the final element in multiline arrays.
+{: .d-inline-block}
+
+Follwing this best practice makes adding new elements or moving elements around less error-prone.
+
+## Arrays and Objects
+
+Arrays and objects can be nested within each other.
+
+```javascript
+let character = {
+  name: "Daisy",
+  bagOfHolding: ["🛡️", "🗡️", "🧪"],
+};
+```
+
+We'll see much more of this in the JSON module.
+
 ## Looping over Array Elements
 
 Here's how we can loop over the elements of an array using a plain old `for` loop:
@@ -132,3 +167,4 @@ fruitBasket.forEach(function (fruit, i) {
 ## Further Reading
 
 - [Arrays @ Javascript.info](https://javascript.info/array)
+- [Array Methods @ Javascript.info](https://javascript.info/array-methods) - We'll review many of these methods in the advanced Javascript module.

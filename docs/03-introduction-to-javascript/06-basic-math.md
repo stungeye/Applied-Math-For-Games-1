@@ -95,3 +95,15 @@ milesFromHome++; // Up to 14334. Sames as: milesFromHome += 1
 milesFromHome--; // Back to 14333. Same as: milesFromHome -= 1
 milesFromHome--; // Down to 14332
 ```
+
+## Numeric Conversions from Strings
+
+Although Javascript will automatically convert strings to numbers, it's safer to explicitly perform the conversion using `Number`:
+
+```javascript
+let tearsPerMinute = 123;
+let minutesCrying = Number(prompt("😭 How long have you been crying?"));
+console.log(`Tears Fallen: ${tearsPerMinute * minutesCrying}`);
+```
+
+If the user inputs something that isn't a number, then `minutesCrying` will be set to `NaN`.
