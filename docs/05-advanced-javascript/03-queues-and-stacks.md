@@ -5,10 +5,10 @@ nav_order: 3
 ---
 
 <!--prettier-ignore-start-->
-## Loop Da Loop
+## Arrays as Queues and Stacks 
 {: .no_toc }
 
-TBD
+Queues and stacks are commonly used data structures that are implemented as part of Javascript arrays.
 
 ## Table of Contents
 {: .no_toc .text-delta }  

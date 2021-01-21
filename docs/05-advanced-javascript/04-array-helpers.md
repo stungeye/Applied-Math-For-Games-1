@@ -1,11 +1,11 @@
 ---
-title: Hurray for Arrays
+title: Helpful Array Methods
 parent: Advanced JS Techniques
 nav_order: 4
 ---
 
 <!--prettier-ignore-start-->
-## Hurray for Arrays 
+## Helpful Array Methods
 {: .no_toc }
 
 Javascript has lots of built in functions that make working with arrays a joy.

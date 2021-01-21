@@ -1,5 +1,5 @@
 ---
-title: Javascript Functions
+title: Anonymous Functions
 parent: Advanced JS Techniques
 nav_order: 2
 ---
