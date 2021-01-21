@@ -8,7 +8,7 @@ nav_order: 7
 # Fetching Data with the Fetch API 
 {: .no_toc }
 
-In this module we'll explore a client-side Javascript technique called AJAX that allows us to make our applications more dynamic by fetching data directly from an URL or an API. 
+In this module we'll explore using the Fetch API to download data directly from an URL or an API. 
 
 ## Table of Contents
 {: .no_toc }
@@ -22,30 +22,9 @@ In this module we'll explore a client-side Javascript technique called AJAX that
 
 Upon completion of this module, you should be able to:
 
-- Explain the client-side programming technique called AJAX.
 - Use the Javascript Fetch API to make HTTP requests from the browser.
 - Use callback functions and promises to deal with the data returned by the Fetch API.
-- Make GET and POST AJAX request using the Fetch API.
-
-## Asynchronous Data Transfer
-
-![Asynchronous Data Transfer](async.png)
-
-When a computer program transfers data synchronously the program must halt (or block) while waiting for the data to arrive.
-
-Asynchronous (or non-sequential) data transfer permits a program to continue running while waiting for data.
-
-In Javascript this is accomplished by registering a data-handling function to execute once the data has arrived.
-
-## The X Stands for JSON
-
-AJAX stands for **A**synchronous **J**avaScript **A**nd **X**ML.
-
-The term AJAX was first proposed in 2005 to describe the use of Javascript to load extra data from a server into an HTML document.
-
-At the time, XML was the most common data-exchange format returned by web servers.
-
-These days most APIs return data as JSON, so programmers often joke that the X in AJAX stands for JSON. :P
+- Make GET and POST HTTP requests using the Fetch API.
 
 ## But You Promised!
 
@@ -62,11 +41,11 @@ A promise can be in one of four states:
 
 ## And Then What?
 
-We use `.then()` to register a callback to handle fulfilled promises. This callback will be called once the promise has fulfilled.
+We use `.then()` to register a callback to handle fulfilled promises. This callback will be called once the promise has been fulfilled.
 
 We can chain `.then()`s together to link together a series of async tasks.
 
-We can also register an callback to handle rejected promises using `.catch()`.
+We can also register a callback to handle rejected promises using `.catch()`.
 
 All of this will make more sense with an example. So let's dive into fetching data using Javascript's Fetch API.
 
@@ -125,9 +104,9 @@ The reasons we set `breeds` to `Object.keys(data.message)` is because the API re
 }
 ```
 
-And for the example we only care about the keys of the `message` property.
+And for this example we only care about the keys of the `message` property.
 
-## Ajax GET Request
+## GET Request
 
 Here's another example of an HTTP GET request for some JSON:
 
@@ -166,7 +145,7 @@ The relevant keys of the JSON returned by the Reddit API look like this:
 }
 ```
 
-## POST AJAX Requests
+## POST Requests
 
 If you wanted to use Javascript to asynchronously submit an HTML form:
 
@@ -183,7 +162,7 @@ fetch("https://example.com/endpoint", {
 
 This will submit the data present in the first form on the page.
 
-## AJAX POST with JSON
+## POST with JSON
 
 Some APIs will have endpoints that you can POST JSON data to:
 
