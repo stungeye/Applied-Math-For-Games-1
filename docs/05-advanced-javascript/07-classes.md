@@ -8,7 +8,7 @@ nav_order: 07
 # Classes
 {: .no_toc }
 
-If functions are the verbs of computer programming, then classes are the nouns.
+If functions are the verbs of computer programming, then classes let us define the nouns.
 
 ### Table of Contents
 {: .no_toc }
@@ -37,9 +37,9 @@ mySpaceShip.move(); // The fuelAvailable property is now 999.
 
 ## Classes are New(ish)
 
-For the first twenty years Javascript had no `class` keyword. Writing Object Oriented code was still possible, but we had to use object literals and [prototypal inheritance](https://javascript.info/prototype-inheritance).
+For the first twenty years Javascript had no `class` keyword. Writing object-oriented code was still possible, but we had to use object literals and [prototypal inheritance](https://javascript.info/prototype-inheritance).
 
-Classes were added to Javascript in 2015 as part of version 6 of the ECMAScript standard (ES6).
+Classes were added to Javascript in 2015 as part of version 6 of the ECMAScript standard (ES6). They are still a moving target wih new features and refinements being added today.
 
 ## Defining a Class
 
@@ -109,7 +109,7 @@ class Point {
   static distance(a, b) {
     const dx = a.x - b.x;
     const dy = a.y - b.y;
-    return Math.hypot(dx, dy);
+    return Math.hypot(dx, dy); // Use built-in math helper to find the distance.
   }
 }
 
@@ -119,6 +119,30 @@ let distanceBetweenPoints = Point.distance(pointOne, pointTwo);
 ```
 
 ## Sub-Classing with Extends
+
+We can use the `extends` keyword to create a subclass, along with `super()` to call the parent's constructor:
+
+```javascript
+class Student {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class CollegeStudent extends Student {
+  constructor(name, debt) {
+    super(name);
+    this.debt = debt;
+  }
+}
+
+let joe = new Student("Joe");
+let daisy = new CollegeStudent("Daisy", -2342);
+```
+
+## Method Overriding
+
+Subclasses can override the methods of their parent classes by defining a method of the same name. The parent's version of the method can be executed using `super.methodName()`.
 
 ```javascript
 class Student {
@@ -147,3 +171,15 @@ console.log(daisy.toString()); // Name: Daisy, Debt: -2342
 ```
 
 ## Properties Are Public
+
+One of the key tenents of object-oriented programming is that of "data hiding" or "encapsulation". Unfortunately we don't get that in Javascript objects, yet. Currently all properties attached to `this` are publicly gettable and settable.
+
+Using the `daisy` object of type `CollegeStudent` from above:
+
+```javascript
+console.log(daisy.debt);
+daisy.debt = 0;
+console.log(`That was easy. Daisy now owes ${daisy.debt} dollars`);
+```
+
+Private properties prefixed by the `#` symbol are being added the ECMAScript specification but [aren't yet widely supported](https://caniuse.com/mdn-javascript_classes_private_class_fields).
