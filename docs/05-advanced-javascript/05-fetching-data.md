@@ -1,7 +1,7 @@
 ---
 title: Fetching Data
 parent: Advanced JS Techniques
-nav_order: 6
+nav_order: 5
 ---
 
 <!-- prettier-ignore-start -->
@@ -19,15 +19,13 @@ In this module we'll explore using the Fetch API to download data directly from 
 
 <!-- prettier-ignore-end -->
 
-## Objectives
-
-Upon completion of this module, you should be able to:
-
-- Use the Javascript Fetch API to make HTTP requests from the browser.
-- Use callback functions and promises to deal with the data returned by the Fetch API.
-- Make GET and POST HTTP requests using the Fetch API.
-
 ## But You Promised!
+
+⏳ Wait For It:
+{: .label .label-blue}
+
+Before we can talk about fetching data, a word on Promises.
+{: .d-inline-block }
 
 Promises are a recent addition to Javascript that represent the _eventual_ result of an asynchronous operation.
 

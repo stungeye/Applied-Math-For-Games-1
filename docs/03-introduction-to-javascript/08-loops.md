@@ -55,7 +55,13 @@ for (let apples = 10; apples <= 20; apples++) {
 
 ## Loops for Arrays and Objects
 
-Javascript includes special syntax for looping over array elements and object key/value pairs. These are covered in the sections on Objects and Arrays:
+⏳ Wait For It:
+{: .label .label-blue}
+
+There are special loops for traversing array elements and object key/value pairs.
+{: .d-inline-block }
+
+These are covered in the sections on Objects and Arrays:
 
 - [Looping Over Array Elements with `for of` Loops](/Applied-Math-For-Games-1/docs/03-introduction-to-javascript/11-arrays.html#for-of-enumeration)
 - [Looping Over Array Elements with `forEach` Callbacks](/Applied-Math-For-Games-1/docs/03-introduction-to-javascript/11-arrays.html#foreach-callback-loop)

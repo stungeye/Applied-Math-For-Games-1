@@ -1,7 +1,7 @@
 ---
 title: Classes
 parent: Advanced JS Techniques
-nav_order: 4
+nav_order: 3
 ---
 
 <!--prettier-ignore-start-->
@@ -34,6 +34,12 @@ let mySpaceShip = {
 
 mySpaceShip.move(); // The fuelAvailable property is now 999.
 ```
+
+⚡ Warning:
+{: .label .label-red}
+
+Arrow functions can't be used here as they don't bind to the object's `this` property.
+{: .d-inline-block }
 
 ## Classes are New(ish)
 

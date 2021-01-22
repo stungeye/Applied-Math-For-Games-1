@@ -1,20 +1,17 @@
 ---
-title: Anonymous Functions
+title: Callback Functions
 parent: Advanced JS Techniques
-nav_order: 2
+nav_order: 1
 ---
 
 <!--prettier-ignore-start-->
-## Javascript Functions
+## Callback Functions
 {: .no_toc }
 
-Functions are one of the key building blocks of Javascript applications. The can be used to modularize your code and can be passed to other function as [callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function).
+Javascript functions are often passed to other function as [callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function).
 
-In this section will look into three topics you'll run into when working with React:
 
-* Anonymous functions 
-* "Arrow" functions
-* Functions as Object Properties
+This section covers callback functions, anonymous functions (also known as closures), and the arrow function syntax.
 
 ## Table of Contents
 {: .no_toc .text-delta }  
@@ -38,7 +35,7 @@ snail(); // And called by name.
 
 ## Anonymous Functions
 
-Unnamed function are called anonymous\*:
+Unnamed function are called anonymous\* functions:
 
 ```javascript
 setTimeout(function(){ console.log("Hello Mail! 📨"; }, 500);
@@ -58,9 +55,9 @@ _\*Anonymous, derived from the Greek word ἀνωνυμία, anonymia, meaning "
 
 ## Callback Functions
 
-In Javascript functions can be passed as parameters to other functions. We call these "callback functions" as they aren't executed immediately.
+In Javascript functions can be passed as arguments to other functions. We call these "callback functions" as they aren't executed immediately.
 
-Example: `setTimeout` takes a callback function and a time in milliseconds as arguments. The callback function is executed after the provided time elapses.
+For example, `setTimeout` takes a callback function and a time in milliseconds as arguments. The callback function is executed after the provided time elapses.
 
 ```javascript
 function whale() {
@@ -72,11 +69,9 @@ let tail = function () {
 };
 
 setTimeout(whale, 500); // Named function as callback.
-
 setTimeout(tail, 1500); // Variable-assigned anonymous function as callback.
 
 // Inline anonymous callback functions are also handy:
-
 setTimeout(function () {
   console.log("Hello Sail! ⛵");
 }, 2000);
@@ -93,7 +88,8 @@ let gale = () => {
   console.log("Hello Gale! 🌬️");
 };
 
-gale(); // Called by variable name.
+// Called by variable name.
+gale(); // Hello Gale 🌬️
 ```
 
 Arrow functions can also be defined with parameters:
@@ -105,59 +101,41 @@ let rail = (times) => {
   }
 };
 
-rail(5);
+rail(5); // 5 times: Hello Rail! 🚊
 ```
 
-## Arrow Function Variants - No Braces
+## Arrow Function Variants - Implicit Return (No Brace)
 
 Arrow functions that contain a single statement can be written without curly braces.
 
 These are called "implicit\* return" functions.
 
+```javascript
 let implicit = (word, emoji) => `Hello ${word}! ${emoji}`;
+```
 
 Implicit return functions automatically return the value of the function statement.
 
 ```javascript
 // Here, the implicit function returns a string which is then logged:
-console.log(implicit("Trail", "🌠"));
-
-// Hello Trail! 🌠
+console.log(implicit("Trail", "🌠")); // Hello Trail! 🌠
 ```
 
-## Explicit\* Return
+_\*Implicit means something implied but not stated directly._
 
-The above `implicit` function is equivalent to:
+## Explicit Return
+
+The above `implicit` function is equivalent to this arrow function with an explicit\* return:
 
 ```javascript
 let explicit = (word, emoji) => {
   return `Hello ${word} ${emoji}`; // Explicit Return Statement
 };
 
-console.log(explicit("trail", "🌠"));
+console.log(explicit("trail", "🌠")); // Hello Trail! 🌠
 ```
 
-_\*Implicit means something implied but not stated directly. Explicit means something made clear and stated plainly._
-
-## Arrow Function Variants - Unadorned
-
-One line, one argument, arrow functions can be written without parentheses or curly braces:
-
-```javascript
-let unadorned = (emoji) => `Hello Scale! ${emoji}`;
-
-console.log(unadorned("⚖️"));
-
-// Hello Scale! ⚖️
-```
-
-Unadorned arrows are also implicit return functions.
-
-**⏳ Wait for it...** We'll use this style a lot in the coming sections on array helpers.
-
-#### Resources
-
-- [ES6 Arrow Functions: Fat and Concise Syntax in JavaScript](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
+_\*Explicit means something made clear and stated plainly._
 
 ## Anonymous Arrow Callbacks
 
@@ -179,40 +157,15 @@ setTimeout(() => console.log("Hello Veil! 👰"), 225);
 
 There's a lot less "punctuation noise", which makes the code easier to read for others.
 
-## Functions as Object Properties
+⏳ Wait For It:
+{: .label .label-blue}
 
-Functions can be added to objects too:
+We'll use implicit-return arrows a lot in the next [section on array helpers](/Applied-Math-For-Games-1/docs/05-advanced-javascript/02-array-helpers.html).
+{: .d-inline-block }
 
-```javascript
-const user = {
-  username: "stungeye",
-  age: 42,
-  printInfo: function () {
-    console.log(`${this.username} is ${this.age}.`);
-  },
-};
+## Further Reading
 
-user.printInfo();
-
-// "stungeye is 42."
-```
-
-Functions attached to objects are called methods.
-
-**⚠️ Warning:** Arrow functions don't bind to the object's `this` so they don't work well as object properties:
-
-```javascript
-const brokenUser = {
-  username: "stungeye",
-  age: 42,
-  printInfo: () => {
-    console.log(`${this.username} is ${this.age}.`);
-  },
-};
-
-user.printInfo(); // "undefined is undefined."
-```
-
-#### Resources
-
+- [ES6 Arrow Functions: Fat and Concise Syntax in JavaScript](https://www.sitepoint.com/es6-arrow-functions-new-fat-concise-syntax-javascript/)
+- [Arrow Function Basics @ Javascript.info](https://javascript.info/arrow-functions-basics)
+- [Arrow Functions Revisted @ Javascript.info](https://javascript.info/arrow-functions)
 - [MDN Arrow Functions - No Separate This](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#No_separate_this)

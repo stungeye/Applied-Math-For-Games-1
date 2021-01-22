@@ -61,6 +61,11 @@ Warnings are provided to prepare you for common bugs and "gotchas".
 
 Best practices used in industry will also be highlighted.
 
+⏳ Wait For It:
+{: .label .label-blue}
+
+Sometimes you just need to wait until later in the notes to learn more. :)
+
 ## Code Conventions
 
 All source code in the notes will be syntax highlighted like so:

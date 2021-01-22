@@ -1,7 +1,7 @@
 ---
 title: Javascript Object Notation
 parent: Advanced JS Techniques
-nav_order: 5
+nav_order: 4
 ---
 
 <!--prettier-ignore-start-->
@@ -21,17 +21,6 @@ JSON data can be easily created and decoded in Javascript and most other modern 
 {:toc}
 
 <!--prettier-ignore-end-->
-
-## Objectives
-
-Upon completion of this module, you should be able to:
-
-- Explain the purpose of the JSON format.
-- Describe the syntax of the JSON format.
-- Explain the similarities and differences between JSON and XML.
-- Encode structured data by hand in the JSON format.
-- Encode, decode and access JSON data using Javascript.
-- View and debug JSON data using an online JSON viewing tool.
 
 ## Structured Data
 

@@ -1,7 +1,7 @@
 ---
 title: Array Methods FTW
 parent: Advanced JS Techniques
-nav_order: 3
+nav_order: 2
 ---
 
 <!--prettier-ignore-start-->
