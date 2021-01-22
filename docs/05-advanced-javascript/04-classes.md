@@ -1,7 +1,7 @@
 ---
 title: Classes
 parent: Advanced JS Techniques
-nav_order: 07
+nav_order: 4
 ---
 
 <!--prettier-ignore-start-->
@@ -37,9 +37,9 @@ mySpaceShip.move(); // The fuelAvailable property is now 999.
 
 ## Classes are New(ish)
 
-For the first twenty years Javascript had no `class` keyword. Writing object-oriented code was still possible, but we had to use object literals and [prototypal inheritance](https://javascript.info/prototype-inheritance).
+For the first twenty years Javascript had no `class` keyword. Writing object-oriented code was still possible, but we had to use object literals (as seen above) and [prototypal inheritance](https://javascript.info/prototype-inheritance).
 
-Classes were added to Javascript in 2015 as part of version 6 of the ECMAScript standard (ES6). They are still a moving target wih new features and refinements being added today.
+Classes were added to Javascript in 2015 as part of version 6 of the ECMAScript standard (ES6). They are still a moving target with new features and refinements being added today.
 
 ## Defining a Class
 
@@ -137,7 +137,7 @@ class CollegeStudent extends Student {
 }
 
 let joe = new Student("Joe");
-let daisy = new CollegeStudent("Daisy", -2342);
+let daisy = new CollegeStudent("Daisy", 2342);
 ```
 
 ## Method Overriding
@@ -165,9 +165,9 @@ class CollegeStudent extends Student {
 }
 
 let joe = new Student("Joe");
-let daisy = new CollegeStudent("Daisy", -2342);
+let daisy = new CollegeStudent("Daisy", 2342);
 console.log(joe.toString()); // Name: Joe
-console.log(daisy.toString()); // Name: Daisy, Debt: -2342
+console.log(daisy.toString()); // Name: Daisy, Debt: 2342
 ```
 
 ## Properties Are Public

@@ -1,6 +1,7 @@
 ---
 title: Javascript Object Notation
-nav_order: 6
+parent: Advanced JS Techniques
+nav_order: 5
 ---
 
 <!--prettier-ignore-start-->

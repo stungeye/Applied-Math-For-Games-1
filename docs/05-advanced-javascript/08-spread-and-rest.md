@@ -1,7 +1,7 @@
 ---
 title: Spread and Rest Syntax
 parent: Advanced JS Techniques
-nav_order: 6
+nav_order: 8
 ---
 
 <!--prettier-ignore-start-->

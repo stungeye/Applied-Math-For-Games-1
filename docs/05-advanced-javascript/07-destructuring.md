@@ -1,7 +1,7 @@
 ---
 title: Destructuring
 parent: Advanced JS Techniques
-nav_order: 5
+nav_order: 7
 ---
 
 <!--prettier-ignore-start-->

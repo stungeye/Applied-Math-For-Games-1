@@ -1,16 +1,18 @@
 ---
-title: Helpful Array Methods
+title: Array Methods FTW
 parent: Advanced JS Techniques
-nav_order: 4
+nav_order: 3
 ---
 
 <!--prettier-ignore-start-->
 ## Helpful Array Methods
 {: .no_toc }
 
-Javascript has lots of built in functions that make working with arrays a joy.
+Javascript has many built-in convenience functions that make it a joy to work with arrays. 
 
-Let's explore the `find`, `map`, `filter`, `join`, `includes`, `every`, `some`, and `reduce` array helper functions. 
+We'll start by exploring how Javascript arrays can be used as queues or stacks.
+
+Then we'll look into transforming, filtering, and searching arrays with the `find`, `map`, `filter`, `join`, `includes`, `every`, `some`, and `reduce` array helper functions. 
 
 ## Table of Contents
 {: .no_toc .text-delta }  
@@ -20,9 +22,57 @@ Let's explore the `find`, `map`, `filter`, `join`, `includes`, `every`, `some`, 
 
 <!--prettier-ignore-end-->
 
-## Array Data To Work With
+## Arrays as Queues
 
-Imagine we have the following array of objects:
+We often use arrays as First-In-First-Out queues using `push` and `shift`.
+
+A queue is like a line-up at a grocery store.
+
+```javascript
+let sportBalls = ["🏀", "⚽", "⚾"];
+
+// Add football to the end of the queue:
+sportBalls.push("🏈");
+
+// sportBalls is now ["🏀", "⚽", "⚾", "🏈"]
+
+// Remove and return basketball and soccer ball from the front of the queue;
+let basketball = sportBalls.shift();
+let soccerball = sportBalls.shift();
+
+// sportBalls is now ["⚾", "🏈"]
+```
+
+## Arrays as Stacks
+
+We often use arrays as Last-In-First-Out stacks using `push` and `pop`.
+
+A stack is like a pile of dinner plates. (Except the end of the array is consider the top of the stack.)
+
+```javascript
+let sportBalls = ["🏀", "⚽", "⚾"];
+
+// Add football to the end of the stack:
+sportBalls.push("🏈");
+
+// sportBalls is now ["🏀", "⚽", "⚾", "🏈"]
+
+// Remove and return football and baseball from the end of the stack:
+let football = sportBalls.pop();
+let baseball = sportBalls.pop();
+
+// sportBalls is now ["🏀", "⚽"];
+```
+
+🎵 Note:
+{: .label .label-yellow}
+
+`unshift` also exists to place elements at the start of an array, shifting existing elements over.
+{: .d-inline-block}
+
+## Sample Array Data To Work With
+
+The remaining examples will make use of the following array of objects:
 
 ```javascript
 const animals = [
@@ -181,3 +231,8 @@ console.log(guestList);
 ```
 
 The `join` method takes a string value to use as "glue" between each element. You can use a empty string to go "glueless".
+
+## Further Reading
+
+- [Stacks and Queues @ Javascript.info](https://javascript.info/array#methods-pop-push-shift-unshift) - More details on `push`, `pop`, `shift` and `unshift`.
+- [Array Methods @ Javascript.info](https://javascript.info/array-methods)

@@ -1,6 +1,7 @@
 ---
 title: Fetching Data
-nav_order: 7
+parent: Advanced JS Techniques
+nav_order: 6
 ---
 
 <!-- prettier-ignore-start -->

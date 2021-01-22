@@ -1,7 +1,7 @@
 ---
 title: Staying Up To Date
 parent: Advanced JS Techniques
-nav_order: 8
+nav_order: 9
 ---
 
 ## What's Next? Staying Up To Date with Javascript

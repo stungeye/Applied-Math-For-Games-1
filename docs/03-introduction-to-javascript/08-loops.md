@@ -32,21 +32,34 @@ do {
 } while (booleanCondition);
 ```
 
+## Data Validation
+
+While loops can be helpful when validating user input:
+
+````javascript
+let temperature;
+do {
+  temperature = Number(prompt("Enter a temperature"));
+} while (temperature == NaN)
+```
+
 ## Loop Da Loop - For
 
-Standard C-style for loops are also available:
+Standard C-style for loops are also available. These loops are best used for counting tasks:
 
 ```javascript
 for (let apples = 10; apples <= 20; apples++) {
   console.log(`${apples}: How to you like them apples?`);
 }
-```
+````
 
-## Other Types of For Loops
+## Loops for Arrays and Objects
 
-Javascript includes other types of `for` loops like `for of`, `for in`, and `forEach` loops.
+Javascript includes special syntax for looping over array elements and object key/value pairs. These are covered in the sections on Objects and Arrays:
 
-We won't review these special-case loops until after we cover objects and arrays.
+- [Looping Over Array Elements with `for of` Loops](/Applied-Math-For-Games-1/docs/03-introduction-to-javascript/11-arrays.html#for-of-enumeration)
+- [Looping Over Array Elements with `forEach` Callbacks](/Applied-Math-For-Games-1/docs/03-introduction-to-javascript/11-arrays.html#foreach-callback-loop)
+- [Looping Over an Object's Key/Value Pairs](/Applied-Math-For-Games-1/docs/03-introduction-to-javascript/10-objects.html#looping-over-keyvalue-pairs)
 
 ## Further Reading
 
