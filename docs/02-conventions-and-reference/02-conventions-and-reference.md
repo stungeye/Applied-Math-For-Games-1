@@ -73,13 +73,13 @@ Sometimes you just need to wait until later in the notes to learn more. :)
 All source code in the notes will be syntax highlighted like so:
 
 ```javascript
-const ghost_quota = 37;
-const caught_ghost = 12;
+const ghostQuota = 37;
+const ghostsCaught = 12;
 
-if (caughtGhosts > ghostQuota) {
+if (ghostsCaught > ghostQuota) {
   console.log("You are done for the day.");
 } else {
-  const ghostsRequired = ghostQuota - caughtGhosts;
+  const ghostsRequired = ghostQuota - ghostsCaught;
   console.log(`You need to find ${ghostsRequired} more ghosts.`);
 }
 ```

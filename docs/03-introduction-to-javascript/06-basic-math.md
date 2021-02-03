@@ -45,6 +45,22 @@ PEMMDAS order of operations rules are applied:
 This is a simplified version of the precedence rules. [See the complete table here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table).
 {: .d-inline-block }
 
+## Modulus
+
+The modulus operator `%` calculates the remainder of a division.
+
+The expression `a % b` means: What remains after taking away all groups of `b` from `a`.
+
+So, for example, `15 % 4` has a modulus of 3, because 4 goes into 15 three times with 2 remaining.
+
+Modulus is commonly used to determine if a number is even or odd:
+
+```javascript
+if (someNumber % 2 == 0) {
+  console.log("The value of the someNumber variable is even.");
+}
+```
+
 ## Exponents
 
 Exponents are used to multiply a number with itself any number of times.
