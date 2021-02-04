@@ -50,7 +50,7 @@ The regular `==` and `!=` will perform type coercion, which means they may not w
 
 ## Decision Statements
 
-The `if` and `else` keywords allow use to control the flow of execution in our programs.
+The `if` and `else` keywords allow us to control the flow of execution in our programs.
 
 ```javascript
 let grinStrength = 45;
@@ -71,10 +71,10 @@ The ternary operator, sometimes called a conditional or question mark operator, 
 Ternary assignments are structured like this:
 
 ```javascript
-let variable = booleanCondition ? value1 : value2;
+let variable = boolean ? value1 : value2;
 ```
 
-☝️ The `variable` will be assigned `value1` if `booleanConditional` is true, otherwise it will be assigned `value2`.
+☝️ The `variable` will be assigned `value1` if `boolean` is true, otherwise it will be assigned `value2`.
 
 A more detailed example:
 
@@ -118,7 +118,3 @@ catName ??= "Mr. Mistoffelees"; // Only perform this assignment if catName is un
 ## Further Reading
 
 - [Long If/Else Chains Can be Replaced By Switch Statements](https://javascript.info/switch)
-
-```
-
-```

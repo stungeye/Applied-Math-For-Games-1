@@ -36,11 +36,11 @@ do {
 
 While loops can be helpful when validating user input:
 
-````javascript
+```javascript
 let temperature;
 do {
   temperature = Number(prompt("Enter a temperature"));
-} while (temperature == NaN)
+} while (temperature == NaN);
 ```
 
 ## Loop Da Loop - For
@@ -51,7 +51,7 @@ Standard C-style for loops are also available. These loops are best used for cou
 for (let apples = 10; apples <= 20; apples++) {
   console.log(`${apples}: How to you like them apples?`);
 }
-````
+```
 
 ## Loops for Arrays and Objects
 

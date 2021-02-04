@@ -78,7 +78,7 @@ console.log(pizzaMessage(13, 7));
 
 ## Variable Scope
 
-Variables defined with `let` are scoped to the function or the block in which they were defined.
+Variables defined with `let` are scoped to the function or the block in which they are defined.
 
 ```javascript
 function gemFactory(numberOfGems) {
