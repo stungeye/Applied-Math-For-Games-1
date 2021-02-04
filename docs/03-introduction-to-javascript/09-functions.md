@@ -90,7 +90,7 @@ console.log(gemFactory(5));
 console.log(gems); // Error. Variable is out of scope.
 
 let requestedGems = Number(prompt("How many gems to you want?")); // Converts the user's string to a number.
-f (requestedGems > 0) {
+if (requestedGems > 0) {
   let yourGems = gemFactory(requestedGems); // yourGems is only scoped to this block.
 }
 
