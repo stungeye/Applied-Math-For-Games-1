@@ -9,7 +9,7 @@ nav_order: 3
 # User Input
 {: .no_toc }
 
-openFrameworks includes an event-driven system for responding to mouse and keyboard input.
+p5.js includes an event-driven system for responding to mouse and keyboard input, along with a number of global variables for querying the state of the mouse and keyboard.
 
 ## Table of Contents
 {: .no_toc }
@@ -19,53 +19,73 @@ openFrameworks includes an event-driven system for responding to mouse and keybo
 
 <!-- prettier-ignore-end -->
 
-## Mouse Position and Input
+## Mouse Position
 
-The current x/y location of the mouse can be retrieved as follows:
+The current x/y location of the mouse can be retrieved using the special 📜 [`mouseX`](https://p5js.org/reference/#/p5/mouseX) and 📜 [`mouseY`](https://p5js.org/reference/#/p5/mouseY) variables:
 
-```cpp
-int mouseX = ofGetMouseX();
-int mouseY = ofGetMouseY();
+```javascript
+circle(mouseX, mouseY, 50, 50);
 ```
 
-If you look through the `ofApp.cpp` and `ofApp.h` files you will see a number of predefined methods you can use to respond to mouse events as they happen:
+The state of the mouse button is available via 📜 [`mouseIsPressed`](https://p5js.org/reference/#/p5/mouseIsPressed) and 📜 [`mouseButton`](https://p5js.org/reference/#/p5/mouseButton):
 
-- `void mouseMoved(int x, int y );`
-- `void mouseDragged(int x, int y, int button);`
-- `void mousePressed(int x, int y, int button);`
-- `void mouseReleased(int x, int y, int button);`
-- `void mouseEntered(int x, int y);`
-- `void mouseExited(int x, int y);`
+```javascript    
+ if (mouseIsPressed) {
+    if (mouseButton === LEFT) { // RIGHT and CENTER are available too.
+      ellipse(50, 50, 50, 50);
+    }
+ }
+```
 
-The value of the `button` parameter will be:
+There are also:
 
-- `0` if the left button is pressed.
-- `1` if the center button/wheel is pressed.
-- `2` if the right button is pressed.
+* 📜 [`pmouseX`](https://p5js.org/reference/#/p5/pmouseX) and 📜 [`pmouseY`](https://p5js.org/reference/#/p5/pmouseY) - Previous positions of mouse in last frame.
+* 📜 [`movedX`](https://p5js.org/reference/#/p5/movedX) and 📜 [`movedY`](https://p5js.org/reference/#/p5/movedY) - Pixel distance moved since last frame.
+* 📜 [`winMouseX`](https://p5js.org/reference/#/p5/winMouseX) and 📜 [`winMouseY`](https://p5js.org/reference/#/p5/winMouseY) - Mouse position in entire browser window, not just p5 canvas.
+* 📜 [`pwinMouseX`](https://p5js.org/reference/#/p5/pwinMouseX), and 📜 [`pwinMouseY`](https://p5js.org/reference/#/p5/pwinMouseY) - Previous browser window positions.
+
+## Mouse Events
+
+There are a number of function you can define that will be called for particular mouse events:
+
+* 📜 [`mouseMoved()`](https://p5js.org/reference/#/p5/mouseMoved) - Called anytime the mouse moves.
+* 📜 [`mouseDragged()`](https://p5js.org/reference/#/p5/mouseDragged) - Called anytime the mouse moves while a button is pressed.
+* 📜 [`mousePressed()`](https://p5js.org/reference/#/p5/mousePressed) - Called when any mouse button is pressed.
+* 📜 [`mouseReleased()`](https://p5js.org/reference/#/p5/mouseReleased) - Called when any mouse button is released.
+* 📜 [`mouseClicked()`](https://p5js.org/reference/#/p5/mouseClicked) - Called after a mouse button has been pressed and then released.
 
 ### Resources
 
-- 📗 Details on these callbacks and their touch event equivalents: [`ofBaseApp` documentation](https://openframeworks.cc/documentation/application/ofBaseApp/).
-- 📺 [Mouse Tutorial - Lewis Lepton on YouTube](https://www.youtube.com/watch?v=RFr5cM4m5XA&list=PL4neAtv21WOlqpDzGqbGM_WN2hc5ZaVv7&index=15) (5m04s)
+* 🔰 [Interactivity Guide - See Mouse Section](https://p5js.org/learn/interactivity.html)
+* 🚂 [Variables in p5.js - mouseX and mouseY - Coding Train Video](https://www.youtube.com/watch?v=RnS0YNuLfQQ) (12m23s)
+* 🚂 [Mouse Interaction with Objects - Coding Train Video](https://www.youtube.com/watch?v=TaN5At5RWH8) (14m57s)
+* 🏷️ [Mouse 1D Example](https://p5js.org/examples/input-mouse-1d.html)
+* 🏷️ [Mouse 2D Example](https://p5js.org/examples/input-mouse-2d.html)
+* 🏷️ [Mouse Press Example](https://p5js.org/examples/input-mouse-press.html)
+* 🏷️ [Drag and Drop Example](https://p5js.org/examples/input-mouse-functions.html)
+
+## Keyboard Variables
+
+There are three variables related to the state of keys pressed on the keyboard:
+
+* 📜 [`keyIsPressed`](https://p5js.org/reference/#/p5/keyIsPressed) - Boolean to test if any key is pressed.
+* 📜 [`key`](https://p5js.org/reference/#/p5/key) - Which key is pressed case insensitive. (Only for printable keyboard characters.)
+* 📜 [`keyCode`](https://p5js.org/reference/#/p5/keyCode) - Integer code for the key being pressed. 
+
+To determine which key related to a specific `keyCode` see: 📚 [keycode.info](https://keycode.info)
+
+There are also constants for special keys: `BACKSPACE`, `DELETE`, `ENTER`, `RETURN`, `TAB`, `ESCAPE`, `SHIFT`, `CONTROL`, `OPTION`, `ALT`, `UP_ARROW`, `DOWN_ARROW`, `LEFT_ARROW`, and `RIGHT_ARROW`
 
 ## Keyboard Events
 
-There are similar `keyPressed(int key)` and `keyReleased(int key)` callbacks available to handle keyboard events.
+Like with the mouse, there are special functions you can define to respond to keyboard events:
 
-The `key` parameter can be compared with specific characters:
-
-```cpp
-void keyPressed(int key){
-    if (key == 't'){
-        // The t key was pressed.
-    } else if (key == ' '){
-        // The spacebar was pressed.
-    }
-}
-```
-
-There are constants available to test for the arrow keys, backspace, return, and other special non-character keys: `OF_KEY_BACKSPACE`, `OF_KEY_RETURN`, `OF_KEY_PRINTSCR`, `OF_KEY_F1` to `OF_KEY_F12`, `OF_KEY_LEFT`, `OF_KEY_UP`, `OF_KEY_RIGHT`, `OF_KEY_DOWN`, `OF_KEY_PAGE_UP`, `OF_KEY_PAGE_DOWN`, `OF_KEY_HOME`, `OF_KEY_END`, `OF_KEY_INSERT`
+* 📜 [`keyPressed()`](https://p5js.org/reference/#/p5/keyPressed) - Called when any key is pressed.
+* 📜 [`keyReleased()`](https://p5js.org/reference/#/p5/keyReleased) - Called when any key is released.
+* 📜 [`keyTyped()`](https://p5js.org/reference/#/p5/keyTyped) - Like `keyPressed()` but only for printable characters.
+* 📜 [`keyIsDown()`](https://p5js.org/reference/#/p5/keyIsDown) - Tests if a particular key is pressed.
 
 ### Resources
 
-- 📺 [Keyboard Tutorial - Lewis Lepton on YouTube](https://www.youtube.com/watch?v=3DHpmJAzas4&list=PL4neAtv21WOlqpDzGqbGM_WN2hc5ZaVv7&index=14) (5m57s)
+* 🔰 [Interactivity Guide - See Keyboard Section](https://p5js.org/learn/interactivity.html)
+* 🏷️ [Keyboard Example](https://p5js.org/examples/input-keyboard.html)

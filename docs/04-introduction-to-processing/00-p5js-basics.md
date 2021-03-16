@@ -23,9 +23,10 @@ Upon completion of this module, you should be able to:
 - Draw 2D shapes to the canvas in a variety of colors.
 - Optionally clear the background before each frame.
 - Translate, rotate, scale, save, and restore the coordinate system.
-- Display images to the canvas.
 - Respond to keyboard and mouse events.
-- Display text to the debugging console and to the canvas.
+- Display images to the canvas.
+- Display text in the debugging console and on the canvas.
+- Load and play sound files.
 
 ## Linked Resources
 
@@ -39,5 +40,3 @@ Linked resources will be identified with the following emoji:
 - 📦: Source code repository.
 - 🧰: Helpful tool, plugin, extension, etc.
 - 📚: Any other online tutorial, guide, or blog post.
-
-- 📙: [Nature of Code](http://natureofcode.com).

@@ -82,6 +82,7 @@ There are a number of methods that allow you to draw 2D shapes to the canvas:
 - 🏷️ [Shape Primitives Examples](https://p5js.org/examples/form-shape-primitives.html)
 - 📜 [Custom Shapes with `beginShape()`, `vertex()`, and `endShape()`](https://p5js.org/reference/#/p5/beginShape)
 - 🏷️ [Building Stars with `beginShape()`, `vertex()`, and `endShape()`](https://p5js.org/examples/form-star.html)
+- 🔰 [Arcs, Spline Curves, and Bézier Curves Guide](https://p5js.org/learn/curves.html)
 
 ## Colour
 
@@ -155,13 +156,20 @@ void draw() {
 }
 ```
 
+🎵 Note:
+{: .label .label-yellow}
+
+Interesting trailing effects can be made using backgrounds with alpha transparency.
+{: .d-inline-block}
+
+
 ## Translation, Rotation, and Scaling
 
 We can change the position, scale, and rotation of the coordinate system using a variety of translate and rotate methods.
 
 ```cpp
 translate(200, 200); // Move the origin to (200, 200)
-rotateZ(45); // Rotate coordinate system by 45 degree (around z)
+rotate(45); // Rotate coordinate system by 45 degree (around z)
 rectangle(0, 0, 100, 100); // Draw a diamond.
 ```
 
@@ -170,7 +178,7 @@ We can also save and restore the state of the coordinate system using `push()` a
 ```cpp
 push(); // Save the original unrotated coordinate system with origin top left.
 translate(200, 200, 0); // Move the origin to (200, 200)
-rotateZ(45); // Rotate coordinate system by 45 degree (around z)
+rotate(45); // Rotate coordinate system by 45 degree (around z)
 scale(2, 2); // Double the scale.
 rect(0, 0, 100, 100); // Draw a diamond.
 pop(); // Restore the original coordinate system.
@@ -179,5 +187,12 @@ rect(0, 0, 100, 100); // Draw a square in the top left corner.
 
 ### Resources
 
-- 📺 [Translate Tutorial - Lewis Lepton on YouTube](https://www.youtube.com/watch?v=1KfihADxxsI&list=PL4neAtv21WOlqpDzGqbGM_WN2hc5ZaVv7&index=6) (4m34s)
-- 📺 [Rotation Tutorial - Lewis Lepton on YouTube](https://www.youtube.com/watch?v=wM4gdiJXeIE&list=PL4neAtv21WOlqpDzGqbGM_WN2hc5ZaVv7&index=21) (6m53s)
+- 📜 [`translate()`](https://p5js.org/reference/#/p5/translate)
+- 📜 [`rotate()`](https://p5js.org/reference/#/p5/rotate)
+- 📜 [`scale()`](https://p5js.org/reference/#/p5/scale)
+- 📜 [`push()`](https://p5js.org/reference/#/p5/push)
+- 📜 [`pop()`](https://p5js.org/reference/#/p5/pop)
+- 🏷️ [Translate Example](https://p5js.org/examples/transform-translate.html)
+- 🏷️ [Scale Example](https://p5js.org/examples/transform-scale.html)
+- 🏷️ [Rotate Example](https://p5js.org/examples/transform-rotate.html)
+- 🏷️ [Translate / Rotate Arm Example](https://p5js.org/examples/transform-arm.html)

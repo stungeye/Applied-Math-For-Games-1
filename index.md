@@ -17,7 +17,7 @@ By the end of this course, students should be able to:
 * Distinguish between types of numbers and how they are represented in computer languages. 
 * Employ trigonometry to solve basic rotation and distance problems. 
 * Use vector mathematics to simulate forces, acceleration, and motion on a 2D plane. 
-* Analyze and predict events occurring in systems and games using statistics and probability. 
+* Analyze and trigger events occurring in systems and games using statistics. 
 
 ## Course Notes
 

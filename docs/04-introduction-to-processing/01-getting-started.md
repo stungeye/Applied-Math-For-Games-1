@@ -22,13 +22,13 @@ p5.js is a web interpretation of [Processing](https://processing.org/), the long
 
 <!-- prettier-ignore-end -->
 
-## Getting Started
+## First Things First 
 
 It's easy to get started with p5.js using the web editor IDE at [editor.p5js.org](https://editor.p5js.org/).
 
-Start by creating an account or logging in using your Github or Google account. You should then explore some of the examples available under the `File` => `Examples` menu.
+Start by creating an account or logging in using your Github or Google account. You can then explore some of the examples available under the `File` => `Examples` menu.
 
-p5.js can also be installed locally. We will look into that option below as well.
+You can also install p5.js locally. We will look into that option below as well.
 
 🎵 Note:
 {: .label .label-yellow}
@@ -129,11 +129,13 @@ function draw() {
 }
 ```
 
-The result:
+[Edit using P5.js Web Editor](https://editor.p5js.org/stungeye/sketches/GAMvJ4lBm)
 
-<iframe height="255" width="255" scrolling="no" frameborder="no" src="https://editor.p5js.org/stungeye/embed/GAMvJ4lBm"></iframe>
+The Result:
 
-## Setup / Update / Draw
+<iframe src="https://editor.p5js.org/stungeye/embed/GAMvJ4lBm" scrolling="no" frameborder="no" width="257" height="257"></iframe>
+
+## Setup and Draw
 
 At the heart of every p5.js application are the `setup` and `draw` methods.
 
@@ -147,3 +149,5 @@ The speed at which p5.js will attemp to call the `draw` method is controlled by 
 
 This is also an optional 📜 [`preload()`](https://p5js.org/reference/#/p5/preload) function for preloading assets.
 {: .d-inline-block }
+
+<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
