@@ -60,7 +60,7 @@ The new script tags should come after the main `p5.js` script tag.
 
 ## Learning Examples
 
-Throughout these notes I've linked to a number of example sketches on the official p5js.org website. 
+Throughout these notes I've linked to a number of example sketches on [the official p5js.org website](https://p5js.org). 
 
 The site includes 🏷️ [many many more amazing examples](https://p5js.org/examples/) you can learn from.
 
