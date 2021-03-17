@@ -89,7 +89,6 @@ Although you can [manually download the required p5.js files](https://p5js.org/d
 3. Select your newly created project folder from step 1.
 4. Add your project folder to your the VS Code workspace.
 5. With the `index.html` file open in the editor open the Live Server using ALT-L ALT-O.
-6. (Optional) Open the command pallet and type `Install p5.js Contributor Library`. (Only seems to work if you have a single project folder in your VS Code Workspace.)
 
 A browser tab should open to: `127.0.0.1:5500/index.html`
 
@@ -111,7 +110,7 @@ Overview of the files and folders in a local p5.js project:
 
 ## Hello World Using p5.js
 
-Create a new p5.js project using either the web editor or the local development process described above.
+Create a new p5.js project using the web editor or the local development process described above.
 
 Open the `sketch.js` file and change the `setup()` and `draw()` methods to the following:
 
@@ -150,4 +149,8 @@ The speed at which p5.js will attemp to call the `draw` method is controlled by 
 This is also an optional 📜 [`preload()`](https://p5js.org/reference/#/p5/preload) function for preloading assets.
 {: .d-inline-block }
 
-<script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+### Resources
+
+- 📜 [`frameCount`](https://p5js.org/reference/#/p5/frameCount) - Number of frames displayed since the sketch began.
+- 📜 [`millis()`](https://p5js.org/reference/#/p5/millis) - Number of milliseconds since the sketch began.
+- 📜 [`deltaTime`](https://p5js.org/reference/#/p5/deltaTime) - Time since previous frame in milliseconds. 

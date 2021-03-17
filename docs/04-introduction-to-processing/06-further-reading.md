@@ -9,7 +9,7 @@ nav_order: 6
 # Further Reading
 {: .no_toc }
 
-We've only just scratched the surface of what is possible using openFrameworks. This section includes two sample projects, information about oF addons, and links to all sorts of example code.
+We've only just scratched the surface of what is possible using p5.js. This section includes information about 3rd party p5.js libraries and links to all sorts of example code.
 
 ## Table of Contents
 {: .no_toc }
@@ -19,102 +19,56 @@ We've only just scratched the surface of what is possible using openFrameworks. 
 
 <!-- prettier-ignore-end -->
 
-## oF Add Ons
+## Community Libraries
 
-openFramworks comes packaged with a number of addons that add extra functionality to the toolkit. A large number of community supported addons are also available through [ofxaddons.com](https://ofxaddons.com).
+The p5js.org website [includes a section on all the community libraries you can use with p5.js](https://p5js.org/libraries/). There are libraries for animation, geolocation, speech synthesis, GUI toolkits, machine learning, and so much more. 
 
-The included addons can be found in the `addons` folder. Any community addons you wish to use should be added to this folder.
+### Resources 
 
-Addons can be added to new or existing projects using the project generator app.
+* 🧰 [p5.js Community Libraries](https://p5js.org/libraries/)
+* 🔰 [Making Your Own p5.js Library Guide](https://github.com/processing/p5.js/blob/main/contributor_docs/creating_libraries.md)
 
-A few of the included addons:
+## Installing Libraries (Local Dev)
 
-- 📗 [ofxGui](https://openframeworks.cc/documentation/ofxGui/) - Handy parameter tweaking GUI with sliders, checkboxes, and buttons. 🗃️ [Examples](https://github.com/openframeworks/openFrameworks/tree/master/examples/gui).
-- 📗 [ofxBox2d](https://github.com/vanderlin/ofxBox2d) - 2D physics engine that wraps [Box2d](https://box2d.org/). 🗃️ [Examples](https://github.com/vanderlin/ofxBox2d).
-- 📗 [ofxNetwork](https://openframeworks.cc/ja/documentation/ofxNetwork/) and [ofxOSC](https://openframeworks.cc/documentation/ofxOsc/) - TCP, UPC, and OSC networking libraries. 🗃️ [Examples](https://github.com/openframeworks/openFrameworks/tree/master/examples/communication).
-- 📗 [ofxOpenCV](https://openframeworks.cc/documentation/ofxOpenCv/) - Wraps the powerful [OpenCV computer vision library](https://opencv.org/). 🗃️ [Examples](https://github.com/openframeworks/openFrameworks/tree/master/examples/computer_vision).
-- 📗 [ofxSVG](https://openframeworks.cc/documentation/ofxSVG/) - Vector graphics loader for SVG files. 🗃️ [Example](https://github.com/openframeworks/openFrameworks/tree/master/examples/input_output/svgExample).
-- 📗 [ofxXMLSettings](https://openframeworks.cc/documentation/ofxXmlSettings/) - Simple XML loader and saver. 🗃️ [Example](https://github.com/openframeworks/openFrameworks/tree/master/examples/input_output/xmlExamples).
+Although you can manually download libraries to your project folder, the easiest way to install community libraries is using the 🧰 [p5.vscode extension](https://marketplace.visualstudio.com/items?itemName=samplavigne.p5-vscode).
 
-### Resources
+With your project open in a workspace in VS Code:
 
-- 📺 [Project Generator and Addons Tutorial - Lewis Lepton on YouTube](https://www.youtube.com/watch?v=sgU_r4Kn_rk&list=PL4neAtv21WOlqpDzGqbGM_WN2hc5ZaVv7&index=3) (5m47s)
-- 📙 [Addon HowTo @ openframeworks.cc](https://openframeworks.cc/learning/01_basics/how_to_add_addon_to_project/)
+- Open the command pallet (CTRL-SHIFT-P)
+- Then type: `Install p5.js Contributor Library` and hit enter
+- Select the library you wish to install
 
-## Other Handy Utility Classes
+The library will be downloaded to the `libraries` folder and a new `<script>` tag will be added to your `index.html` file to load the library.
 
-There's so much more to openFrameworks! You can start by exploring these handy classes:
+⚡ Warning:
+{: .label .label-red}
 
-- 📗 [`ofRectangle`](https://openframeworks.cc/documentation/types/ofRectangle/) - Super handy for simple collision detection hit boxes.
-- 📗 [`ofDirectory`](https://openframeworks.cc/documentation/utils/ofDirectory/), [`ofFilePath`](https://openframeworks.cc/documentation/utils/ofFilePath/) and [`ofFile`](https://openframeworks.cc/documentation/utils/ofFile/) - For working with files.
-- 📗 [`ofURLFileLoader`](https://openframeworks.cc///documentation/utils/ofURLFileLoader/) - For loading data from URLs.
-- 📗 [And many more!](https://openframeworks.cc/documentation/)
+This only seems to work if you have a single project folder in your VS Code Workspace.
+{: .d-inline-block}
 
-## Example Code to Study
+## Installing Libraries (Web Editor)
 
-You'll find two example programs below, but there are lots of examples out there you can learn from:
+When using the [p5.js Web Editor](https://editor.p5js.org) you can install libraries by manually uploading the library's javascript file(s) and adding the appropriate `<script>` tag(s) to the `index.html`. 
 
-- 🗃️ [Official openFrameworks Examples](https://github.com/openframeworks/openFrameworks/tree/master/examples) - These are also found in the `examples` folder of the openFrameworks zip file.
-- 📚 [Cookbook of Common Tasks from ofAuckland](https://sites.google.com/site/ofauckland/examples)
-- 🗃️ [Example Source from Mastering openFrameworks Book](https://github.com/firmread/ofDemystified)
-- 📺 [Lewis Lepton's 76 Video openFrameworks YouTube series](https://www.youtube.com/playlist?list=PL4neAtv21WOlqpDzGqbGM_WN2hc5ZaVv7) and 🗃️ [the associated github repo](https://github.com/lewislepton/openFrameworksTutorialSeries).
-- 📺 Dan Buzzo's [openFrameworks superBasics YouTube series](https://www.youtube.com/playlist?list=PL6QF0yo3Zj7DbN76C5-_6VCDF5CPBIz6l) and [his many other playlists](https://www.youtube.com/c/danbuzzo/featured).
+  Some libraries might also provide you with a way to load the script from a content delivery network (CDN). Library readyoume provides you with a script tag that points to a CDN version of the library, then you need only add that script tag to your `index.html` file.
 
-## Example Sketch One - Mouse Trails
+⚡ Warning:
+{: .label .label-red}
 
-Manually clearing the background with an alpha channel to create some mouse trails:
+The new script tags should come after the main `p5.js` script tag. 
+{: .d-inline-block}
 
-```cpp
-void ofApp::setup() {
-    ofSetBackgroundAuto(false); // Disable automatic background clearing.
-    ofEnableAlphaBlending();    // Allow alpha channel transparency.
-    ofSetCircleResolution(50);  // Make circles smoother than the default.
-    ofSetFrameRate(60);         // Set the framerate to 60 frames per second.
-}
+## Learning Examples
 
-void ofApp::draw() {
-    ofSetColor(0, 0, 0, 10); // Set the fill color to black with a low alpha value.
-    ofDrawRectangle(0, 0, ofGetWidth(), ofGetHeight()); // Draw a rectangle that covers the canvas.
-    ofSetColor(255, 255, 255, 255); // Set the fill color to white with full alpha.
-    ofDrawCircle(ofGetMouseX(), ofGetMouseY(), 30); // Draw circle at the mouse position.
-}
-```
+Throughout these notes I've linked to a number of example sketches on the official p5js.org website. 
 
-## Example Sketch Two - Twisted Squares
+The site includes 🏷️ [many many more amazing examples](https://p5js.org/examples/) you can learn from.
 
-Scaling and rotation of a circle controlled by the mouse position:
+[Dan Shiffman's Coding Train channel on YouTube](https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw) (also linked to in these notes) is also a great source of p5.js examples and inspiration. He also has [a Coding Train website](https://thecodingtrain.com) that embeds all his videos with links to the source.
 
-```cpp
-void ofApp::setup() {
-    ofSetFrameRate(60); // Set frame rate to 60 FPS.
-    ofSetRectMode(OF_RECTMODE_CENTER); // Rectangle x/y positions specify the shape's center.
-    ofNoFill(); // Don't fill shapes.
-}
+## Other Important Links
 
-void ofApp::draw() {
-    // Pink and blue circular background gradient.
-    ofBackgroundGradient(ofColor::deepPink, ofColor::deepSkyBlue, OF_GRADIENT_CIRCULAR);
-
-    // Translate the coordinate system to the middle of the canvas.
-    ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2);
-
-    // Draw 100 circles of increasing size and rotation.
-    for (auto i = 0; i < 100; ++i) {
-        // Use the x position of the mouse to set the rotation.
-        ofRotateZDeg((double)ofGetMouseX() / 50);
-        // Use the y position of the mouse to set the scaling.
-        double scaleFactor = 1 + (double)ofGetMouseY() / (double)ofGetHeight() / 5;
-        ofScale(scaleFactor, scaleFactor);
-        // Draw the rotated and scaled square.
-        ofDrawRectangle(0, 0, 1, 1);
-    }
-}
-```
-
-## Important Links
-
-- 🔍 [openFrameworks Forums](https://forum.openframeworks.cc/) - Sign up today. :)
-- 📗 [API Documentation @ openframeworks.cc](https://openframeworks.cc/documentation/)
-- 📘 [The ofBook @ openframeworks.cc](https://openframeworks.cc/ofBook/chapters/foreword.html)
-- 📙 [How-Tos @ openframeworks.cc](https://openframeworks.cc/learning/)
-- 🗃️ [openFramworks Github Repo](https://github.com/openframeworks/)
+- 🔍 [Processing Forums - p5.js Category](https://discourse.processing.org/c/p5js) - Sign up today. :)
+- 📜 [API Documentation @ p5js.org](https://p5js.org/reference/)
+- 🔰 [All p5.js Learning Guides](https://p5js.org/learn/) 
+- 📦 [p5.js Repository on GitHub](https://github.com/processing/p5.js) 

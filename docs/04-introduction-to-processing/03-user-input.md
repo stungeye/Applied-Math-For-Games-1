@@ -64,6 +64,72 @@ There are a number of function you can define that will be called for particular
 * 🏷️ [Mouse Press Example](https://p5js.org/examples/input-mouse-press.html)
 * 🏷️ [Drag and Drop Example](https://p5js.org/examples/input-mouse-functions.html)
 
+## Mapping Mouse Input
+
+When using positional mouse values, we often wish to map the screen positions to a range of values that are more useful for our sketch. For example, imagine a sketch where the mouse position controls the background color, with the red component of the color controlled by `mouseX` and the blue component of the color controlled by `mouseY`. 
+
+A naive approach would be:
+
+```javascript
+function draw() {
+  background(mouseX, 0, mouseY);
+}
+```
+
+Because the color components need to be in the range of 0 to 255, this would only work for a sketch with a 255x255 canvas size. This is where the 📜 [`map()`](https://p5js.org/reference/#/p5/map) function comes into play. With `map()` we can re-map a number from one range of values to another:
+
+```javascript
+let redValue = map(mouseX, 0, width, 0, 255);
+```
+
+The first argument is the value being remap, the next two arguments are the initial range (in our case `mouseX` goes from 0 to the width of the canvas), and the final two arguments are the range we want to map to (in our case 0 to 255).
+
+### Resources
+
+- 🚂 [The Map() Function - Coding Train Video](https://www.youtube.com/watch?v=nicMAoW6u1g)
+
+## Constraining Mouse Input
+
+In some environments (like the p5 Web Editor) `mouseX` and `mouseY` can return values larger than the screen dimensions, so we can use the 📜 [`constrain`](https://p5js.org/reference/#/p5/constrain) function to set minimum and maximum limits:
+
+```javascript
+let xPos = constrain(mouseX, 0, width); // Constrain xPos to 0 to 200.
+let redValue = map(xPos, 0, width, 0, 255); // Map xPos to 0 to 255 range.
+```
+
+### Resources
+
+- 📺 [map() and constrain() in p5.js - Golan Levin Tutorial](https://www.youtube.com/watch?v=xMZX7uJtF5Q)
+
+## Map and Constrain Example
+
+The `map()` and `constrain()` functions are useful beyond just mouse position, but here's a full demo of using them with the mouse:
+
+```javascript
+function setup() {
+  createCanvas(200, 300);
+  textSize(32);
+  fill(255);
+}
+
+function draw() {
+  let xPos = constrain(mouseX, 0, width); // Constrain xPos to 0 to 200.
+  let redValue = map(xPos, 0, width, 0, 255); // Map xPos to 0 to 255 range.
+  
+  let yPos = constrain(mouseY, 0, height); // Constrain yPos to 0 to 300.
+  let blueValue = map(yPos, 0, height, 0, 255); // Map xPos to 0 to 255 range.
+  
+  background(redValue, 0, blueValue);
+  text(`red: ${redValue}\nblue: ${blueValue}`, 10, 40);
+}
+```
+
+[Edit Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/lA2pKfmpt)
+
+The Result:
+
+<iframe src="https://editor.p5js.org/stungeye/embed/lA2pKfmpt" scrolling="no" frameborder="no"  width="200" height="300"></iframe>
+
 ## Keyboard Variables
 
 There are three variables related to the state of keys pressed on the keyboard:

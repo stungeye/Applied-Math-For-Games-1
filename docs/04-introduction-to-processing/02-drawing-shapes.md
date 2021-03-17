@@ -23,7 +23,7 @@ Drawing 2D shapes to an HTML canvas with p5.js is a snap.
 
 ![Canvas Coordinates](canvas-coordinates.png){: .medium .inline}
 
-When working in 2D, the canvas can be consider to be a 2D grid of pixels. This is similar to the x/y cartesian coordinates used in high-school algebra, but with a few changes:
+When working in 2D, the canvas can be consider to be a grid of pixels. This is similar to the x/y cartesian coordinates used in high-school algebra, but with a few changes:
 
 - The origin (where x and y are zero) is in the top left corner of the screen.
 - The y-axis is flipped such that values of y increase as you go down the screen.
@@ -58,7 +58,7 @@ strokeWeight(5); // If not set, line thickness is set to 1 pixel.
 line(0, 0, width, height); // Line from top left to bottom right corners.
 ```
 
-For anti-aliasing of lines is enabled by default but can be toggled using 📜 [`smooth()`](https://p5js.org/reference/#/p5/smooth) and 📜 [`noSmooth`](https://p5js.org/reference/#/p5/noSmooth).
+Anti-aliasing of lines is enabled by default but can be toggled using 📜 [`smooth()`](https://p5js.org/reference/#/p5/smooth) and 📜 [`noSmooth`](https://p5js.org/reference/#/p5/noSmooth).
 
 ### Resources
 
@@ -68,13 +68,13 @@ For anti-aliasing of lines is enabled by default but can be toggled using 📜 [
 
 There are a number of methods that allow you to draw 2D shapes to the canvas:
 
-- 📜 [`arc()`](https://p5js.org/reference/#/p5/arc)
-- 📜 [`ellipse()`](https://p5js.org/reference/#/p5/ellipse)
-- 📜 [`circle()`](https://p5js.org/reference/#/p5/circle)
-- 📜 [`quad()`](https://p5js.org/reference/#/p5/quad)
-- 📜 [`rect()`](https://p5js.org/reference/#/p5/rect)
-- 📜 [`square()`](https://p5js.org/reference/#/p5/square)
-- 📜 [`triangle()`](https://p5js.org/reference/#/p5/triangle)
+- 📜 [`arc()`](https://p5js.org/reference/#/p5/arc) - Portions of a circle.
+- 📜 [`ellipse()`](https://p5js.org/reference/#/p5/ellipse) - Squished circles. 
+- 📜 [`circle()`](https://p5js.org/reference/#/p5/circle) - Plain old circles.
+- 📜 [`quad()`](https://p5js.org/reference/#/p5/quad) - Four point quadrilateral polygon.
+- 📜 [`rect()`](https://p5js.org/reference/#/p5/rect) - Rectangle.
+- 📜 [`square()`](https://p5js.org/reference/#/p5/square) - Square.
+- 📜 [`triangle()`](https://p5js.org/reference/#/p5/triangle) - Triangle.
 
 ### Resources
 
@@ -149,7 +149,7 @@ fill(255, 0, 0, 127); // Red, 50% transparent
 
 It's our responsibility to clear the canvas at the start of every frame. We do this using 📜 [`background()`](https://p5js.org/reference/#/p5/ground), which can take a color variable, or the same color arguments as `color()`, `fill()`, or `stroke()`.
 
-```cpp
+```javascript
 void draw() {
   background(50, 90, 200, 255); // Clear background with R, G, B, A (0-255)
   circle(width / 2, height / 2, 50, 50); // Circle draws over background.
@@ -167,7 +167,7 @@ Interesting trailing effects can be made using backgrounds with alpha transparen
 
 We can change the position, scale, and rotation of the coordinate system using a variety of translate and rotate methods.
 
-```cpp
+```javascript
 translate(200, 200); // Move the origin to (200, 200)
 rotate(45); // Rotate coordinate system by 45 degree (around z)
 rectangle(0, 0, 100, 100); // Draw a diamond.
@@ -175,24 +175,84 @@ rectangle(0, 0, 100, 100); // Draw a diamond.
 
 We can also save and restore the state of the coordinate system using `push()` and `pop()`.
 
-```cpp
+```javascript
+stroke(0, 200, 0); // Green stroke color.
 push(); // Save the original unrotated coordinate system with origin top left.
-translate(200, 200, 0); // Move the origin to (200, 200)
-rotate(45); // Rotate coordinate system by 45 degree (around z)
+strokeWeight(5); // 5 pixel stroke width.
+stroke(200, 0, 0); // Red stroke color.
+translate(100, 50); // Move the origin to (100, 50)
+rotate(PI / 4); // Rotate coordinate system by PI/4 radians (45 degrees).
 scale(2, 2); // Double the scale.
-rect(0, 0, 100, 100); // Draw a diamond.
-pop(); // Restore the original coordinate system.
-rect(0, 0, 100, 100); // Draw a square in the top left corner.
+rect(0, 0, 50, 50); // Draw a red diamond with thick lines.
+pop(); // Restore the original drawing styles and coordinate system.
+rect(5, 5, 50, 50); // Draw a green square with a thin lines near top left corner.
 ```
+
+⚡ Warning:
+{: .label .label-red}
+
+`translate`, `rotate`, and `scale` are cumulative within `draw()` but reset each frame.
+{: .d-inline-block}
+
+[Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/YsG9sT_mL)
+
+The Result:
+
+<iframe src="https://editor.p5js.org/stungeye/embed/YsG9sT_mL" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+  
 
 ### Resources
 
-- 📜 [`translate()`](https://p5js.org/reference/#/p5/translate)
-- 📜 [`rotate()`](https://p5js.org/reference/#/p5/rotate)
-- 📜 [`scale()`](https://p5js.org/reference/#/p5/scale)
-- 📜 [`push()`](https://p5js.org/reference/#/p5/push)
-- 📜 [`pop()`](https://p5js.org/reference/#/p5/pop)
+- 📜 [`translate()`](https://p5js.org/reference/#/p5/translate) - Change the location of the origin.
+- 📜 [`rotate()`](https://p5js.org/reference/#/p5/rotate) - Rotate the coordinate system.
+- 📜 [`scale()`](https://p5js.org/reference/#/p5/scale) - Scale the coordinate system and the stroke weight.
+- 📜 [`push()`](https://p5js.org/reference/#/p5/push) - Saves current drawing styles and coordinate transformation, rotation, and scale.
+- 📜 [`pop()`](https://p5js.org/reference/#/p5/pop) - Restore settings saved by `push()`.
 - 🏷️ [Translate Example](https://p5js.org/examples/transform-translate.html)
 - 🏷️ [Scale Example](https://p5js.org/examples/transform-scale.html)
 - 🏷️ [Rotate Example](https://p5js.org/examples/transform-rotate.html)
 - 🏷️ [Translate / Rotate Arm Example](https://p5js.org/examples/transform-arm.html)
+
+## Shape Example - Twisted Squares
+
+Here's an example that shows off some possibilities with shapes, colors, scale, and rotation. 
+
+```javascript
+function setup() {
+  createCanvas(400, 400);
+  rectMode(CENTER); // Rectangle positions point to the center, not top corner.
+  noFill(); // Don't fill shapes.
+}
+
+function draw() {
+  background(255); // Clear the screen with white.
+  translate(width / 2, height / 2); // Translate to center of sketch.
+  
+  // Calculate scale and rotation.
+  let scaleFactor = map(constrain(mouseX, 0, width), 0, width, 1.1, 1.5);
+  let rotation = map(constrain(mouseY, 0, height), 0, height, 0, PI / 8);
+
+  // Draw 60 circles of increasing size and rotation.
+  let maxSquares = 60;
+  for (let i = 1; i < maxSquares; ++i) {
+    rotate(rotation); // The x position of the mouse mapped 0 to PI/8 sets the rotation.
+    scale(scaleFactor); // The y position of the mouse mapped 1.1 to 1.5 sets the scale.
+    strokeWeight(1 / (scaleFactor * i)); // Stroke weight shouldn't increase as we scale.
+    // Color transitions from pink to blue as squares grow in size.
+    stroke(lerpColor(color('DeepPink'), color('DeepSkyBlue'), i / maxSquares));
+    rect(0, 0, 4, 4); // Draw the rotated and scaled square.
+  }
+}
+```
+
+⏳ Wait For It:
+{: .label .label-blue}
+
+We'll learn more about mouse input, 📜 [`map()`](https://p5js.org/reference/#/p5/map), and 📜 [`constrain()`](https://p5js.org/reference/#/p5/constrain) next.
+{: .d-inline-block}
+
+[Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/I8RWTz0Zr)
+
+The Result:
+
+<iframe src="https://editor.p5js.org/stungeye/embed/I8RWTz0Zr" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
