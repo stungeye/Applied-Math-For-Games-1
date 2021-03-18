@@ -21,9 +21,9 @@ This section will demonstrate how to display images, render text, and play sound
 
 ## Persistent Variables
 
-The variables we've dealt with so far have been function parameters and local variables, both of which go out of scope after each frame. To preserve state across frames we can define global variables outside of the `setup()` and `draw()` functions. 
+The variables we've dealt with so far have been function parameters and local variables, both of which go out of scope after each frame. To preserve state across frames we can define global variables outside of the `setup()` and `draw()` functions.
 
-The next two sections give us the opportunity to work with global variables defined in this manner. 
+The next two sections give us the opportunity to work with global variables defined in this manner.
 
 ⚡ Warning:
 {: .label .label-red}
@@ -37,7 +37,7 @@ Anytime we are loading a media asset like an image, or a font, or a sound, we ne
 
 ## Adding Images to a Sketch
 
-Images should be placed into an `assets` folder within your p5.js project. 
+Images should be placed into an `assets` folder within your p5.js project.
 
 If you are using the p5.js web editor you will need to expand the "Sketch Files" area (See [#8 of the p5.js Tour](/Applied-Math-For-Games-1/docs/04-introduction-to-processing/01-getting-started.html#tour-of-the-p5js-web-editor)) and then upload the image:
 
@@ -57,7 +57,7 @@ Images must be loaded in a special `preload()` function:
 
 ```javascript
 function preload() {
-  ramImage = loadImage('assets/goat.png'); // Preload the image.
+  ramImage = loadImage("assets/goat.png"); // Preload the image.
 }
 ```
 
@@ -67,7 +67,7 @@ In `setup()` we can optionally scale the image:
 function setup() {
   createCanvas(300, 300);
   // Scale the image by one third:
-  ramImage.resize(ramImage.width / 3, ramImage.height / 3); 
+  ramImage.resize(ramImage.width / 3, ramImage.height / 3);
   frameRate(1); // One frame per second please.
 }
 ```
@@ -104,15 +104,15 @@ The RGBA color value of any image pixel can be retrieved and set:
 
 ```javascript
 let color = ram.get(45, 55); // Get the p5.color value at x = 45 and y = 55
-ram.set(5, 10, color('red')); // Set the pixel at (5,10) red.
+ram.set(5, 10, color("red")); // Set the pixel at (5,10) red.
 ram.updatePixels(); // The set() must be paired with an updatePixels().
 ```
 
 ### Resources
 
-* 📜 [`p5.image get()`](https://p5js.org/reference/#/p5.Image/get) - Get and image pixel or region.
-* 📜 [`p5.image set()`](https://p5js.org/reference/#/p5.Image/set) - Set and image pixel or region.
-* 📜 [`p5.image pixels`](https://p5js.org/reference/#/p5.Image/pixels) - The get/set operations are slow so we can request access to the raw pixel array.
+- 📜 [`p5.image get()`](https://p5js.org/reference/#/p5.Image/get) - Get and image pixel or region.
+- 📜 [`p5.image set()`](https://p5js.org/reference/#/p5.Image/set) - Set and image pixel or region.
+- 📜 [`p5.image pixels`](https://p5js.org/reference/#/p5.Image/pixels) - The get/set operations are slow so we can request access to the raw pixel array.
 
 ## Simple Text
 
@@ -138,7 +138,7 @@ Grab a font from your `c:\windows\fonts` folder or a free font source like [font
 
 ```javascript
 function preload() {
-  lemon = loadFont('assets/lemon.ttf'); // Load our TrueType font.
+  lemon = loadFont("assets/lemon.ttf"); // Load our TrueType font.
 }
 
 function setup() {
@@ -153,7 +153,7 @@ function draw() {
   background(0); // Clear the background in black.
   translate(width / 2, height / 2); // Translate to the middle of the canvas.
   rotate(frameCount / 100); // Rotate based on the frame count.
-  text('upsidedown', 0, 0); // Display our text string.
+  text("upsidedown", 0, 0); // Display our text string.
 }
 ```
 
@@ -178,15 +178,15 @@ Depending on your web browser you should be able to load and play mp3, ogg, wav,
 
 ## Loading and Playing a Sound
 
-Like images and fonts, you should load sounds in the `preload()` function. 
+Like images and fonts, you should load sounds in the `preload()` function.
 
-There's so much you can do with sounds in p5.js, but here we'll simply show how to load and play an mp3 file in the `assets` folder:
+There's so much you can do with sounds in p5.js, but here we'll simply show how to load and play [an mp3 file](ka-ching.mp3) in the `assets` folder:
 
 ```javascript
 let kaChing;
 
 function preload() {
-  kaChing = loadSound('assets/ka-ching.mp3'); // Preload the sound.
+  kaChing = loadSound("assets/ka-ching.mp3"); // Preload the sound.
 }
 
 function setup() {
@@ -202,7 +202,7 @@ function draw() {
 }
 
 function mousePressed() {
-    kaChing.play(); // Play sound on mouse click.
+  kaChing.play(); // Play sound on mouse click.
 }
 ```
 
@@ -217,7 +217,7 @@ The Result:
 - 📜 [`loadSound()`](https://p5js.org/reference/#/p5/loadSound)
 - 📜 [`play()`](https://p5js.org/reference/#/p5.SoundFile/play)
 - 📜 [`pause()`](https://p5js.org/reference/#/p5.SoundFile/pause)
-- 📜 [`stop()`]https://p5js.org/reference/#/p5.SoundFile/stop)
+- 📜 [`stop()`](https://p5js.org/reference/#/p5.SoundFile/stop)
 - 📜 [`loop()`](https://p5js.org/reference/#/p5SoundFile/loop)
 - 📜 [The Full `p5.sound` API](https://p5js.org/reference/#/libraries/p5.sound) - SO MUCH MOAR!
 - 🏷️ [Playback Rate Example](https://p5js.org/examples/sound-playback-rate.html)
