@@ -342,72 +342,150 @@ We restrict the number of digits to the left of the decimal point to one.
 
 ## IEEE 754 Floating Point Format
 
-So how exactly are real numbers represented by a computer? Most programming languages use [the IEEE 754 standard](https://en.wikipedia.org/wiki/IEEE_754). In this standard 32-bit floating point numbers are considered "single" precision, and are normally just called floats. 64-bit floating point numbers are then said to have "double" precision, and are normally referred to as doubles.
+So how exactly are real numbers represented by a computer?
 
-This standard allows us to represent real numbers using a form of scientific notion.
+They use a form of binary scientific notation, that's how!
 
+Most programming languages use [the IEEE 754 standard](https://en.wikipedia.org/wiki/IEEE_754), which has 32-bit single-precision "floats" and 64-bit double-precision "doubles".
+
+## Why a Standard
+
+Before float standards existed different hardware manufacturers and languages all used their own quirky formats.
+
+IEEE 754 not only specifies the format, but also the algorithms for arithmetic, the rounding rules, and the tests implementations must pass, like:
+
+```
 x + y == y + x
 x + 0 == x
 if (x == y) then x - y == 0
+```
 
-num = (-1^signBit) \* 2^exponent x 1.mantissa
+## IEEE 754 Binary Format
 
-32 bit = 1 sign bit + 8 exponent bits + 23 mantissa bits
-64 bit = 1 sign bit + 11 exponent bits + 52 mantissa bits
+In IEEE 754 a number is represented in binary scientific notation. So instead of **m \* 10<sup>n</sup>** it's:
 
-Special floats for:
+**number = m \* 2<sup>n</sup>**
 
-- Divide by zero
-- NaN
-- Signed Infinity
-- Signed Zero (for underflow and overflow of very small numbers.)
+Or more specifically:
 
-  1.0 in floating point:
+**num = -1<sup>sign</sup> \* mantissa \* 2<sup>exponent</sup>**
 
-num = (-1^signBit) \* 2^exponent x 1.mantissa
-1.0 = (-1^0) \* 2^0 x 1.0
-1.0 = [0][00000000][00000000000000000000000]
+Where:
 
-But not quite:
+- The **mantissa** is a binary number decimal number of the form: `1.######...`
+- The **exponent** is also a binary number.
+- The **sign** bit allows for positive (0) and negative numbers (1).
 
-1.0 = [0][01111111][00000000000000000000000]
+|     Bit Size     | Common Name |  Sign Bit  |     Exponent     |     Mantissa     |
+| :--------------: | :---------: | :--------: | :--------------: | :--------------: |
+| 32-bit (4 bytes) |    float    | 1 sign bit | 8 exponent bits  | 23 mantissa bits |
+| 64-bit (8 bytes) |   double    | 1 sign bit | 11 exponent bits | 52 mantissa bits |
 
-Exponent is shift-127 encode so that all zeros can actually represent zero.
+🎵 Note:
+{: .label .label-yellow}
 
-So if :
-1.0 = [0][01111111][00000000000000000000000]
-[0][01111111][00000000000000000000001] = ?
-1.0000001192092896
+There's a trade-off between precision (large mantissa) and range (large exponent).
+{: .d-inline-block}
 
-This is std::numeric_limits<T>::epsilon in C++. The difference between 1 and the next float.
-Useful for "almost equal" computation.
+## IEEE 754 Example: The Number One (Almost!)
 
-Denormalized Number??? Solution to sweep hole at zero?
+Let's try to represent 1.0 using the IEEE 754 binary format:
 
-Most of the precision lies between 0.0 and 0.1.
+**num = -1<sup>sign</sup> \* mantissa \* 2<sup>exponent</sup>**  
+**1.0 = -1<sup>0</sup> \* 1.0 \* 2<sup>0</sup>**
 
-If you can keep your calculations normalized between -1 and +1 you can get decent precision.
+```
+[0][00000000][00000000000000000000000]
+ ▲         ▲                        ▲
+ └──Sign   └──Exponent              └──Mantissa
+```
 
-Example pi: 3.14159265
-In a 32bit float: 3.14159274
-Delta is: 0.00000009
+🎵 Note:
+{: .label .label-yellow}
 
-9 ulps (units in last place)
+Because the mantissa is always normalized to 1.# we don't need to store the leading zero.
+{: .d-inline-block}
 
-Relative error of pi:
+## IEEE 754 Example: The Number One (Actual!)
 
-(pi - floatpi) / pi = 2.864789 x 10^-8
+⚡ Warning:
+{: .label .label-red}
 
-[0][00000000][00000000000000000000000][g][R][s]
+But wait! Intuitively, shouldn't an all zero bitmask mean decimal zero?
+{: .d-inline-block}
 
-[G][r][S]
-[0][-][-] - Round Down
-[1][0][0] - Round Up if the mantissa LSB is 1, else down
-[1][0][1] - Round Up
-[1][1][0] - Round Up
-[1][1][1] - Round Up
+Let's add 127 to the exponent when we store it. This allows for:
 
-Special
+- Storage of exponent values from -127 to 127 using 00000000 to 11111111.
+- Special case when for zero: 0.0 = 0.0 \* 2<sup>-127</sup> (All Zeros!)
+
+So using IEEE 754, the decimal number 1.0 is actually stored as:
+
+```
+[0][01111111][00000000000000000000000]
+ ▲         ▲                        ▲
+ └──Sign   └──Exponent              └──Mantissa
+```
+
+## Another Example: -0.09375
+
+**Step 1:** Determine Sign Bit
+
+Sign Bit = 1 (Negative)
+
+**Step 2:** Convert decimal number to binary:
+
+0.09375 [decimal] = 0.00011 [binary]
+
+**Step 3:** Normalize the mantissa
+
+Mantissa = 0.00011 = 1.1 \* 2<sup>-4</sup>
+
+**Step 4:** Bias the exponent by adding 127 and convert to binary:
+
+Exponent = -4 + 127 = 123 [decimal] = 01111011 [binary]
+
+**Step 5:** Remove the leading one from the mantissa:
+
+Mantissa = 1.10000000000000000000000 = 10000000000000000000000
+
+**Step 6:** The full IEEE 754 binary representation of -0.09375
+
+```
+[1][01111011][10000000000000000000000]
+ ▲         ▲                        ▲
+ └──Sign   └──Exponent              └──Mantissa
+```
+
+## The "Next" Number After 1.0
+
+So which number comes after 1.0 in the available 32-bit floating point numbers?
+
+Let's add one to the mantissa:
+
+```
+[0][01111111][00000000000000000000001]
+ ▲         ▲                        ▲
+ └──Sign   └──Exponent              └──Mantissa
+```
+
+**nextNum = -1<sup>0</sup> \* 1.00000000000000000000001 \* 2<sup>0</sup>**  
+**nextNum = 1.00000000000000000000001 [binary]**
+**nextNum = 1.00000011920928955078125 [decimal]** _Divide 1 in half 23 times for the delta._
+
+⚡ Warning:
+{: .label .label-red}
+
+This doesn't mean a constant step value of 0.00000011920928955078125 between all floats!
+{: .d-inline-block}
+
+## Float Density
+
+Because float precision is based on its mantissa, and the mantissa is always the same size regardless of the size of the number being store, **there's an uneven distribution floats inside the range of possible real numbers**!
+
+Approximately half of all possible floats can be found in the -1.0 to +1.0 range!
+
+## Special Floats
 
 | Exponent | Mantissa      | Represents             |
 | -------- | ------------- | ---------------------- |
@@ -415,3 +493,24 @@ Special
 | 11111111 | Not All Zeros | NAN                    |
 | 00000000 | All Zeros     | Zero                   |
 | 00000000 | Not All Zeros | Subnormal (very small) |
+
+Which means that with the sign bit we can store +Infinity, -Infinity, and strangely +Zero, and -Zero.
+
+## SubNormal Numbers
+
+Denormalized Number??? Solution to sweep hole at zero?
+
+## Assignment Questions
+
+- Create your own UUID with a custom numeral system.
+- Determine # of floats in difference ranges of real numbers.
+- Plot float density across valid numeric range.
+
+## Further Reading
+
+- [Binary Game ](https://learningcontent.cisco.com/games/binary/index.html) - Like a super nerdy Tetris!
+- [Floating Point Guide](https://floating-point-gui.de/) - FAQ, Formats, Errors, Language Cheat Sheets.
+- [What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) - Deep dive!
+- [IEEE 754 @ Wikipedia](https://en.wikipedia.org/wiki/IEEE_754)
+- [CppCon 2015: John Farrier “Demystifying Floating Point"](https://www.youtube.com/watch?v=k12BJGSc2Nc) - 50 Minute Conference Talk
+- [Decimal to IEEE 754 Binary Format Video](https://www.youtube.com/watch?v=RuKkePyo9zk)
