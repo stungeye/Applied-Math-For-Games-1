@@ -286,6 +286,8 @@ You will sometime hear this denormalization strategy referred to as _gradual und
 - Create your own UUID with a custom numeral system.
 - Determine # of floats in difference ranges of real numbers.
 - Plot float density across valid numeric range.
+- Roll your own URL shortener using a custom numeral system.
+- Read / Write Base 64 Encoded Data
 
 ## Further Reading
 
