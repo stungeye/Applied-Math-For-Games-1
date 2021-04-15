@@ -1,7 +1,7 @@
 ---
 title: Particle Systems
 parent: Game Dev Math
-nav_order: 1
+nav_order: 6
 ---
 
 <!--prettier-ignore-start-->

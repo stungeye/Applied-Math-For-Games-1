@@ -1,7 +1,7 @@
 ---
 title: Vectors
 parent: Game Dev Math
-nav_order: 1
+nav_order: 3
 ---
 
 <!--prettier-ignore-start-->

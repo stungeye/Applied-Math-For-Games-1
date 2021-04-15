@@ -1,7 +1,7 @@
 ---
 title: Forces
 parent: Game Dev Math
-nav_order: 1
+nav_order: 4
 ---
 
 <!--prettier-ignore-start-->
