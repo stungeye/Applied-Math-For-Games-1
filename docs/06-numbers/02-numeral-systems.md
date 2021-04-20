@@ -59,7 +59,7 @@ Obvious, right? But what about numeral systems with other bases?
 
 ## Binary (Base-2)
 
-The binary numeral system is the base-2 system; it uses only two symbols: 0 and 1 (in Hindu-Arabic numerals)
+The binary numeral system is the base-2 system; it uses only two symbols: 0 and 1
 
 - A single **b**inary dig**it** is known as a _bit_
 - Four bits is called a _nibble_, i.e. 1010
@@ -198,6 +198,12 @@ Let's consider binary again:
 | Place Value Weight | 1 / 2          | 1 / 4          | 1 / 8          | 1 / 16         | 1 / 32         |
 | Place Value Weight | 0.5            | 0.25           | 0.125          | 0.0625         | 0.03125        |
 
+🎵 Note:
+{: .label .label-yellow}
+
+The weights double as we go left and halve as we go right.
+{: .d-inline-block}
+
 ## Real Decimal to Binary
 
 Let's take the number decimal number 23.59375. To start we could convert the whole number component, 23, into binary using our existing method described above.
@@ -225,5 +231,5 @@ To convert back to decimal we multiple each numeral by it's binary place value w
 
 - [Numeral System @ Wikipedia](http://en.wikipedia.org/wiki/Numeral_system)
 - [Hindu-Arabic Numerals @ Wikipedia](https://en.wikipedia.org/wiki/Arabic_numerals)
-- [Binary Numbers and Base Systems As Fast As Possible](https://www.youtube.com/watch?v=LpuPe81bc2w) - 3m47s Video (The Rest Is an Ad)
+- [Binary Numbers and Base Systems As Fast As Possible](https://www.youtube.com/watch?v=LpuPe81bc2w) - 3m47s Video (Remaing 2 minutes = Ad)
 - [Binary Game ](https://learningcontent.cisco.com/games/binary/index.html) - Like a super nerdy Tetris!

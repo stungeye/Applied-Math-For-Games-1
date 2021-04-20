@@ -262,6 +262,14 @@ Because float precision is based on its mantissa, and because the mantissa is th
 
 Approximately half of all possible floats can be found in the -1.0 to +1.0 range!
 
+| Range                            | Fixed Step Between Decimal Numbers |
+| -------------------------------- | ---------------------------------- |
+| 1 to 2                           | 2<sup>-23</sup>                    |
+| 2 to 4                           | 2<sup>-22</sup>                    |
+| 4 to 8                           | 2<sup>-21</sup>                    |
+| 8 to 16                          | 2<sup>-20</sup>                    |
+| 2<sup>n</sup> to 2<sup>n+1</sup> | 2<sup>n-23</sup>                   |
+
 ## Special Floats
 
 | Exponent | Mantissa      | Represents             |
@@ -281,6 +289,17 @@ To remove this gap, the standard represents the smallest non-zero numbers in a d
 
 You will sometime hear this denormalization strategy referred to as _gradual underflow_. In other words as floats in this denormalized range get closer and closer to zero they lost precision.
 
+## Extremes - 32-bit Examples
+
+Assuming just positive values:
+
+| IEEE 754 32-Bits                   | Explanation        | Value                                                                                         |
+| ---------------------------------- | ------------------ | --------------------------------------------------------------------------------------------- |
+| 0 00000000 00000000000000000000001 | Smallest Subnormal | 2<sup>−126</sup> \* 2<sup>-23</sup> = 2<sup>-149</sup> <br>≈ 1.4012984643 \* 10<sup>-45</sup> |
+| 0 00000000 11111111111111111111111 | Largest Subnormal  | 2<sup>−126</sup> \* (1 - 2<sup>-23</sup>) = <br>≈ 1.1754942107 \* 10<sup>-38</sup>            |
+| 0 00000001 00000000000000000000000 | Smallest Normal    | 2<sup>-126</sup> <br>≈ 1.1754943508 \* 10<sup>-38</sup>                                       |
+| 0 11111110 11111111111111111111111 | Largest Normal     | 2<sup>127</sup> \* (2 − 2<sup>-23</sup>) <br>≈ 3.4028234664 \* 10<sup>38</sup>                |
+
 ## Assignment Ideas
 
 - Create your own UUID with a custom numeral system.
@@ -292,7 +311,10 @@ You will sometime hear this denormalization strategy referred to as _gradual und
 ## Further Reading
 
 - [Floating Point Guide](https://floating-point-gui.de/) - FAQ, Formats, Errors, Language Cheat Sheets.
+- [How Floating Point Numbers Work](https://towardsdatascience.com/how-floating-point-numbers-work-1429907b6d1d) - Detailed blog post.
 - [What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) - Deep dive!
 - [IEEE 754 @ Wikipedia](https://en.wikipedia.org/wiki/IEEE_754)
 - [CppCon 2015: John Farrier “Demystifying Floating Point"](https://www.youtube.com/watch?v=k12BJGSc2Nc) - 50 Minute Conference Talk
-- [Decimal to IEEE 754 Binary Format Video](https://www.youtube.com/watch?v=RuKkePyo9zk)
+- [Decimal to IEEE 754 Binary Format Video](https://www.youtube.com/watch?v=RuKkePyo9zk) - 15 Minute Step-By-Step Conversion Demo
+- [Kahan Summation Algorithm](https://en.wikipedia.org/wiki/Kahan_summation_algorithms) - Compensated summation algorithm that reduces errors when summing floating point numbers.
+- [Binary Hand Dance](https://www.youtube.com/watch?v=OCYZTg3jahU) 🤘
