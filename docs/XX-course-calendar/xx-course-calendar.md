@@ -7,9 +7,7 @@ nav_order: 100
 
 ## Week 1 & 2 - Numbers and Basic Math
 
-- Different Types of Numbers: Natural, Whole, Integer, Rational, Real, Irrational, Imaginary, Complex
-- How Computers Represent Numbers: Numeral Systems, Fixed vs Floating Point, Precision and Error
-- Basic Math Group Challenge
+- [Numbers](/Applied-Math-For-Games-1/docs/06-numbers/00-numbers.html)
 
 ## Week 3 & 4 - (Re)Introduction to Javascript and P5js
 

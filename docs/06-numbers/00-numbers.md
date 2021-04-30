@@ -6,7 +6,7 @@ nav_order: 6
 
 # Numbers
 
-Numbers are the basis for all of mathematics. In this module, we'll explore how mathematicians group different types of numbers into separate categories. We'll review how numbers are represented in different numeral systems. And lastly, we investigate how whole and real numbers are represented and stored by computers.
+Numbers are the basis for all of mathematics. In this module, we'll explore how mathematicians group different types of numbers into separate categories. We'll review how numbers are represented in different numeral systems. And lastly, we investigate how whole and real numbers are stored in binary by computers.
 
 ## Objectives
 
