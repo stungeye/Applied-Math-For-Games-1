@@ -12,7 +12,8 @@ Numbers are the basis for all of mathematics. In this module, we'll explore how 
 
 Upon completion of this module, you should be able to:
 
-- Define the various categories of numbers used by mathematicians.
+- Describe the various categories of numbers used by mathematicians.
+- Describe how numbers are represented in place-value numeral systems.
 - Define decimal, binary, hexadecimal numeral systems.
 - Convert between these numeral systems.
 - Count using the binary and hexadecimal systems.

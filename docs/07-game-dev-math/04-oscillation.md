@@ -18,6 +18,30 @@ TBW
 
 <!--prettier-ignore-end-->
 
+## Module Topics
+
+- Angles (Radians vs Degrees)
+- Angular Motion
+- Trigonometry (sohcahtoa)
+- Drawing Vectors Using Trig
+- Polar vs Cartesian Coordinates
+- Simple Harmonic Motion
+- Waves
+- Pendulum Motion
+- Spring Forces
+
+## Objectives:
+
+By the end of this module you should be able to:
+
+- Differentiate between radians and degrees for the measurement of angles.
+- Use trigonometric functions to determine the missing lengths / angles of a right angle triangle.
+- Differentiate between polar and cartesian coordinates.
+- Use sin and cos to convert between polar and cartesian coordinates.
+- Draw waves of varying complexity using sin within a p5js sketch.
+- Combine knowledge of angular momentum with trigonometry to model pendulums in p5js.
+- Add Hooke’s law to model systems of springs.
+
 ## Textbook Chapter
 
 [Chapter 3 - Oscillation - Nature of Code](/Applied-Math-For-Games-1/assets/pdf/noc_chp3_2020_draft.pdf) [pdf]

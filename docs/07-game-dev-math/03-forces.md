@@ -18,6 +18,24 @@ TBW
 
 <!--prettier-ignore-end-->
 
+## Module Topics
+
+- Newton’s Laws of Motion
+- Weight vs Mass
+- Newton’s Laws as Code
+- Gravity
+- Friction
+- Drag
+- Gravitational Attraction
+
+## Objectives:
+
+By the end of this module you should be able to:
+
+- Describe Newton’s three laws of motion.
+- Explain the difference between weight and mass.
+- Using p5.js to implement Newton’s second law as code and use it to simulate the forces of gravity, friction, and drag.
+
 ## Textbook Chapter
 
 [Chapter 2 - Forces - Nature of Code](/Applied-Math-For-Games-1/assets/pdf/noc_chp2_2020_draft.pdf) [pdf]

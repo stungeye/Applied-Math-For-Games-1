@@ -18,6 +18,22 @@ TBW
 
 <!--prettier-ignore-end-->
 
+## Module Topics
+
+- Advance Javascript array manipulation.
+- Inheritance and polymorphism in Javascript.
+- Application of forces on collections.
+
+## Objectives:
+
+By the end of this module you should be able to:
+
+- Model a single particle as a Javascript class.
+- Model a particle system as a class that contains an array of particles.
+- Remove particles from a system once they’ve reach end of life.
+- Use javascript inheritance and polymorphism to give particle systems the ability to emit various types of particles.
+- Apply attractive or repellent forces to systems of particles.
+
 ## Textbook Chapter
 
 [Chapter 4 - Particle Systems - Nature of Code](/Applied-Math-For-Games-1/assets/pdf/noc_chp4_2020_draft.pdf) [pdf]

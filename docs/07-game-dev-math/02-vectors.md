@@ -8,8 +8,6 @@ nav_order: 3
 # Vectors
 {: .no_toc }
 
-TBW
-
 ## Table of Contents
 {: .no_toc .text-delta }  
 
@@ -17,6 +15,27 @@ TBW
 {:toc}
 
 <!--prettier-ignore-end-->
+
+## Module Topics
+
+- Scalars vs Vectors
+- Vector Addition
+- Vector Subtraction
+- Vector Multiplication
+- Vector Magnitude
+- Normalizing Vectors
+- Velocity and Acceleration as Vectors
+
+## Objectives:
+
+By the end of this module you should be able to:
+
+- Define a vector and differentiate it from a scalar value.
+- Describe how a vector can be used to define both a point in a 2D space and a magnitude with direction.
+- Calculate the result of 2D vector addition, subtraction, and multiplication.
+- Calculate the length/magnitude of a given 2D vector.
+- Calculate the normalized unit vector from a given 2D vector.
+- Use vectors to model simple linear acceleration and velocity in a p5js application.
 
 ## Textbook Chapter
 
