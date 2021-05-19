@@ -315,7 +315,7 @@ I find Worley noise to be of particular beauty:
 
 ## Natural Noise
 
-Look around you. The natural world is full of beauty noise and randomness!
+Look around you. The natural world is full of beautiful noise and randomness!
 
 ![Natural Noise. Attribution: Patricio Gonzalez Vivo and Jen Lowe](natural_noise_book_of_shaders.png){: .large}
 
