@@ -217,7 +217,7 @@ In the below sketch the x position of the circle on the left is controlled by Pe
 🎵 Note:
 {: .label .label-yellow}
 
-Ken Perlin won an Academy Award for his word on pseudo-random noise.
+[Ken Perlin](https://cs.nyu.edu/~perlin/) won an Academy Award for his work on pseudo-random noise.
 {: .d-inline-block}
 
 ## Noise in P5.js
