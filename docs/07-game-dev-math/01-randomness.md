@@ -138,7 +138,7 @@ When we roll a six-side die, there are six equally possible outcomes:
 
 In these examples every outcome has an equal probability.
 
-## Varied Probabilities
+## Grouped Probabilities
 
 For certain events, the chance of the outcome isn't just 1 out of the possible number of outcomes.
 
@@ -158,15 +158,15 @@ The probability of a coin turning up heads three times in a row is:
 
 `(1/2) * (1/2) * (1/2) = 1/8 = 0.125`
 
-So anytime you flip a coin three times you have a 12.5% chance that all three flips will be a head.
+Anytime you flip a coin three times you have a 12.5% chance that all three flips will be heads.
 
 ## The Gambler's Fallacy
 
-The probability of rolling only heads decreases as the sequence increases. That said, the chance of rolling a head on each flip of this sequence never changes.
+The probability of rolling only heads decreases as your number of flips increases. That said, the chance of rolling a head for each flip in a sequence is always 50%.
 
-If I managed to flip heads 100 times in a row, there's still a 50% chance that the next flip will be a head.
+Let's say you flip heads 100 times in a row. There's still a 50% chance that the next flip will be a head, even though the probability of rolling 101 heads in a row is very small.
 
-Thinking otherwise is called the **Gambler's Fallacy**, because gambler's often fool themselves into thinking that past random events will affect the outcome of future events.
+Thinking otherwise is called the **Gambler's Fallacy**, because gamblers often fool themselves into thinking that past random events will affect the outcome of future events.
 
 ## Randomness With Probabilities
 
