@@ -271,7 +271,11 @@ Investigate the sketch's source to see how I'm driving both the x and y position
 
 ## Higher Dimensional Noise
 
-So far we've only looked at 1-dimensional Perlin noise. We thought of 1D noise as a sampling the height of a squiggly line at a particular offset.
+So far we've only looked at 1-dimensional Perlin noise. We thought of 1D noise as sampling the height of a squiggly line at a particular offset. As such, we can use 1D noise to generate the outlines of waves and mountains.
+
+![Waves and Mountains. Attribution: Kyle Geske](waves_mountains_kyle_geske.png){: .medium}
+
+### 2D Noise
 
 The `noise()` function can also generate 2D:
 
@@ -279,7 +283,11 @@ The `noise()` function can also generate 2D:
 let value1 = noise(offset1, offset2); // 2D noise
 ```
 
-You can think of 2D noise as sampling the height of a terrain of valleys and mountains at a particular 2D coordinate.
+2D noise can be used to generate a cloudy texture, or it can be sampled to produce a height map for valley and mountain terrain generation.
+
+![2D Noise. Attribution: Wim van Eck and Maarten Lamers](2D_noise_biological_content_generation.png){: .medium}
+
+### 3D Noise
 
 We can also generate 3D noise:
 
@@ -287,6 +295,28 @@ We can also generate 3D noise:
 let value2 = noise(offset1, offset2, offset3); // 3D noise
 ```
 
-I don't actually know how to think about imagining 3D noise, do you?
+3D noise can be use to generate blobs, [planetary surfaces](https://www.youtube.com/watch?v=lctXaT9pxA0), or 3D terrains that include caves (think Minecraft voxel terrain).
 
-Maybe it's like sampling the surface of valleys and mountains that grow and erode over time?
+![Minecraft Cave. Attribution: Mojang Studios Press Release](minecraft-caves-and-cliffs.jpg){: .medium}
+
+## Other Forms of Noise
+
+There are other forms of procedural noise beyond Perlin noise:
+
+- [Simplex Noise](https://en.wikipedia.org/wiki/Simplex_noise)
+- [OpenSimplex Noise](https://en.wikipedia.org/wiki/OpenSimplex_noise)
+- [Wavelet Noise](https://en.wikipedia.org/wiki/Wavelet_noise)
+- [Value Noise](https://en.wikipedia.org/wiki/Value_noise)
+- [Worley Noise](https://en.wikipedia.org/wiki/Worley_noise)
+
+I find Worley noise to be of particular beauty:
+
+![Worley Noise. Attribution: Rocchini @ Wikipedia](worley_noise_wikipedia.jpg){: .large }
+
+## Natural Noise
+
+Look around you. The natural world is full of beauty noise and randomness!
+
+![Natural Noise. Attribution: Patricio Gonzalez Vivo and Jen Lowe](natural_noise_book_of_shaders.png){: .large}
+
+☝️ _Click to embiggen._
