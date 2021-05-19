@@ -303,11 +303,11 @@ let value2 = noise(offset1, offset2, offset3); // 3D noise
 
 There are other forms of procedural noise beyond Perlin noise:
 
-- [Simplex Noise](https://en.wikipedia.org/wiki/Simplex_noise)
-- [OpenSimplex Noise](https://en.wikipedia.org/wiki/OpenSimplex_noise)
-- [Wavelet Noise](https://en.wikipedia.org/wiki/Wavelet_noise)
-- [Value Noise](https://en.wikipedia.org/wiki/Value_noise)
-- [Worley Noise](https://en.wikipedia.org/wiki/Worley_noise)
+- 📚 [Simplex Noise](https://en.wikipedia.org/wiki/Simplex_noise)
+- 📚 [OpenSimplex Noise](https://en.wikipedia.org/wiki/OpenSimplex_noise)
+- 📚 [Wavelet Noise](https://en.wikipedia.org/wiki/Wavelet_noise)
+- 📚 [Value Noise](https://en.wikipedia.org/wiki/Value_noise)
+- 📚 [Worley Noise](https://en.wikipedia.org/wiki/Worley_noise)
 
 I find Worley noise to be of particular beauty:
 
@@ -320,3 +320,10 @@ Look around you. The natural world is full of beautiful noise and randomness!
 ![Natural Noise. Attribution: Patricio Gonzalez Vivo and Jen Lowe](natural_noise_book_of_shaders.png){: .large}
 
 ☝️ _Click to embiggen._
+
+## Further Reading
+
+- 📚 [Understanding Perlin Noise](https://adrianb.io/2014/08/09/perlinnoise.html)
+- 📚 [Understanding Randomness](https://www.baeldung.com/cs/randomness)
+- 📚 [Notch Explains Early Minecraft Terrain Generation](https://notch.tumblr.com/post/3746989361/terrain-generation-part-1)
+- 📚 [Advanced Randomness Techniques for Game AI](http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter03_Advanced_Randomness_Techniques_for_Game_AI.pdf) (Free Chapter from [Game AI Pro](http://www.gameaipro.com/) Volume 1)
