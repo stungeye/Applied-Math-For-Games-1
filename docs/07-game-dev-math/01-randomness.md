@@ -325,5 +325,5 @@ Look around you. The natural world is full of beautiful noise and randomness!
 
 - 📚 [Understanding Perlin Noise](https://adrianb.io/2014/08/09/perlinnoise.html)
 - 📚 [Understanding Randomness](https://www.baeldung.com/cs/randomness)
-- 📚 [Notch Explains Early Minecraft Terrain Generation](https://notch.tumblr.com/post/3746989361/terrain-generation-part-1)
 - 📚 [Advanced Randomness Techniques for Game AI](http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter03_Advanced_Randomness_Techniques_for_Game_AI.pdf) (Free Chapter from [Game AI Pro](http://www.gameaipro.com/) Volume 1)
+- 📚 [Notch Explains Early Minecraft Terrain Generation](https://notch.tumblr.com/post/3746989361/terrain-generation-part-1)
