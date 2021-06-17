@@ -300,14 +300,6 @@ Assuming just positive values:
 | 0 00000001 00000000000000000000000 | Smallest Normal    | 2<sup>-126</sup> <br>≈ 1.1754943508 \* 10<sup>-38</sup>                                       |
 | 0 11111110 11111111111111111111111 | Largest Normal     | 2<sup>127</sup> \* (2 − 2<sup>-23</sup>) <br>≈ 3.4028234664 \* 10<sup>38</sup>                |
 
-## Assignment Ideas
-
-- Create your own UUID with a custom numeral system.
-- Determine # of floats in difference ranges of real numbers.
-- Plot float density across valid numeric range.
-- Roll your own URL shortener using a custom numeral system.
-- Read / Write Base 64 Encoded Data
-
 ## Further Reading
 
 - [Floating Point Guide](https://floating-point-gui.de/) - FAQ, Formats, Errors, Language Cheat Sheets.
