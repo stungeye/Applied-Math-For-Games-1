@@ -108,7 +108,7 @@ let vector = createVector(40, 80);
 ellipse(vector.x, vector.y, 50, 50);
 ```
 
-We can also create random vectors using `random2D()` or create vectors from angles and lengths using `fromAngle()`. Here's a fun sketch that makes use of random vectors:
+We can also create random vectors using `p5.Vector.random2D()` or create vectors from angles and lengths using `p5.Vector.fromAngle()`. Here's a fun sketch that makes use of random vectors:
 
 <iframe src="https://editor.p5js.org/stungeye/embed/FixFDvy12"  scrolling="no" frameborder="no"  width="250" height="250"></iframe>
 
@@ -423,11 +423,11 @@ class Mover {
 }
 ```
 
-[Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/present/JAQ7fvXz2)
+[Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/M5Ac9dFHA)
 
-<iframe src="https://editor.p5js.org/stungeye/embed/JAQ7fvXz2" scrolling="no" frameborder="no"  width="400" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/M5Ac9dFHA" scrolling="no" frameborder="no"  width="400" height="200"></iframe>
 
-☝️ _Ball will accelerate towards mouse pointer. Click for a new mover with randomized size and max speed._
+☝️ _Ball will accelerate towards mouse pointer. Click to increase number of movers from 1 to 10._
 
 ## Vectors in Physics, Math, and Computer Science (10 Minute Video)
 
