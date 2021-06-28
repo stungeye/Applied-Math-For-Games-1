@@ -1,7 +1,7 @@
 ---
 title: Examples and Resources
 parent: p5.js Basics
-nav_order: 6
+nav_order: 7
 ---
 
 <!-- prettier-ignore-start -->

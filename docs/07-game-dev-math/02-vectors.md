@@ -316,7 +316,11 @@ let vectorBlue = p5.Vector.normalize(vectorRed).mult(radius);
 
 <iframe src="https://editor.p5js.org/stungeye/embed/K7E6yJ-S_" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
 
-[Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/present/K7E6yJ-S_)
+[Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/K7E6yJ-S_)
+
+## Vector Equality
+
+TBW
 
 ## Simulating Motion with Vectors
 
@@ -425,7 +429,7 @@ class Mover {
 
 [Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/M5Ac9dFHA)
 
-<iframe src="https://editor.p5js.org/stungeye/embed/M5Ac9dFHA" scrolling="no" frameborder="no"  width="400" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/M5Ac9dFHA" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
 
 ☝️ _Ball will accelerate towards mouse pointer. Click to increase number of movers from 1 to 10._
 

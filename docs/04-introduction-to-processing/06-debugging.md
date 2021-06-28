@@ -1,7 +1,7 @@
 ---
 title: Debugging
 parent: p5.js Basics
-nav_order: 5
+nav_order: 6
 ---
 
 <!-- prettier-ignore-start -->
