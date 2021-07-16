@@ -29,15 +29,9 @@ Animation is an optical illusion. When presented with a sequence of images in qu
 
 P5 was created with animation in mind. The `draw()` function is executed 60 times per second. (Although we can decrease the frame using the `frameRate()` function.)
 
-We can create animations using the `draw()` function by clearing the background and redrawing shapes a space distance from their previous position.
+We can create animations using the `draw()` function by clearing the background and redrawing shapes a small distance from their previous positions.
 
 ```javascript
-function setup() {
-  createCanvas(200, 100);
-  // 60 frames per second, if possible:
-  frameRate(60);
-}
-
 function draw() {
   // Clear the canvas:
   background(220);
@@ -55,7 +49,7 @@ function draw() {
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/WOBPTOtAM)
 
-<iframe src="https://editor.p5js.org/stungeye/embed/WOBPTOtAM" scrolling="no" frameborder="no"  width="200" height="100"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/WOBPTOtAM" scrolling="no" frameborder="no"  width="300" height="100"></iframe>
 
 ## Sprite-Based Animation in P5.js
 
