@@ -320,7 +320,20 @@ let vectorBlue = p5.Vector.normalize(vectorRed).mult(radius);
 
 ## Vector Equality
 
-TBW
+To check if two vectors are equal we have to use the `.equals()` method, rather than the `==` or `===` operator:
+
+```javascript
+let v1 = createVector(5, 10);
+let v2 = createVector(5, 10);
+
+// == and === will not work:
+console.log(v1 == v2); // false
+console.log(v1 === v2); // false
+
+// .equals() is how we check equality:
+console.log(v1.equals(v2)); // true
+console.log(v1.equals(5, 10)); // true
+```
 
 ## Simulating Motion with Vectors
 
