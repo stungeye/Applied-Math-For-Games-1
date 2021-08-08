@@ -8,6 +8,10 @@ nav_order: 3
 # Vectors
 {: .no_toc }
 
+A **vector** is a quantity fully described by its magnitude and its direction.
+
+Vectors are a powerful tool for modeling physical behaviour like motion and gravity.
+
 ## Table of Contents
 {: .no_toc .text-delta }  
 

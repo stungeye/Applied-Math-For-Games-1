@@ -8,7 +8,9 @@ nav_order: 4
 # Forces and Newtonian Physics 
 {: .no_toc }
 
-TBW
+A **force** is a vector representing a push or a pull that causes an object to accelerate.
+
+Issac Newton developed three laws to describe the motion of objects subject to forces.
 
 ## Table of Contents
 {: .no_toc .text-delta }  
