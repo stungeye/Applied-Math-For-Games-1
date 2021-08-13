@@ -197,17 +197,15 @@ Implementing the friction formula isn't too tricky:
 
 ```javascript
 friction() {
-  // Direction of friction
-  let friction = this.velocity.copy().normalize().mult(-1);
+   // Direction of friction
+    let friction = this.velocity.copy().normalize().mult(-1);
 
-  // Magnitude of Friction
-  let normal = this.mass; // Simplified by ignoring gravity constant.
-  friction.setMag(this.mu * normal);
+    // Magnitude of Friction
+    let normal = this.mass; // Simplified by ignoring gravity constant.
+    friction.setMag(this.mu * normal);
 
-  // Don't let friction force exceed magnitude of velocity.
-  friction.limit(this.velocity.mag());
-
-  this.applyForce(friction);
+    // Apply the friction force to the mover.
+    this.applyForce(friction);
 }
 ```
 
