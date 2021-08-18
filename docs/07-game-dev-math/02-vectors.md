@@ -260,7 +260,7 @@ let blueVector = p5.Vector.mult(redVector, scaleFactor);
 
 ## Vector Magnitude with [Pythagoras](https://plato.stanford.edu/entries/pythagoras/)
 
-Every vector can be thought of as a the hypotenuse of a right-angle triangle. Therefore, we can calculate the length of a vector by returning to high school math class and rediscovering the Pythagorean theorem.
+Every vector can be thought of as a the hypotenuse of a [right-angle triangle](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle). Therefore, we can calculate the length of a vector by returning to high school math class and rediscovering the Pythagorean theorem.
 
 If we return to our example vector at (5, 2) then the length of the vector is:
 
@@ -274,6 +274,12 @@ c  =  √(25 + 4)
 c  =  √29
 c  ≅  5.3851648
 ```
+
+⏳ Wait For It:
+{: .label .label-blue}
+
+We'll dig deeper into [the trigonometry of right triangles in our Oscillation module](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle).
+{: .d-inline-block}
 
 ## Vector Magnitude with p5.js
 

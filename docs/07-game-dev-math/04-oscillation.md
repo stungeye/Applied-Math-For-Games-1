@@ -20,7 +20,7 @@ We can use trig to simulate waves, swinging motions, and springs.
 
 <!--prettier-ignore-end-->
 
-## Objectives:
+## Objectives
 
 By the end of this module you should be able to:
 
@@ -117,6 +117,8 @@ The distance of an arc around a circle depends on the size of the circle, so rad
 Specifically a radian is the ratio of a circle's arc to its radius. 1 radian is the angle at which this ratio equals 1.
 
 In other words, a rotation of 1 radian occurs when the distance traveled around a circle is equal to its radius.
+
+Angles measured in radians are said to be **rads**. For example: 180° = π rads
 
 ## A Slice of π
 
@@ -275,13 +277,116 @@ Click, drag, and release to spin the rectangle:
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/ccrzVE85u)
 
-## Trigonometry (sohcahtoa)
+## Noisy Rotation
 
-In the previous sketch we used the `.heading()` method to get an angle from vector, but how exactly was that done "under the hood"? The secret lies in trigonometry, 
+Physical motion aside, knowledge of translation and rotation in p5.js can lead to some amazing results.
 
-## Drawing Vectors Using Trig
+In this sketch by [Gene Kogan](https://twitter.com/genekogan) our old friend [Perlin Noise](/Applied-Math-For-Games-1/docs/07-game-dev-math/01-randomness.html#generating-noise) is being used here to control the inner and outer rotations, translations, and square sizes.
+
+<iframe src="https://preview.p5js.org/stungeye/embed/1eKtSVITv" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+
+[Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/1eKtSVITv)
+
+🎵 Note:
+{: .label .label-yellow}
+
+The code also make clever use of nested rotation and translation using [push and pop](/Applied-Math-For-Games-1/docs/04-introduction-to-processing/02-drawing-shapes.html#translation-rotation-and-scaling).
+{: .d-inline-block}
+
+## Trigonometry
+
+In the [Spin It! sketch](#spin-it) we used the `.heading()` method to get an angle from vector, but how exactly was that done "under the hood"?
+
+The secret lies in trigonometry, the branch of mathematics that studies relationships between side lengths and angles of triangles.
+
+Trigonometry also reveals the hidden concepts that relate circles to triangles.
+
+We can use trigonometry to:
+
+- Determine the rotation of a vector.
+- Find the angle two given points. (Think simple AI steering and aiming.)
+- Find the distance between two points. (Think simple collision detection.)
+- Simulate physical systems that involve harmonic motion (waves, pendulums, springs).
+
+## The Right Triangle
+
+![The Right Triangle - Attribution: Our Textbook](soh-cah-toa.png){:class .inline .small}
+
+A **triangle** is a 2D shape that has three sides and three angles that add up to 180 degrees (π radians).
+
+A **right triangle** (right-angled or orthogonal triangle) has one angle that is 90 degrees (π/2 radians). The other two angles always add up to 90 degrees but can be different sizes.
+
+## Which Side Are You On?
+
+The **hypotenuse** is the longest side of a right triangle. It is always across from the right angle.
+
+The other two sides are the **legs**, and are named in relation to one of the non-right angles.
+
+Given one of the non-right angles, each leg will be either **opposite** that angle, or **adjacent** to it.
+
+### Resources
+
+The above definitions were sources from:
+
+- 📚 [Right Triangle @ English Wikipedia](https://en.wikipedia.org/wiki/Right_triangle)
+- 📚 [Triangle @ Simple English Wikipedia](https://simple.wikipedia.org/wiki/Right_triangle)
+
+## SOH CAH TOA - Right Triangle Sides and Angles
+
+Using the Pythagorean theorem (`a² + b² = c²`) we can determine the length of any side of a right triangle when given the other two sides.
+
+The trigonometry functions **sine**, **cosine**, and **tangent** give us ways to determine the length of sides and angles of a right triangle.
+
+- Sine: `sin = opposite / hypotenuse`
+- Cosine: `cos = adjacent / hypotenuse`
+- Tangent: `tan = opposite / adjacent`
+
+Some people remember these relationships using the catch phrase: SOH CAH TOA
+
+### Resources
+
+- 📚 [Magnitude wit
+  h Pythagoras in our Vector Modules](/Applied-Math-For-Games-1/docs/07-game-dev-math/02-vectors.html#vector-magnitude-with-pythagoras).
+
+## The Triangle and The Circle
+
+Let's return to the circle for a moment.
+
+Any point along a circle's circumference also describes a right triangle attached to the origin.
+
+![Right Triangles and Circles - Image made using GeoGebra.org](right_triangle_on_unit_circle.png){:class .large}
+
+This means that SOH CAH TOA also applies to the x and y coordinate of the points of a circle!
+
+## Trig and the Unit Circle
+
+Any point along the circumference of a circle can be described by the angle made by a right triangle (as shown above).
+
+Using trig we can determine the x and y coordinate of this point.
+
+Finding the y coordinate:
+
+```text
+sin(angle) = opposite / hypotenuse
+sin(angle) = y-coordinate / radius
+y-coord = radius * sin(angle)
+```
+
+Finding the x coordinate:
+
+```text
+cos(angle) = adjacent / hypotenuse
+cos(angle) = x-coordinate / radius
+x-coord = radius * cos(angle)
+```
+
+## Visualizing The Trigonometry of Circles and Right Triangles
+
+![Trig and the Circle](circle-two-sine-waves.gif)
 
 ## Polar vs Cartesian Coordinates
+
+## Drawing Vectors Using Trig
 
 ## Simple Harmonic Motion
 
