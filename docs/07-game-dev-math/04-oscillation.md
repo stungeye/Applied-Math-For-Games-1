@@ -191,6 +191,12 @@ Next we're told the truck is moving at a different speed with the wheels turning
 
 Much easier to think about and no pesky π.
 
+### Resources
+
+- 📚 [Intuitive Guide to Angles, Degrees and Radians @ Better Explained](https://betterexplained.com/articles/intuitive-guide-to-angles-degrees-and-radians/)
+- 📚 [Prehistoric Calculus: Discovering Pi @ Better Explained](https://betterexplained.com/articles/prehistoric-calculus-discovering-pi/)
+- 📚 [The Tau Manifesto by Michael Hartl](https://tauday.com/tau-manifesto)
+
 ## Processing Angles
 
 p5.js has a number of helper functions and constants that will come in handing when working with angles:
@@ -281,7 +287,7 @@ Click, drag, and release to spin the rectangle:
 
 Physical motion aside, knowledge of translation and rotation in p5.js can lead to some amazing results.
 
-In this sketch by [Gene Kogan](https://twitter.com/genekogan) our old friend [Perlin Noise](/Applied-Math-For-Games-1/docs/07-game-dev-math/01-randomness.html#generating-noise) is being used here to control the inner and outer rotations, translations, and square sizes.
+In this sketch by [Gene Kogan](https://twitter.com/genekogan) our old friend [Perlin Noise](/Applied-Math-For-Games-1/docs/07-game-dev-math/01-randomness.html#generating-noise) is used here to control the inner and outer rotations, translations, and square sizes.
 
 <iframe src="https://preview.p5js.org/stungeye/embed/1eKtSVITv" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
 
@@ -290,7 +296,7 @@ In this sketch by [Gene Kogan](https://twitter.com/genekogan) our old friend [Pe
 🎵 Note:
 {: .label .label-yellow}
 
-The code also make clever use of nested rotation and translation using [push and pop](/Applied-Math-For-Games-1/docs/04-introduction-to-processing/02-drawing-shapes.html#translation-rotation-and-scaling).
+The code also makes clever use of nested rotation and translation using [push and pop](/Applied-Math-For-Games-1/docs/04-introduction-to-processing/02-drawing-shapes.html#translation-rotation-and-scaling).
 {: .d-inline-block}
 
 ## Trigonometry
@@ -307,6 +313,12 @@ We can use trigonometry to:
 - Find the angle two given points. (Think simple AI steering and aiming.)
 - Find the distance between two points. (Think simple collision detection.)
 - Simulate physical systems that involve harmonic motion (waves, pendulums, springs).
+
+⏳ Wait For It:
+{: .label .label-blue}
+
+The `heading()` secret mention above will be [revealed below](#drawing-vectors-using-trig).
+{: .d-inline-block}
 
 ## The Right Triangle
 
@@ -356,15 +368,18 @@ Any point along a circle's circumference also describes a right triangle attache
 
 ![Right Triangles and Circles - Image made using GeoGebra.org](right_triangle_on_unit_circle.png){:class .large}
 
-This means that SOH CAH TOA also applies to the x and y coordinate of the points of a circle!
+Each of those points can be described by either:
 
-## Trig and the Unit Circle
+- An x and y coordinate.
+- The angle within a right triangle. (Where the hypotenuse is the circle's radius.)
 
-Any point along the circumference of a circle can be described by the angle made by a right triangle (as shown above).
+## Trig and the The Circle
 
-Using trig we can determine the x and y coordinate of this point.
+This means that trig can be used to relate circle points at specific angles to x and y coordinates!
 
-Finding the y coordinate:
+When given a point at a specific angle along the circumference of a circle...
+
+We can find the y coordinate using sin:
 
 ```text
 sin(angle) = opposite / hypotenuse
@@ -372,7 +387,7 @@ sin(angle) = y-coordinate / radius
 y-coord = radius * sin(angle)
 ```
 
-Finding the x coordinate:
+We can find the x coordinate using cos:
 
 ```text
 cos(angle) = adjacent / hypotenuse
@@ -382,26 +397,229 @@ x-coord = radius * cos(angle)
 
 ## Visualizing The Trigonometry of Circles and Right Triangles
 
-![Trig and the Circle](circle-two-sine-waves.gif)
+As the angle around a circle increases, y moves in a wave between 0 to 1 to 0 to -1 to 0.
+
+We call this motion a sine wave.
+
+![Sine as Rotation - Attribution: https://setosa.io/ev/sine-and-cosine/](sine_as_rotation.gif)
+
+The x coordinates also move in a wave between 1 and -1 as the angle increases.
+
+The change in x around a circle is a cosine wave.
+
+![Trig and the Circle - Attribution: http://1ucasvb.tumblr.com](circle-two-sine-waves.gif)
+
+[Interact with angles and circle coordinates here](https://www.geogebra.org/m/XC3D226P).
+
+## Resources
+
+- 📚 [Intuitive Understanding of Sine Waves @ Better Explained](https://betterexplained.com/articles/intuitive-understanding-of-sine-waves/) - Sine as acceleration opposite to your current position; a continual pull back to centre. **A must read!**
+- 📚 [Sine and Cosine Explained Visually](https://setosa.io/ev/sine-and-cosine/)
 
 ## Polar vs Cartesian Coordinates
 
-## Drawing Vectors Using Trig
+We can now see that any point can be equally describe by:
 
-## Simple Harmonic Motion
+- An x and y coordinate.
+- An angle around the origin paired with a distance (radius) from the origin.
+
+The first (x and y) is called a **Cartesian coordinate**, the second (angle and radius) is called a **Polar coordinate**.
+
+We can use trig to convert back and forth between Cartesian and Polar coordinates.
+
+## Polar and Cartesian Processing
+
+Given a polar coordinate with a fixed radius and an angle tied to the mouse's x position:
+
+```javascript
+radius = 180;
+angle = map(mouseX, 0, width, 0, TWO_PI);
+```
+
+We can draw the associated circle:
+
+```javascript
+circle(0, 0, radius * 2);
+```
+
+The equivalent Cartesian point:
+
+```javascript
+let x = radius * cos(angle);
+let y = radius * sin(angle);
+
+point(x, y);
+```
+
+And the underlying right triangle:
+
+```javascript
+triangle(0, 0, x, 0, x, y);
+```
+
+Click the sketch below to reveal the associated cartesian point, then hold any key to change the radius.
+
+<iframe src="https://preview.p5js.org/stungeye/embed/5AFt0p8t3" scrolling="no" frameborder="no"  width="400" height="440"></iframe>
+
+[Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/5AFt0p8t3)
+
+## Why Polar Coordinates?
+
+There are situations were _thinking in polar_ proves easier than working with Cartesian points.
+
+Think about a cartoon explosion generator, where each frame of the explosion is a "spiky circle".
+
+We can define a polygon using `beginShape()` and `endShape()` with vertices (points) defined by a series of polar coordinates with random radius and an increasing angle.
+
+```javascript
+let angleDelta = 0.1;
+let minRadius = 100;
+let maxRadius = 300;
+
+translate(width / 2, height / 2);
+
+beginShape();
+for (let angle = 0; angle <= TWO_PI; angle += angleDelta) {
+  let radius = random(minRadius, maxRadius);
+  let x = radius * cos(angle);
+  let y = radius * sin(angle);
+  vertex(x, y);
+}
+endShape(CLOSE);
+```
+
+**FLASH WARNING:** Bottom slider controls the framerate. A high framerate could be an epilepsy danger!
+
+<iframe src="https://preview.p5js.org/stungeye/embed/KupFJRt3M" scrolling="no" frameborder="no"  width="400" height="440"></iframe>
+
+[Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/KupFJRt3M)
+
+## From Vector to Heading
+
+Remember [when I promised](#trigonometry) to reveal the secret of the P5.Vector `heading()` method?
+
+We used `heading()` to get the angle of of a vector in the [Spin It! demo](#spin-it). In our physical simulations we can also use it to have objects point in the direction of motion.
+
+We previously handled the indication of direction in the [Mouse Seeking Mover Sketch](/Applied-Math-For-Games-1/docs/07-game-dev-math/02-vectors.html#extending-motion-simulation-with-acceleration) (lines 41 to 43 of `mover.js` shown below) using a copy of the velocity vector:
+
+```javascript
+// Draw a "nose" on the mover indicating the direction of the velocity.
+let noseLength = map(this.velocity.mag(), 0, this.speedLimit, 0, this.size);
+let direction = this.velocity.copy().setMag(noseLength);
+line(0, 0, direction.x, direction.y);
+```
+
+But what if our mover was an image sprite that we needed to rotate to the direction of movement?
+
+The simplest solution would be to call `heading()` on the velocity to get rotation, but let's see how we could accomplish this manually using trigonometry.
+
+## Sprite Mouse Seekers
+
+Here's an updated version of our mouse seeking mover sketch that uses image sprites.
+
+<iframe src="https://preview.p5js.org/stungeye/embed/pYnanrdai" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+
+[Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/pYnanrdai)
+
+## Rotating Towards Movement
+
+![Velocity and Heading - Source: Our Textbook](heading_from_velocity_trig.png){:class .inline .small}
+
+Using trig to find the angle of our ship's motion means constructing a right triangle using the x and y components its velocity.
+
+We know the angle's Opposite and Adjacent sides, so it's TOA or tangent to the rescue.
+
+```text
+tan(angle) = opposite / adjacent
+tan(angle) = velocity.y / velocity.x
+```
+
+To solve for the angle we need to do what's called an **inverse tangent** (otherwise known as arctangent, arctan, or atan), which works like this:
+
+```text
+tan(a) = b
+a = arctan(b)
+```
+
+In our case `b` is the slope of the velocity, rise over run or y over x, so using the p5.js `atan()` function.
+
+```javascript
+let angle = atan(this.velocity.y / this.velocity.x);
+```
+
+## A Minor Issue
+
+![The Problem with atan() - Source: Our Textbook](problem_with_atan.png){:class .inline .small}
+
+**But there's a problem!**
+
+Arctangent only provides half the picture.
+
+Vectors of equal length but opposite direction are assigned equal angles when using arctangent.
+
+Let's look at the example to the right.
+
+```text
+atan(3/-4) = atan(-0.75) = -0.6435011 radians
+atan(-3/4) = atan(-0.75) = -0.6435011 radians
+```
+
+Luckily p5js (and many other programming environments) provide `atan2()` which includes extra logic to distinguish opposite vectors. With `atan2()` we pass the y and x values as separate arguments:
+
+```javascript
+let angle = atan2(this.velocity.y, this.velocity.x);
+```
+
+### Resources
+
+- 📜 [`atan()`](https://p5js.org/reference/#/p5/atan)
+- 📜 [`atan2()`](https://p5js.org/reference/#/p5/atan2)
+- 📚 [Speeding up atan2f by 50x](https://mazzo.li/posts/vectorized-atan2.html) - Specific to the C language, but still fascinating.
+
+## Let's Surf
+
+Okay! That's the baseline math behind circles, right triangles, and the trigonometric functions, but trig can do **so much more** for us!
+
+Let's look again at the motion of sine and cosine as we fed them angles from 0 to 2 π.
+
+![Trig and the Circle - Attribution: http://1ucasvb.tumblr.com](circle-two-sine-waves.gif)
+
+Sine moves smoothly starting at 0, up to 1, down to -1, and then back up to 0. Repeat.
+
+Cosine moves smoothly starting at 1, down to -1, and then back up to 1. Repeat.
+
+We can use these ways to smoothly bounce any variable between to values.
+
+## Like Day and Night
+
+Here's some basic **harmonic motion** in motion.
+
+This sketch uses a sin wave to control the background color, along with the y position of the sun and moon.
+
+```javascript
+// We'll feed this small frame by frame change into sin.
+// Changing the divisor will speed up or slow down the transitions.
+let tinyChange = frameCount / 100;
+
+let dayBackground = color("skyBlue");
+let nightBackground = color("black");
+
+// Pairing sin with map and lerpColor to change values over time.
+// Offset the moon and the sun by PI to put them on either side of the wave.
+let yPositionMoon = map(sin(tinyChange), -1, 1, 100, height * 2);
+let yPositionSun = map(sin(tinyChange + PI), -1, 1, 80, height * 4);
+let skyColor = lerpColor(nightBackground, dayBackground, sin(tinyChange));
+```
+
+<iframe src="https://preview.p5js.org/stungeye/embed/nfTctFrdW" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+
+[Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/nfTctFrdW)
 
 ## Waves
 
 ## Pendulum Motion
 
 ## Spring Forces
-
-## Resources
-
-- 📚 [Intuitive Guide to Angles, Degrees and Radians @ Better Explained](https://betterexplained.com/articles/intuitive-guide-to-angles-degrees-and-radians/)
-- 📚 [Prehistoric Calculus: Discovering Pi @ Better Explained](https://betterexplained.com/articles/prehistoric-calculus-discovering-pi/)
-- 📚 [Intuitive Understanding of Sine Waves @ Better Explained](https://betterexplained.com/articles/intuitive-understanding-of-sine-waves/)
-- 📚 [The Tau Manifesto by Michael Hartl](https://tauday.com/tau-manifesto)
 
 ```
 
