@@ -33,10 +33,10 @@ Calendar is subject to change. Some modules may take more or less time than indi
 
 - [Forces and Newtonian Physics](/Applied-Math-For-Games-1/docs/06-game-dev-math/03-forces.html)
 
-## Week 10 & 11 - Trigonometry and Oscillation
+## Week 10 & 11 - Trigonometry
 
 - [Trigonometry and Oscillation](/Applied-Math-For-Games-1/docs/06-game-dev-math/04-oscillation.html)
 
-## Week 12 & 13 - Particle Systems
+## Week 12 & 13 - Oscillation
 
-- [Particle Systems](/Applied-Math-For-Games-1/docs/06-game-dev-math/05-particle-systems.html)
+- [Trigonometry and Oscillation](/Applied-Math-For-Games-1/docs/06-game-dev-math/04-oscillation.html)

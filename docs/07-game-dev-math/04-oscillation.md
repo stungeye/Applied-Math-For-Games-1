@@ -611,11 +611,73 @@ let yPositionSun = map(sin(tinyChange + PI), -1, 1, 80, height * 4);
 let skyColor = lerpColor(nightBackground, dayBackground, sin(tinyChange));
 ```
 
-<iframe src="https://preview.p5js.org/stungeye/embed/nfTctFrdW" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/nfTctFrdW" scrolling="no" frameborder="no"  width="400" height="225"></iframe>
 
 [Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/nfTctFrdW)
 
-## Waves
+## Waves with Amplitude and Period
+
+In the above sketch we fed values into `sin()` that changed by a tiny amount each frame. We also used the `map()` function to map the -1 to 1 output of `sin()` to different ranges.
+
+Another way to work with the output of `sin()` is to think about the **amplitude** and **period** of the generated wave.
+
+The amplitude controls the high and low points of the wave, while the period controls the speed of the oscillation.
+
+```javascript
+let amplitude = 100;
+let period = 120;
+
+let waveform = amplitude * sin((TWO_PI * frameCount) / period);
+```
+
+Here the value of `waveform` will vary from 0 to 100 to 0 to -100 to 0. This wave will repeat every 120 frames.
+
+If we preferred starting at 100 going down to -100 and back up to 100 we could use cosine instead:
+
+```javascript
+let amplitude = 100;
+let period = 120;
+
+let waveform = amplitude * cos((TWO_PI * frameCount) / period);
+```
+
+<iframe src="https://preview.p5js.org/stungeye/embed/cYMbqi5Ju" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+
+[Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/cYMbqi5Ju)
+
+🎵 Note:
+{: .label .label-yellow}
+
+Oscillation speed is sometimes measured in terms of **frequency**, which is 1 over the period.
+{: .d-inline-block}
+
+## Angular Velocity in 2D
+
+Let's take this knowledge a use it to simulate a collection balls swinging around on perfectly elastic strings. Click the canvas to respawn the oscillators.
+
+<iframe src="https://preview.p5js.org/stungeye/embed/JlZElsCCM" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+
+[Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/JlZElsCCM)
+
+In this sketch each ball has a fixed 2D velocity, but this velocity doesn't feed directly into it's position. Instead, the velocity is use to control two slowly increasing angles fed into `sin()`. Each oscillator also has a 2D amplitude which controls how far it will swing back and forth in the x and y directions.
+
+Once per frame the oscillators position is updated like this:
+
+```javascript
+this.angle.add(this.velocity);
+this.position.x = this.amplitude.x * sin(this.angle.x);
+this.position.y = this.amplitude.y * sin(this.angle.y);
+```
+
+## Do the Worm
+
+In this sketch we'll simulate the undulation of a worm using a sine wave.
+
+The y position of each circle is defined by a sine wave. Each circle is sampling the same wave but with a slight increase ("piecewise velocity") of the input angle from the previous circle. The angle used to control the left-most circle is also increasing ("meta velocity") with each frame.
+
+<iframe src="https://preview.p5js.org/stungeye/embed/i8tNeQg23" scrolling="no" frameborder="no"  width="400" height="250"></iframe>
+
+[Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/i8tNeQg23)
 
 ## Pendulum Motion
 
