@@ -1,16 +1,14 @@
 ---
-title: Oscillation
+title: Trigonometry
 parent: Game Dev Math
 nav_order: 5
 ---
 
 <!--prettier-ignore-start-->
-# Oscillation and Trigonometry
+# Trigonometry
 {: .no_toc }
 
-Trigonometry is the mathematics of right-angle triangles.
-
-We can use trig to simulate waves, swinging motions, and springs.
+Trigonometry is the mathematics of right-angle triangles and circles. We can use trig to simulate angular motion and waves. It can also be used to convert between different coordinate systems. 
 
 ## Table of Contents
 {: .no_toc .text-delta }  
@@ -29,8 +27,6 @@ By the end of this module you should be able to:
 - Differentiate between polar and cartesian coordinates.
 - Use sin and cos to convert between polar and cartesian coordinates.
 - Draw waves of varying complexity using sin within a p5js sketch.
-- Combine knowledge of angular momentum with trigonometry to model pendulums in p5js.
-- Add Hooke’s law to model systems of springs.
 
 ## Textbook Chapter
 
@@ -51,6 +47,8 @@ Understanding oscillation will allow us to simulate physical systems such as:
 - The bounce of a spring.
 - The orbit of a planet.
 - The vibration of a guitar string.
+
+But before we can get to oscillation, we need to review the mathematics of trigonometry.
 
 ## Circular Logic
 
@@ -678,11 +676,3 @@ The y position of each circle is defined by a sine wave. Each circle is sampling
 <iframe src="https://preview.p5js.org/stungeye/embed/i8tNeQg23" scrolling="no" frameborder="no"  width="400" height="250"></iframe>
 
 [Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/i8tNeQg23)
-
-## Pendulum Motion
-
-## Spring Forces
-
-```
-
-```
