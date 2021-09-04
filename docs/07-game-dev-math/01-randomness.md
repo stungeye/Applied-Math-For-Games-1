@@ -256,12 +256,12 @@ function draw() {
 
 The following sketch includes two walkers:
 
-- Green Walker uses `random()` to pick its next position.
-- Red Walker uses `noise()` to pick its next position.
+- <span style="color: #2A9D8F;">Green Walker</span> uses `random()` to pick its next position.
+- <span style="color: #E76F51;">Red Walker</span> uses `noise()` to pick its next position.
 
-If you're colour blind, the green walker's journey is the "smoother" of the two.
+If you're colour blind, the <span style="color: #E76F51;">Red Perlin Walker</span>'s journey is the "smoother" of the two.
 
-Investigate the sketch's source to see how I'm driving both the x and y position of the green Perlin walker.
+Investigate the sketch's source to see how I'm driving both the x and y position of the <span style="color: #E76F51;">Red Perlin Walker</span>.
 
 <iframe src="https://editor.p5js.org/stungeye/embed/_AMr0dMHF" scrolling="no" frameborder="no" width="200" height="200"></iframe>
 
