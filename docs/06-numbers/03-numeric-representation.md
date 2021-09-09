@@ -146,7 +146,7 @@ Or more specifically:
 
 Where:
 
-- The **mantissa** is a binary number decimal number of the form: `1.######...`
+- The **mantissa** is a binary number of the form: `1.######...`
 - The **exponent** is also a binary number.
 - The **sign** bit allows for positive (0) and negative numbers (1).
 
