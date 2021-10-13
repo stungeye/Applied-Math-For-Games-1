@@ -233,7 +233,7 @@ There are, however, other types of distributions.
 
 Imagine for a moment the heights of all adult Manitobans. Everyone has a different height, so you could think about the heights of adult Manitobans as being random, but it's not a uniform random. When picking a Manitoban at random there's a higher probability of that person being 5.5 feet (168cm) tall than being 3ft (91cm) tall.
 
-Height is an example of a "Normal" distribution, which is sometimes called a "Gaussian" distribution (named for mathematician Carl Friedrich Gauss). In a normal distribution the values cluster around an average, rather than being evenly distributed throughout a range.
+Height comes close to being what is called a "Normal" distribution, which is sometimes called a "Gaussian" distribution (named for mathematician Carl Friedrich Gauss). In a normal distribution the values cluster around an average, rather than being evenly distributed throughout a range.
 
 ## `random()` vs `gaussianRandom()`
 
