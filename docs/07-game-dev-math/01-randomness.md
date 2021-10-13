@@ -31,12 +31,11 @@ Randomness is a crucial element of lotteries, cryptography, simulations, games, 
 
 By the end of this module you should be able to:
 
-- Explain what is meant by mean and standard deviation and how to calculate these values from a dataset.
 - Describe how to calculate the probability of a single uniform event (coin toss, card selection).
 - Differentiate between uniform and Gaussian probability distributions.
 - Use p5js to generate uniform, gaussian, and Perlin random numbers.
-- Use p5js to simulate and graph the probability distributions of uniform and Gaussian events.
 - Implement a random walk simulation using p5js.
+- Draw scenes using p5.js that make use of randomness and noise.
 
 ## Textbook Chapter
 
