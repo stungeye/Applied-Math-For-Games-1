@@ -266,7 +266,7 @@ function draw() {
 }
 ```
 
-<iframe src="https://preview.p5js.org/stungeye/embed/QRZkULbcp" scrolling="no" frameborder="no" width="50" height="50"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/QRZkULbcp" scrolling="no" frameborder="no" width="400" height="100"></iframe>
 
 [View / Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/QRZkULbcp)
 
