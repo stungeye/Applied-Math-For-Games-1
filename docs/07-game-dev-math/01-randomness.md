@@ -207,19 +207,19 @@ let drop = random(lootBag);
 But you could also use an if/else chain:
 
 ```javascript
-let lootChance = random(); // Number from 0 up to (but not including) 1
+let lootChance = floor(random(10)); // Integer from 0 up to 9
 let drop;
 
-if (lootChance < 0.1) // (0 >= lootChance < 0.1) => 10% chance
+if (lootChance == 0) // p = 1/10 => 10% chance
   drop = "🗡️";
-} else if (lootChance < 0.3) { // (0.1 >= lootChance < 0.3) => 20% chance
+} else if (lootChance <= 2) { // (lootChance is 1 or 2) p = 2/10 => 20% chance
   drop = "💰";
-} else { // (0.3 >= lootChance < 1.0) => 70% chance
+} else { // (looChance is 3 to 9) p = 7/10 => 70% chance
   drop = "🍄";
 }
 ```
 
-<iframe src="https://editor.p5js.org/stungeye/embed/bNrdX70TE" scrolling="no" frameborder="no" width="400" height="100"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/bNrdX70TE" scrolling="no" frameborder="no" width="50" height="50"></iframe>
 
 ☝️ _Click the canvas for another loot drop with the above stated probabilities._
 
