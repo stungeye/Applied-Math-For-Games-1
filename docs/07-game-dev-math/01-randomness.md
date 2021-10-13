@@ -136,7 +136,23 @@ When we roll a six-side die, there are six equally possible outcomes:
 - Probability of a 3: 1/6
 - etc.
 
-In these examples every outcome has an equal probability.
+In the above examples every outcome has an equal probability.
+
+## P is for Probability
+
+When talking about probabilities we can give a percentage like 50% or we can say that p=0.5.
+
+When every outcome has an equal probability, like when rolling a die or flipping a coin, we calculate p like this:
+
+``` 
+p = 1 / (# of possible outcomes)
+```
+
+Example: The chance of rolling a 3 when rolling a six-sided die is `p = 1/6 = 0.166666...`
+
+To convert a `p` calculation into a percentage we just need to multiply p by 100.
+
+Example: The percentage chance of rolling a 3 when rolling a six-sided die is approximately 16.7%
 
 ## Grouped Probabilities
 
@@ -144,11 +160,17 @@ For certain events, the chance of the outcome isn't just 1 out of the possible n
 
 When pulling a card from a deck of 52 play cards, the probability of pulling an ace is:
 
-`number of aces / total numbers of cards = = 4 / 52 = 0.077 = ~8%`
+`p = number of aces / total numbers of cards = 4 / 52 = 0.077 = ~8%`
 
 The probability of pulling a diamond is over three times greater:
 
-`number of diamonds / number of cards = 13 / 52 = 0.25 = 25%`
+`p = number of diamonds / number of cards = 13 / 52 = 0.25 = 25%`
+
+When there's a group of outcomes that are equivalent we calcuate p like this:
+
+```
+p = (# of ways for a specific event to occur) / (# of total possible outcomes)
+```
 
 ## Sequences of Probabilities
 
