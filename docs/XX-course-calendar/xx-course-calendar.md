@@ -1,9 +1,9 @@
 ---
-title: Course Calendar
+title: Course Calendar - Applied Math 1
 nav_order: 100
 ---
 
-# Course Calendar
+# Course Calendar - Applied Math for Games 1
 
 ## Module 1 - Numbers and Basic Math
 
