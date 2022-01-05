@@ -26,7 +26,3 @@ nav_order: 100
 ## Module 5 - Forces and Newtonian Physics
 
 - [Forces and Newtonian Physics](/Applied-Math-For-Games-1/docs/07-game-dev-math/03-forces.html)
-
-## Module 6 - Trigonometry
-
-- [Trigonometry](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-trigonometry.html)
