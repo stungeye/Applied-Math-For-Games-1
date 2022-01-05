@@ -8,7 +8,7 @@ nav_order: 1
 ## Callback Functions
 {: .no_toc }
 
-Javascript functions are often passed to other function as [callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function).
+Javascript functions are often passed to other functions as [callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function).
 
 
 This section covers callback functions, anonymous functions (also known as closures), and the arrow function syntax.
@@ -48,14 +48,14 @@ let nail = function () {
   console.log("Hello Nail! 💅");
 };
 
-nail(); // And called liked named functions.
+nail(); // And called like named functions.
 ```
 
 _\*Anonymous, derived from the Greek word ἀνωνυμία, anonymia, meaning "without a name" or "namelessness"._
 
 ## Callback Functions
 
-In Javascript functions can be passed as arguments to other functions. We call these "callback functions" as they aren't executed immediately.
+In Javascript, functions can be passed as arguments to other functions. We call these "callback functions" as they aren't executed immediately.
 
 For example, `setTimeout` takes a callback function and a time in milliseconds as arguments. The callback function is executed after the provided time elapses.
 
@@ -81,7 +81,7 @@ setTimeout(function () {
 
 ## Arrow Functions
 
-Another way to define anonymous function is with the "arrow operator" `=>`:
+Another way to define an anonymous function is with the "arrow operator" `=>`:
 
 ```javascript
 let gale = () => {
