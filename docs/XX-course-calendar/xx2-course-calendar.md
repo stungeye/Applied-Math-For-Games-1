@@ -1,5 +1,5 @@
 ---
-title: Course Calendar - Applied Math 2
+title: Calendar - Applied Math 2
 nav_order: 100
 ---
 
