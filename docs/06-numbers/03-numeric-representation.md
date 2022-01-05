@@ -36,7 +36,7 @@ Computers can represent whole numbers with 100% accuracy. As we've seen above, t
 
 _Are there limits imposed on the computer representation of whole numbers?_
 
-Yes. As we discussed above, the integers extend infinitely in the negative and positive directions. So unless our computer has infinite memory there's an limit on the maximum positive/negative numbers we can store. Many programming languages will store a whole number in binary with 32 to 64 bits. If we reserve one bit to specify the sign, that's 31 or 63 bits for storage.
+Yes. As we discussed above, the integers extend infinitely in the negative and positive directions. So unless our computer has infinite memory there's a limit on the maximum positive/negative numbers we can store. Many programming languages will store a whole number in binary with 32 to 64 bits. If we reserve one bit to specify the sign, that's 31 or 63 bits for storage.
 
 | Number of Bits | Whole Number Decimal Range                               |
 | -------------- | -------------------------------------------------------- |
@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-For this course we're using Javascript, which has a [BigInt primitive](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) that allows for integers with a maximum size only limited by the about of memory available.
+For this course we're using Javascript, which has a [BigInt primitive](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) that allows for integers with a maximum size only limited by the amount of memory available.
 
 ## Real Numbers Represented By Computers
 
@@ -78,7 +78,7 @@ Like integers, each real number will be represented by either 32 or 64 bits. By 
 
 _Are there potential errors inherent in a computer's representation of whole numbers?_
 
-Because computer's store real numbers as approximations all real numbers have a built-in relative error. Take the real number pi, for example:
+Because computer's store real numbers as approximations, all real numbers have a built-in relative error. Take the real number pi, for example:
 
 | pi                                  | value                                                                                    |
 | ----------------------------------- | ---------------------------------------------------------------------------------------- |
@@ -258,7 +258,7 @@ This doesn't mean there's a constant delta of 0.0000001192... between all floats
 
 ## Float Density
 
-Because float precision is based on its mantissa, and because the mantissa is the same number of bits regardless of the size of the number being store, **there's an uneven distribution floats inside the range of possible real numbers**!
+Because float precision is based on its mantissa, and because the mantissa is the same number of bits regardless of the size of the number being stored, **there's an uneven distribution of floats inside the range of possible real numbers**!
 
 Approximately half of all possible floats can be found in the -1.0 to +1.0 range!
 
@@ -287,7 +287,7 @@ With a mantissa of the form `1.#...` we get a gap between 0.0 and the first repr
 
 To remove this gap, the standard represents the smallest non-zero numbers in a denormalized form denoted by an all zero exponent. For these denormalized numbers the exponent is still considered to be it's smallest value of (-126 for 32-bit and -1022 for 64-bit) but the mantissa is now assumed to be of the form `0.#...`
 
-You will sometime hear this denormalization strategy referred to as _gradual underflow_. In other words as floats in this denormalized range get closer and closer to zero they lost precision.
+You will sometime hear this denormalization strategy referred to as _gradual underflow_. In other words as floats in this denormalized range get closer and closer to zero they lose precision.
 
 ## Extremes - 32-bit Examples
 
