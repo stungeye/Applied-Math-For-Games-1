@@ -463,7 +463,7 @@ Click the sketch below to reveal the associated cartesian point, then hold any k
 
 ## Why Polar Coordinates?
 
-There are situations were _thinking in polar_ proves easier than working with Cartesian points.
+There are situations where _thinking in polar_ proves easier than working with Cartesian points.
 
 Think about a cartoon explosion generator, where each frame of the explosion is a "spiky circle".
 
@@ -523,7 +523,7 @@ Here's an updated version of our mouse seeking mover sketch that uses image spri
 
 ![Velocity and Heading - Source: Our Textbook](heading_from_velocity_trig.png){:class .inline .small}
 
-Using trig to find the angle of our ship's motion means constructing a right triangle using the x and y components its velocity.
+Using trig to find the angle of our ship's motion means constructing a right triangle using the x and y components of its velocity.
 
 We know the angle's Opposite and Adjacent sides, so it's TOA or tangent to the rescue.
 
@@ -657,9 +657,9 @@ Let's take this knowledge a use it to simulate a collection balls swinging aroun
 
 [Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/JlZElsCCM)
 
-In this sketch each ball has a fixed 2D velocity, but this velocity doesn't feed directly into it's position. Instead, the velocity is use to control two slowly increasing angles fed into `sin()`. Each oscillator also has a 2D amplitude which controls how far it will swing back and forth in the x and y directions.
+In this sketch each ball has a fixed 2D velocity, but this velocity doesn't feed directly into it's position. Instead, the velocity is used to control two slowly increasing angles fed into `sin()`. Each oscillator also has a 2D amplitude which controls how far it will swing back and forth in the x and y directions.
 
-Once per frame the oscillators position is updated like this:
+Once per frame the oscillator's position is updated like this:
 
 ```javascript
 this.angle.add(this.velocity);
