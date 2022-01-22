@@ -227,7 +227,7 @@ function draw() {
 }
 ```
 
-<iframe src="https://preview.p5js.org/stungeye/embed/1GLIrmVZD" scrolling="no" frameborder="no"  width="200" height="245"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/1GLIrmVZD" scrolling="no" frameborder="no"  width="300" height="245"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/1GLIrmVZD)
 
@@ -249,7 +249,7 @@ angle += angularVelocity;
 
 Hover your mouse over the canvas. Angular acceleration is determined by the mouse's x position.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/j0jaVV_gj" scrolling="no" frameborder="no"  width="200" height="245"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/j0jaVV_gj" scrolling="no" frameborder="no"  width="300" height="245"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/j0jaVV_gj)
 
@@ -277,7 +277,7 @@ if (mouseIsPressed) {
 
 Click, drag, and release to spin the rectangle:
 
-<iframe src="https://preview.p5js.org/stungeye/embed/ccrzVE85u" scrolling="no" frameborder="no"  width="200" height="245"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/ccrzVE85u" scrolling="no" frameborder="no"  width="300" height="245"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/ccrzVE85u)
 
@@ -457,7 +457,7 @@ triangle(0, 0, x, 0, x, y);
 
 Click the sketch below to reveal the associated cartesian point, then hold any key to change the radius.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/5AFt0p8t3" scrolling="no" frameborder="no"  width="400" height="485"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/5AFt0p8t3" scrolling="no" frameborder="no"  width="400" height="500"></iframe>
 
 [Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/5AFt0p8t3)
 
@@ -488,7 +488,7 @@ endShape(CLOSE);
 
 **FLASH WARNING:** Bottom slider controls the framerate. A high framerate could be an epilepsy danger!
 
-<iframe src="https://preview.p5js.org/stungeye/embed/KupFJRt3M" scrolling="no" frameborder="no"  width="400" height="485"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/KupFJRt3M" scrolling="no" frameborder="no"  width="400" height="500"></iframe>
 
 [Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/KupFJRt3M)
 
