@@ -9,10 +9,10 @@ nav_order: 100
 
 - [Trigonometry](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-trigonometry.html)
 
-## Module 2 - Vector-based Particles Systems
+## Module 2 - Scaling, Rotation, and Translation
 
-## Module 3 - Scaling, Rotation, and Translation
+## Module 3 - Structured Data and Consuming JSON
 
-## Module 4 - Game Mechanics using a 2D Physics Library
+## Module 4 - Voxel Playgrounds
 
-## Module 5 - Math in Unreal Engine
+## Module 5 - JSON + Voxels = ?
