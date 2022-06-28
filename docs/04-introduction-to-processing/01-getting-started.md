@@ -22,7 +22,7 @@ p5.js is a web interpretation of [Processing](https://processing.org/), the long
 
 <!-- prettier-ignore-end -->
 
-## First Things First 
+## First Things First
 
 It's easy to get started with p5.js using the web editor IDE at [editor.p5js.org](https://editor.p5js.org/).
 
@@ -132,7 +132,7 @@ function draw() {
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/GAMvJ4lBm" scrolling="no" frameborder="no" width="257" height="257"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/GAMvJ4lBm" scrolling="no" frameborder="no" width="255" height="297"></iframe>
 
 ## Setup and Draw
 
@@ -153,4 +153,4 @@ This is also an optional 📜 [`preload()`](https://p5js.org/reference/#/p5/prel
 
 - 📜 [`frameCount`](https://p5js.org/reference/#/p5/frameCount) - Number of frames displayed since the sketch began.
 - 📜 [`millis()`](https://p5js.org/reference/#/p5/millis) - Number of milliseconds since the sketch began.
-- 📜 [`deltaTime`](https://p5js.org/reference/#/p5/deltaTime) - Time since previous frame in milliseconds. 
+- 📜 [`deltaTime`](https://p5js.org/reference/#/p5/deltaTime) - Time since previous frame in milliseconds.

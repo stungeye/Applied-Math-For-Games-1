@@ -38,3 +38,12 @@
 .main-content a {
   white-space: normal;
 }
+
+.iframe-wrapper {
+  overflow: hidden;
+}
+
+.iframe-wrapper iframe {
+  position: relative;
+  top: -42px;
+}

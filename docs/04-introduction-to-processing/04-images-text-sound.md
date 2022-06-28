@@ -87,7 +87,7 @@ function draw() {
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/wiYQhrMBY" scrolling="no" frameborder="no"  width="302" height="302"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/wiYQhrMBY" scrolling="no" frameborder="no"  width="300" height="342"></iframe>
 
 ### Resources
 
@@ -161,7 +161,7 @@ function draw() {
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/WihYLEDbq" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/WihYLEDbq" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
 
 ### Resources
 
@@ -210,7 +210,7 @@ function mousePressed() {
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/c9RUrmBvu" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/c9RUrmBvu" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
 
 ### Resources
 

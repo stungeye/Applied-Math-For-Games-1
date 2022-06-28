@@ -128,7 +128,7 @@ function draw() {
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/lA2pKfmpt" scrolling="no" frameborder="no"  width="200" height="300"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/lA2pKfmpt" scrolling="no" frameborder="no"  width="200" height="342"></iframe>
 
 ## Keyboard Variables
 

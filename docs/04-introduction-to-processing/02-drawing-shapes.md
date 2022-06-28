@@ -69,7 +69,7 @@ Anti-aliasing of lines is enabled by default but can be toggled using 📜 [`smo
 There are a number of methods that allow you to draw 2D shapes to the canvas:
 
 - 📜 [`arc()`](https://p5js.org/reference/#/p5/arc) - Portions of a circle.
-- 📜 [`ellipse()`](https://p5js.org/reference/#/p5/ellipse) - Squished circles. 
+- 📜 [`ellipse()`](https://p5js.org/reference/#/p5/ellipse) - Squished circles.
 - 📜 [`circle()`](https://p5js.org/reference/#/p5/circle) - Plain old circles.
 - 📜 [`quad()`](https://p5js.org/reference/#/p5/quad) - Four point quadrilateral polygon.
 - 📜 [`rect()`](https://p5js.org/reference/#/p5/rect) - Rectangle.
@@ -162,7 +162,6 @@ void draw() {
 Interesting trailing effects can be made using backgrounds with alpha transparency.
 {: .d-inline-block}
 
-
 ## Translation, Rotation, and Scaling
 
 We can change the position, scale, and rotation of the coordinate system using a variety of translate and rotate methods.
@@ -198,8 +197,8 @@ rect(5, 5, 50, 50); // Draw a green square with a thin lines near top left corne
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/YsG9sT_mL" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
-  
+<iframe src="https://editor.p5js.org/stungeye/embed/YsG9sT_mL" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
+
 
 ### Resources
 
@@ -215,7 +214,7 @@ The Result:
 
 ## Shape Example - Twisted Squares
 
-Here's an example that shows off some possibilities with shapes, colors, scale, and rotation. 
+Here's an example that shows off some possibilities with shapes, colors, scale, and rotation.
 
 ```javascript
 function setup() {
@@ -227,7 +226,7 @@ function setup() {
 function draw() {
   background(255); // Clear the screen with white.
   translate(width / 2, height / 2); // Translate to center of sketch.
-  
+
   // Calculate scale and rotation.
   let scaleFactor = map(constrain(mouseX, 0, width), 0, width, 1.1, 1.5);
   let rotation = map(constrain(mouseY, 0, height), 0, height, 0, PI / 8);
@@ -239,7 +238,7 @@ function draw() {
     scale(scaleFactor); // The y position of the mouse mapped 1.1 to 1.5 sets the scale.
     strokeWeight(1 / (scaleFactor * i)); // Stroke weight shouldn't increase as we scale.
     // Color transitions from pink to blue as squares grow in size.
-    stroke(lerpColor(color('DeepPink'), color('DeepSkyBlue'), i / maxSquares));
+    stroke(lerpColor(color("DeepPink"), color("DeepSkyBlue"), i / maxSquares));
     rect(0, 0, 4, 4); // Draw the rotated and scaled square.
   }
 }
@@ -255,4 +254,4 @@ We'll learn more about mouse input, 📜 [`map()`](https://p5js.org/reference/#/
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/I8RWTz0Zr" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/I8RWTz0Zr" scrolling="no" frameborder="no"  width="400" height="442"></iframe>

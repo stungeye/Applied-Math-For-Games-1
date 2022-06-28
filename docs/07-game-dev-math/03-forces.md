@@ -213,7 +213,7 @@ friction() {
 
 Here's a simulation with idealized wind and friction. Imagine you are looking "top down" at a pool table or a golf green. The size of the object scales with its mass. Apply wind by clicking. Hit any key to randomize object sizes. For simplicity objects do not interact with each other.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/mUxsWj-nw" scrolling="no" frameborder="no"  width="400" height="445"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/mUxsWj-nw" scrolling="no" frameborder="no"  width="400" height="442"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/mUxsWj-nw)
 
@@ -230,6 +230,6 @@ Friction is now serving two different purposes in this simulation:
 1. Horizontal ground friction.
 2. Loss of energy on bounce, like would happen in real life due to momentum lost to sound and heat.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/jKlxa8ud5" scrolling="no" frameborder="no"  width="400" height="445"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/jKlxa8ud5" scrolling="no" frameborder="no"  width="400" height="442"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/jKlxa8ud5)

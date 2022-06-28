@@ -49,7 +49,7 @@ function draw() {
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/WOBPTOtAM)
 
-<iframe src="https://editor.p5js.org/stungeye/embed/WOBPTOtAM" scrolling="no" frameborder="no"  width="300" height="100"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/WOBPTOtAM" scrolling="no" frameborder="no"  width="300" height="142"></iframe>
 
 ## Sprite-Based Animation in P5.js
 
@@ -84,6 +84,6 @@ function draw() {
 
 [Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/zEMpTwHvu)
 
-<iframe src="https://editor.p5js.org/stungeye/embed/zEMpTwHvu" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/zEMpTwHvu" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
 
 ☝️ _Hover your mouse over the canvas to change the frame rate. Images by [James Paterson](https://twitter.com/presstube)._

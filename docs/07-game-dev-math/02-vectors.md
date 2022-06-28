@@ -86,7 +86,7 @@ So if we called the above example vector "c" it might be written in a textbook a
 
 ## Interactive 2D Vector Grid
 
-<iframe src="https://editor.p5js.org/stungeye/embed/wFj8pPBGe" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/wFj8pPBGe" scrolling="no" frameborder="no"  width="400" height="442"></iframe>
 
 ☝️ _Hover your mouse over this grid to explore vectors on a 2D cartesian grid. If you're curious you can [check out how this was coded here](https://editor.p5js.org/stungeye/sketches/wFj8pPBGe)._
 
@@ -114,7 +114,7 @@ ellipse(vector.x, vector.y, 50, 50);
 
 We can also create random vectors using `p5.Vector.random2D()` or create vectors from angles and lengths using `p5.Vector.fromAngle()`. Here's a fun sketch that makes use of random vectors:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/FixFDvy12"  scrolling="no" frameborder="no"  width="250" height="250"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/FixFDvy12"  scrolling="no" frameborder="no"  width="250" height="292"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/FixFDvy12)
 
@@ -185,7 +185,7 @@ function draw() {
 }
 ```
 
-<iframe src="https://editor.p5js.org/stungeye/embed/C-rrqEgJm"  scrolling="no" frameborder="no"  width="320" height="150"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/C-rrqEgJm"  scrolling="no" frameborder="no"  width="320" height="192"></iframe>
 
 ### Resources
 
@@ -218,7 +218,7 @@ function draw() {
 
 Not shown are the `setup()`, `drawText()`, and `drawArrow()` methods. [See the full code here](https://editor.p5js.org/stungeye/sketches/oN2-iJN_v).
 
-<iframe src="https://editor.p5js.org/stungeye/embed/oN2-iJN_v" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/oN2-iJN_v" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
 
 ### Resources
 
@@ -249,7 +249,7 @@ let scaleFactor = map(mouseX, 0, width, -2, 2, true);
 let blueVector = p5.Vector.mult(redVector, scaleFactor);
 ```
 
-<iframe src="https://editor.p5js.org/stungeye/embed/gVn52AVlw" scrolling="no" frameborder="no"  width="205" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/gVn52AVlw" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
 
 [Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/gVn52AVlw)
 
@@ -291,7 +291,7 @@ let vector = createVector(mouseX, mouseY);
 let length = vector.mag().toFixed(2);
 ```
 
-<iframe src="https://editor.p5js.org/stungeye/embed/zO1KyODtZ" scrolling="no" frameborder="no"  width="205" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/zO1KyODtZ" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
 
 [Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/gVn52AVlw)
 
@@ -324,7 +324,7 @@ let vectorBlue = p5.Vector.normalize(vectorRed).mult(radius);
 // let vectorBlue = vectorRed.copy().setMag(radius);
 ```
 
-<iframe src="https://editor.p5js.org/stungeye/embed/K7E6yJ-S_" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/K7E6yJ-S_" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
 
 [Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/K7E6yJ-S_)
 
@@ -452,7 +452,7 @@ class Mover {
 
 [Edit Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/M5Ac9dFHA)
 
-<iframe src="https://editor.p5js.org/stungeye/embed/M5Ac9dFHA" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/M5Ac9dFHA" scrolling="no" frameborder="no"  width="400" height="442"></iframe>
 
 ☝️ _Ball will accelerate towards mouse pointer. Click to increase number of movers from 1 to 10._
 
