@@ -66,7 +66,7 @@ Functions can optionally return a value to the caller.
 
 ```javascript
 function pizzaMessage(piecesLeft, hungryPeople) {
-  if (piecesLeft < people) {
+  if (piecesLeft < hungryPeople) {
     return "Sorry we don't have enough pizza.";
   } else {
     return "Let's share! Any leftovers go to the dog.";

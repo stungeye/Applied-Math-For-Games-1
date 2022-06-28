@@ -124,7 +124,7 @@ Most programming languages use [the IEEE 754 standard](https://en.wikipedia.org/
 
 ## Why a Standard
 
-Before float standards existed different hardware manufacturers and languages all used their own quirky formats.
+Before float standards existed, different hardware manufacturers and languages all used their own quirky formats.
 
 IEEE 754 not only specifies the format, but also the algorithms for arithmetic, the rounding rules, and the tests implementations must pass, like:
 
