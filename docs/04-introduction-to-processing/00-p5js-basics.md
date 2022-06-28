@@ -17,7 +17,7 @@ This module is an introduction to installing and using this powerful library bui
 Upon completion of this module, you should be able to:
 
 - Create new p5.js projects using the web editor.
-- Create new p4.js projects on your local machine.
+- Create new p5.js projects on your local machine.
 - Describe the purpose of the setup and draw methods.
 - Resize the drawing canvas and query for the canvas height/width.
 - Draw 2D shapes to the canvas in a variety of colors.

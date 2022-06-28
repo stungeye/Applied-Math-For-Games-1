@@ -1,9 +1,9 @@
 ---
-title: Course Calendar
+title: Calendar - Applied Math 1
 nav_order: 100
 ---
 
-# Course Calendar
+# Course Calendar - Applied Math for Games 1
 
 ## Module 1 - Numbers and Basic Math
 
@@ -26,7 +26,3 @@ nav_order: 100
 ## Module 5 - Forces and Newtonian Physics
 
 - [Forces and Newtonian Physics](/Applied-Math-For-Games-1/docs/07-game-dev-math/03-forces.html)
-
-## Module 6 - Trigonometry
-
-- [Trigonometry](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-trigonometry.html)

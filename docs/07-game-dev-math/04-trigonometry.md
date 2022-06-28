@@ -227,7 +227,7 @@ function draw() {
 }
 ```
 
-<iframe src="https://preview.p5js.org/stungeye/embed/1GLIrmVZD" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/1GLIrmVZD" scrolling="no" frameborder="no"  width="300" height="245"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/1GLIrmVZD)
 
@@ -249,7 +249,7 @@ angle += angularVelocity;
 
 Hover your mouse over the canvas. Angular acceleration is determined by the mouse's x position.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/j0jaVV_gj" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/j0jaVV_gj" scrolling="no" frameborder="no"  width="300" height="245"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/j0jaVV_gj)
 
@@ -277,7 +277,7 @@ if (mouseIsPressed) {
 
 Click, drag, and release to spin the rectangle:
 
-<iframe src="https://preview.p5js.org/stungeye/embed/ccrzVE85u" scrolling="no" frameborder="no"  width="200" height="200"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/ccrzVE85u" scrolling="no" frameborder="no"  width="300" height="245"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/ccrzVE85u)
 
@@ -287,7 +287,7 @@ Physical motion aside, knowledge of translation and rotation in p5.js can lead t
 
 In this sketch by [Gene Kogan](https://twitter.com/genekogan) our old friend [Perlin Noise](/Applied-Math-For-Games-1/docs/07-game-dev-math/01-randomness.html#generating-noise) is used here to control the inner and outer rotations, translations, and square sizes.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/1eKtSVITv" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/1eKtSVITv" scrolling="no" frameborder="no"  width="400" height="445"></iframe>
 
 [Edit Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/1eKtSVITv)
 
@@ -457,13 +457,13 @@ triangle(0, 0, x, 0, x, y);
 
 Click the sketch below to reveal the associated cartesian point, then hold any key to change the radius.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/5AFt0p8t3" scrolling="no" frameborder="no"  width="400" height="440"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/5AFt0p8t3" scrolling="no" frameborder="no"  width="400" height="500"></iframe>
 
 [Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/5AFt0p8t3)
 
 ## Why Polar Coordinates?
 
-There are situations were _thinking in polar_ proves easier than working with Cartesian points.
+There are situations where _thinking in polar_ proves easier than working with Cartesian points.
 
 Think about a cartoon explosion generator, where each frame of the explosion is a "spiky circle".
 
@@ -488,7 +488,7 @@ endShape(CLOSE);
 
 **FLASH WARNING:** Bottom slider controls the framerate. A high framerate could be an epilepsy danger!
 
-<iframe src="https://preview.p5js.org/stungeye/embed/KupFJRt3M" scrolling="no" frameborder="no"  width="400" height="440"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/KupFJRt3M" scrolling="no" frameborder="no"  width="400" height="500"></iframe>
 
 [Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/KupFJRt3M)
 
@@ -515,7 +515,7 @@ The simplest solution would be to call `heading()` on the velocity to get rotati
 
 Here's an updated version of our mouse seeking mover sketch that uses image sprites.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/pYnanrdai" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/pYnanrdai" scrolling="no" frameborder="no"  width="400" height="445"></iframe>
 
 [Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/pYnanrdai)
 
@@ -523,7 +523,7 @@ Here's an updated version of our mouse seeking mover sketch that uses image spri
 
 ![Velocity and Heading - Source: Our Textbook](heading_from_velocity_trig.png){:class .inline .small}
 
-Using trig to find the angle of our ship's motion means constructing a right triangle using the x and y components its velocity.
+Using trig to find the angle of our ship's motion means constructing a right triangle using the x and y components of its velocity.
 
 We know the angle's Opposite and Adjacent sides, so it's TOA or tangent to the rescue.
 
@@ -586,7 +586,7 @@ Sine moves smoothly starting at 0, up to 1, down to -1, and then back up to 0. R
 
 Cosine moves smoothly starting at 1, down to -1, and then back up to 1. Repeat.
 
-We can use these ways to smoothly bounce any variable between to values.
+We can use these waves to smoothly bounce any variable between to values.
 
 ## Like Day and Night
 
@@ -609,7 +609,7 @@ let yPositionSun = map(sin(tinyChange + PI), -1, 1, 80, height * 4);
 let skyColor = lerpColor(nightBackground, dayBackground, sin(tinyChange));
 ```
 
-<iframe src="https://preview.p5js.org/stungeye/embed/nfTctFrdW" scrolling="no" frameborder="no"  width="400" height="225"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/nfTctFrdW" scrolling="no" frameborder="no"  width="400" height="270"></iframe>
 
 [Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/nfTctFrdW)
 
@@ -639,7 +639,7 @@ let period = 120;
 let waveform = amplitude * cos((TWO_PI * frameCount) / period);
 ```
 
-<iframe src="https://preview.p5js.org/stungeye/embed/cYMbqi5Ju" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/cYMbqi5Ju" scrolling="no" frameborder="no"  width="400" height="445"></iframe>
 
 [Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/cYMbqi5Ju)
 
@@ -653,13 +653,13 @@ Oscillation speed is sometimes measured in terms of **frequency**, which is 1 ov
 
 Let's take this knowledge a use it to simulate a collection balls swinging around on perfectly elastic strings. Click the canvas to respawn the oscillators.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/JlZElsCCM" scrolling="no" frameborder="no"  width="400" height="400"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/JlZElsCCM" scrolling="no" frameborder="no"  width="400" height="445"></iframe>
 
 [Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/JlZElsCCM)
 
-In this sketch each ball has a fixed 2D velocity, but this velocity doesn't feed directly into it's position. Instead, the velocity is use to control two slowly increasing angles fed into `sin()`. Each oscillator also has a 2D amplitude which controls how far it will swing back and forth in the x and y directions.
+In this sketch each ball has a fixed 2D velocity, but this velocity doesn't feed directly into it's position. Instead, the velocity is used to control two slowly increasing angles fed into `sin()`. Each oscillator also has a 2D amplitude which controls how far it will swing back and forth in the x and y directions.
 
-Once per frame the oscillators position is updated like this:
+Once per frame the oscillator's position is updated like this:
 
 ```javascript
 this.angle.add(this.velocity);
@@ -673,6 +673,6 @@ In this sketch we'll simulate the undulation of a worm using a sine wave.
 
 The y position of each circle is defined by a sine wave. Each circle is sampling the same wave but with a slight increase ("piecewise velocity") of the input angle from the previous circle. The angle used to control the left-most circle is also increasing ("meta velocity") with each frame.
 
-<iframe src="https://preview.p5js.org/stungeye/embed/i8tNeQg23" scrolling="no" frameborder="no"  width="400" height="250"></iframe>
+<iframe src="https://preview.p5js.org/stungeye/embed/i8tNeQg23" scrolling="no" frameborder="no"  width="400" height="295"></iframe>
 
 [Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/i8tNeQg23)

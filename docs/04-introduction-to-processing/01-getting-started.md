@@ -74,7 +74,7 @@ Open the web editor "Sketch Files" explore (number 8 in the above tour). You'll 
 
 The p5.js library itself (along with the sound library) is loaded from the HTML using a version of p5.js hosted on a content delivery network (CDN).
 
-Before uploading image or sounds assets, it's recommend that you create a folder called `assets`.
+Before uploading image or sounds assets, it's recommended that you create a folder called `assets`.
 
 ![Web Editor Sketch Files New Folder](web-editor-create-folder.png)
 
@@ -88,7 +88,7 @@ Although you can [manually download the required p5.js files](https://p5js.org/d
 2. Open the VS Code command pallet (CTRL-SHIFT-P) and type `Create p5.js Project`.
 3. Select your newly created project folder from step 1.
 4. Add your project folder to your the VS Code workspace.
-5. With the `index.html` file open in the editor open the Live Server using ALT-L ALT-O.
+5. With the `index.html` file open in the editor open the Live Server using ALT-L ALT-O, or by clicking the "Go Live" button in the bottom right-hand corner of the screen.
 
 A browser tab should open to: `127.0.0.1:5500/index.html`
 
@@ -105,7 +105,7 @@ Overview of the files and folders in a local p5.js project:
   - index.html - Main HTML file that loads all required JS and CSS files.
   - sketch.js - Main p5.js sketch file.
   - style.css - Change how your HTML page and sketch are styled using this CSS file.
-  - jsconfig.json - Needed so that Visual Code can perform proper p5.js intellisense autocompletion.
+  - jsconfig.json - Needed so that Visual Studio Code can perform proper p5.js intellisense autocompletion.
 - `libraries` folder: Location of `p5.min.js`, `p5.sound.min.js`, and other installed contributor libraries.
 
 ## Hello World Using p5.js
@@ -141,7 +141,7 @@ At the heart of every p5.js application are the `setup` and `draw` methods.
 - 📜 [`setup()`](https://p5js.org/reference/#/p5/setup) is run once at the start of the program and never again.
 - 📜 [`draw()`](https://p5js.org/reference/#/p5/draw) is run over and over, once per frame.
 
-The speed at which p5.js will attemp to call the `draw` method is controlled by the target framerate, which is set by calling 📜 [`frameRate()`](https://p5js.org/reference/#/p5/framerate) in `setup()`.
+The speed at which p5.js will attempt to call the `draw` method is controlled by the target framerate, which is set by calling 📜 [`frameRate()`](https://p5js.org/reference/#/p5/framerate) in `setup()`.
 
 🎵 Note:
 {: .label .label-yellow}

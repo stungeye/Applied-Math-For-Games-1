@@ -59,7 +59,7 @@ class SpaceShip {
   constructor(initialFuel) {
     this.fuelAvailable = initialFuel;
   }
-  // Methods are defined with optional parameters.
+  // Methods can be defined with optional parameters.
   move() {
     this.fuelAvailable--;
   }
@@ -83,6 +83,37 @@ let yourShip = new SpaceShip(5000);
 myShip.move(); // myShip.fuelAvailable is now 999.
 yourShip.move(); // yourShip.fuelAvailable is now 4999.
 ```
+
+## Accessing Internal State and Methods
+
+The internal variables of a class are called properties or sometimes instance variables. Within a class these properties are always accessed by prepending `this.` to the property name.
+
+The functions associated with a class are called methods. As we saw above, when calling a method on an object we use the dot operator:
+
+```javascript
+let myShip = new SpaceShip(1000);
+myShip.move(); // Calling the move() method on the myShip object of type SpaceShip.
+```
+
+Within a class one method can call another method by prepending `this.` to the method name. Look at how the `move()` method calls the `debugPrint()` method in the example below:
+
+```javascript
+class SpaceShip {
+  constructor(initialFuel) {
+    this.fuelAvailable = initialFuel;
+  }
+  
+  move() {
+    this.fuelAvailable--;
+    this.debugPrint(); // Calling another method.
+  }
+  
+  debugPrint() {
+    console.log("The ship has " + this.fuelAvailable + " remaining.");
+  }
+}
+```
+
 
 ## Static Properties
 
