@@ -49,9 +49,9 @@ An easy way to expand a number is to use a _Place Value Table_. As an example, w
 
 To expand the number, we work through the columns from left to right, multiplying the _face-value_ of each numeral with its _place-value-weight_. We then add all those products together.
 
-34,125 = (3 \* 10<sup>4</sup>) + (4 \* 10<sup>3</sup>) + (1 \* 10<sup>2</sup>) + (2 \* 10<sup>1</sup>) + (5 \* 10<sup>0</sup>)
+34,125 = (3 x 10<sup>4</sup>) + (4 x 10<sup>3</sup>) + (1 x 10<sup>2</sup>) + (2 x 10<sup>1</sup>) + (5 x 10<sup>0</sup>)
 
-34,125 = (3 _ 10,000) + (4 _ 1,000) + (1 _ 100) + (2 _ 10) + (5 \* 1)
+34,125 = (3 x 10,000) + (4 x 1,000) + (1 x 100) + (2 x 10) + (5 x 1)
 
 34,125 = 30,000 + 4,000 + 100 + 20 + 5
 
