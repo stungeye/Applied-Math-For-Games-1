@@ -393,3 +393,4 @@ Look around you. The natural world is full of beautiful noise and randomness!
 - 📚 [Understanding Randomness](https://www.baeldung.com/cs/randomness)
 - 📚 [Advanced Randomness Techniques for Game AI](http://www.gameaipro.com/GameAIPro/GameAIPro_Chapter03_Advanced_Randomness_Techniques_for_Game_AI.pdf) (Free Chapter from [Game AI Pro](http://www.gameaipro.com/) Volume 1)
 - 📚 [Notch Explains Early Minecraft Terrain Generation](https://notch.tumblr.com/post/3746989361/terrain-generation-part-1)
+- 📚 [The Two Types of Randomness in Game Design](https://www.youtube.com/watch?v=dwI5b-wRLic) - Game Maker's Studio YouTube
