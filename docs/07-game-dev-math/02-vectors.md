@@ -149,7 +149,7 @@ Manually this could be done as follows:
 // c = a + b
 let a = createVector(40, 80);
 let b = createVector(5, 10);
-let c = createVector(a.x + b.x, a.y + c.y);
+let c = createVector(a.x + b.x, a.y + b.y);
 ```
 
 ## Adding to an Existing Vector
