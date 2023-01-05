@@ -168,7 +168,7 @@ We can change the position, scale, and rotation of the coordinate system using a
 
 ```javascript
 translate(200, 200); // Move the origin to (200, 200)
-rotate(45); // Rotate coordinate system by 45 degree (around z)
+rotate(PI / 4); // Rotate coordinate system by 45 degree (around z)
 rectangle(0, 0, 100, 100); // Draw a diamond.
 ```
 
