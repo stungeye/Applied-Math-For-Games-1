@@ -671,7 +671,7 @@ this.position.y = this.amplitude.y * sin(this.angle.y);
 
 In this sketch we'll simulate the undulation of a worm using a sine wave.
 
-The y position of each circle is defined by a sine wave. Each circle is sampling the same wave but with a slight increase ("piecewise velocity") of the input angle from the previous circle. The angle used to control the left-most circle is also increasing ("meta velocity") with each frame.
+The y position of each circle is defined by a sine wave. Each circle is sampling the same wave but with a slight increase ("piecewise step") of the input angle from the previous circle. The angle used to control the left-most circle is also increasing ("meta velocity") with each frame.
 
 <iframe src="https://preview.p5js.org/stungeye/embed/i8tNeQg23" scrolling="no" frameborder="no"  width="400" height="292"></iframe>
 
