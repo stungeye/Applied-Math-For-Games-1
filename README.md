@@ -1,6 +1,6 @@
 # Applied Math for Games 1 Course Notes
 
-These Full Stack Web Development notes were built using the [Jekyll static-site generator](https://jekyllrb.com/) with the [Just the Docs theme](https://pmarsceill.github.io/just-the-docs/).
+These Applied Math for Games notes were built using the [Jekyll static-site generator](https://jekyllrb.com/) with the [Just the Docs theme](https://pmarsceill.github.io/just-the-docs/).
 
 The published notes are hosted on GitHub Pages here: [stungeye.github.io/Applied-Math-For-Games-1](https://stungeye.github.io/Applied-Math-For-Games-1/)
 
