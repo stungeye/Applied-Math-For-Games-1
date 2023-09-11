@@ -104,7 +104,7 @@ We aren't validating the user input here, so any value entered other than `y` me
 The `??` operator allows us to pick between a potentially undefined value and a fall-back value.
 
 ```javascript
-let variable = value1 ??? value2;
+let variable = value1 ?? value2;
 ```
 
 ☝️ If `value1` is defined, `variable` will be assigned `value1`. If `value1` is `undefined` or `null`, `variable` will be assigned `value2`.
