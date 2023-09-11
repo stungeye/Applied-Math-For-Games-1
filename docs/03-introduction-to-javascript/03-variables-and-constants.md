@@ -49,7 +49,7 @@ Variable names in Javascript:
 - Must only contain letters, numbers, or the symbols `$` and `_`.
 - Must start with a letter, `$`, or `_`.
 - Are case sensitive.
-- Should be written in CamelCase if they comprise multiple words.
+- Should be written in camelCase if they comprise multiple words.
 
 ## Constants
 
