@@ -40,7 +40,7 @@ While loops can be helpful when validating user input:
 let temperature;
 do {
   temperature = Number(prompt("Enter a temperature"));
-} while (temperature == NaN);
+} while (isNaN(temperature));
 ```
 
 ## Loop Da Loop - For
