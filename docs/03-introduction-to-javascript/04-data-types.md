@@ -99,8 +99,10 @@ Doubles do, however, have some weird behavior when it comes to approximation:
 {: .d-inline-block }
 
 ```javascript
-let weirdo = 0.1 + 0.3; // 0.30000000000000004
+let weirdo = 0.1 + 0.3; // 0.40000000000000004
 ```
+
+This may be fixed in newer version of the Javascript language.
 
 See [our module on numeric representation](/Applied-Math-For-Games-1/docs/06-numbers/03-numeric-representation.html) for more details on floating point approximations.
 
