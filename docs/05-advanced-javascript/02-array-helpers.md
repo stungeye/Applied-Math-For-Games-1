@@ -88,7 +88,7 @@ const animals = [
 
 Let's use `find`, `map`, `filter`, `join`, `includes`, `every`, `some`, and `reduce` to make sense of this data.
 
-📢 **Remember:** We'll be making heavy use of implicit-return arrow functions.
+📢 **Remember:** We'll be making heavy use of implicit-return arrow functions, so [make sure you understand those first](/Applied-Math-For-Games-1/docs/05-advanced-javascript/01-javascript-functions.html).
 
 #### Resources
 
