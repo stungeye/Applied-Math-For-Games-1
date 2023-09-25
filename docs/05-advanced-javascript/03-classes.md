@@ -26,7 +26,7 @@ We can even attach functions to these objects.
 
 ```javascript
 let mySpaceShip = {
-  fuelAvailable = 1000;
+  fuelAvailable: 1000,
   move: function () {
     this.fuelAvailable--;
   },
