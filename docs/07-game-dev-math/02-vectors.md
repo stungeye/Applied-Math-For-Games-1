@@ -262,7 +262,7 @@ let blueVector = p5.Vector.mult(redVector, scaleFactor);
 
 Every vector can be thought of as a the hypotenuse of a [right-angle triangle](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle). Therefore, we can calculate the length of a vector by returning to high school math class and rediscovering the Pythagorean theorem.
 
-If we return to our example vector at (5, 2) then the length of the vector is:
+If we return to our example vector at (5, 3) then the length of the vector is:
 
 ![Vector as Right Triangle](vector_as_triangle.png)
 
