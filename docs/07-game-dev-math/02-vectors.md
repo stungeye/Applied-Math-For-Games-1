@@ -269,10 +269,10 @@ If we return to our example vector at (5, 2) then the length of the vector is:
 ```
 c² =  a² + b²
 c  =  √(a² + b²)
-c  =  √(5² + 2²)
-c  =  √(25 + 4)
-c  =  √29
-c  ≅  5.3851648
+c  =  √(5² + 3²)
+c  =  √(25 + 9)
+c  =  √34
+c  ≅  5.83095189
 ```
 
 ⏳ Wait For It:
