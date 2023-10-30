@@ -387,7 +387,7 @@ With acceleration added our steps for simulation physical motion become:
 1. Calculate current acceleration.
 2. Add acceleration to velocity.
 3. Limit velocity to a maximum speed. (Example: Vehicle's max speed)
-4. Add velocity to to position.
+4. Add velocity to position.
 5. Update position or velocity. (Example: Wall bounce or canvas wrap)
 6. Draw object at position.
 7. Repeat.
