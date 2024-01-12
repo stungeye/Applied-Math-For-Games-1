@@ -140,7 +140,7 @@ Pi is _baked_ into radian measurements:
 
 Pi is defined as the ratio of a circle's circumference to its diameter.
 
-You've likely seen it written in these forms:
+Here are three different ways of representing this relationship mathematically:
 
 ```text
 π = C / d
@@ -148,7 +148,16 @@ C = π * d
 C = 2 * π * r
 ```
 
-A circle with a diameter of 1 will have circumference of length pi.
+A circle with a diameter of 1 will have circumference of length pi:
+
+```text
+C = 2 * π * r
+(If d = 1 then r = 0.5)
+C = 2 * π * 0.5
+C = (2 * 0.5) * π
+C = π
+```
+Visualized, here's a circle with a diameter of 1. Watch as its circumference unrolls to a length of π:
 
 ![Pi Unrolled - Source: Wikipedia https://en.wikipedia.org/wiki/Pi](Pi-unrolled-720.gif)
 
@@ -161,6 +170,11 @@ Visualized another way:
 
 Pi crops up throughout math and physics. We'll soon see how it relates to trigonometry.
 {: .d-inline-block}
+
+### Resources
+- 📚 [Prehistoric Calculus: Discovering Pi @ Better Explained](https://betterexplained.com/articles/prehistoric-calculus-discovering-pi/)
+- 📚 [Calculating Pi in Various Ways a Visualization](https://scientific.place/finding-pi/)
+- 📚 [The Tau Manifesto by Michael Hartl](https://tauday.com/tau-manifesto)
 
 ## Why Radians
 
@@ -192,8 +206,6 @@ Much easier to think about and no pesky π.
 ### Resources
 
 - 📚 [Intuitive Guide to Angles, Degrees and Radians @ Better Explained](https://betterexplained.com/articles/intuitive-guide-to-angles-degrees-and-radians/)
-- 📚 [Prehistoric Calculus: Discovering Pi @ Better Explained](https://betterexplained.com/articles/prehistoric-calculus-discovering-pi/)
-- 📚 [The Tau Manifesto by Michael Hartl](https://tauday.com/tau-manifesto)
 
 ## Processing Angles
 
