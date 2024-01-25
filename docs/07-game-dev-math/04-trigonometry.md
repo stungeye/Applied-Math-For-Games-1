@@ -383,7 +383,7 @@ Each of those points can be described by either:
 - An x and y coordinate.
 - The angle within a right triangle. (Where the hypotenuse is the circle's radius.)
 
-## Trig and the The Circle
+## Trig and The Circle
 
 This means that trig can be used to relate circle points at specific angles to x and y coordinates!
 
