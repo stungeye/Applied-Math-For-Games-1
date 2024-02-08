@@ -38,7 +38,7 @@ snail(); // And called by name.
 Unnamed function are called anonymous\* functions:
 
 ```javascript
-setTimeout(function(){ console.log("Hello Mail! 📨"; }, 500);
+setTimeout(function(){ console.log("Hello Mail! 📨"); }, 500);
 ```
 
 Anonymous functions can be assigned to variables:
