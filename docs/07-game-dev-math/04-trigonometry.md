@@ -8,7 +8,7 @@ nav_order: 5
 # Trigonometry
 {: .no_toc }
 
-Trigonometry is the mathematics of right-angle triangles and circles. We can use trig to simulate angular motion and waves. It can also be used to convert between different coordinate systems. 
+**Trigonometry** is the mathematics of right-angle triangles and circles. We can use trig to simulate angular motion and waves. It can also be used to convert between different coordinate systems. 
 
 ## Table of Contents
 {: .no_toc .text-delta }  
