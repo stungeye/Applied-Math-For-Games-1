@@ -301,15 +301,15 @@ let length = vector.mag().toFixed(2);
 Calculating magnitude is expensive due to the square root.
 {: .d-inline-block}
 
-You can get away with using the computationally cheaper `.magSq()` if don't care about the actual value and only want to compare vectors. You can also get an approximation magnitude, using [this "double-dog-leg" approximation](http://forums.parallax.com/discussion/147522/dog-leg-hypotenuse-approximation):
+You can get away with using the computationally cheaper `.magSq()` if don't care about the actual value and only want to compare vectors. You can also get an approximation magnitude, using [this "dog-leg" approximation](http://forums.parallax.com/discussion/147522/dog-leg-hypotenuse-approximation):
 
 ```javascript
 function magnitude(a, b) {
-  a = Math.abs(a)
-  b = Math.abs(b)
-  var lo = Math.min(a, b)
-  var hi = Math.max(a, b)
-  return hi + 3 * lo / 32 + Math.max(0, 2 * lo - hi) / 8 + Math.max(0, 4 * lo - hi) / 16
+  a = Math.abs(a);
+  b = Math.abs(b);
+  var lo = Math.min(a, b);
+  var hi = Math.max(a, b);
+  return  hi + (lo + Math.max(0, lo + lo + lo - hi)) / 8;
 }
 ```
 
