@@ -1,7 +1,7 @@
 ---
 title: Numeral Systems
 parent: Numbers
-nav_order: 2
+nav_order: 4
 ---
 
 <!--prettier-ignore-start-->

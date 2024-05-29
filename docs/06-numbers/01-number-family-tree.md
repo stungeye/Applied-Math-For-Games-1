@@ -8,7 +8,7 @@ nav_order: 1
 # Numeric Representation 
 {: .no_toc }
 
-TBW
+This module dives into the different types of numbers used in mathematics and how they relate to each other.
 
 ## Table of Contents
 {: .no_toc .text-delta }  
