@@ -50,12 +50,14 @@ The magnitude of my velocity is 50km per hour and the direction of my velocity i
 
 ## Representing Vectors
 
-Visually, you can think of a vector as points or arrows in space. In this course we'll be sticking to two dimensions, so our vectors can be seen as points on a 2D Cartesian coordinate grid, or as arrows from one point to another on this grid.
+Visually, you can think of a vector as points or arrows in space. In this course we'll be sticking to two dimensions (think height and width), so our vectors can be seen as points on a 2D Cartesian coordinate grid, or as arrows from one point to another on this grid.
 
 Let's take the pair of numbers (5, 3). We can think of this as representing two things:
 
 - The point on a 2D Cartesian grid 5 units to the right along the x-axis and 3 units up the y-axis.
 - An arrow on this same grid, with the _tail_ of the arrow at the origin, and the _tip_ of the arrow at the point described above.
+
+We're using the word "tail" here to mean the start of the vector, and the word "tip" to mean the end of the vector (the tip of the arrow).
 
 ![Vector as Arrow](vector_as_arrow.png)
 
@@ -67,11 +69,22 @@ The Cartesian grid is named after philosopher and mathematician [René Descartes
 
 Descartes famously proposed that all truth begins with "cogito, ergo sum", or "I think, therefore I am".
 
+## Vector Components
+
+A vector is written as an ordered pair of **components**. A two-dimensional (2D) vector has two component.
+
+```
+Order pair of components: (x, y)
+Example of a particular vector: (5, 3)
+```
+
+The first number in a 2D vector represents the vector's `x` component and the second number represents the vector's `y` component.
+
 ## Vectors in Math Textbooks
 
-I've written the above vector as the pair of number in parenthesis. In math textbooks you'll often see 2D vectors written in square braces, with the top number representing the x displacement and the bottom number representing the y displacement. You'll also see placeholders for vectors written as single letters with arrows above them.
+In math textbooks you'll often see 2D vectors written in square braces, with the top number representing the x displacement and the bottom number representing the y displacement. You'll also see placeholders for vectors written as single letters with arrows above them.
 
-So if we called the above example vector "c" it might be written in a textbook as:
+So if we called our example vector (5,3) "c" it might be written in a textbook as:
 
 ![Math Vector](math_vector.png)
 
@@ -91,3 +104,38 @@ Some common operations we'll be performing on vectors in this course:
 - Division - We can also scale the length of a vector by dividing it by a scalar.
 - Calculating Magnitude - Determining the scalar length of a vector.
 - Normalization - Scaling a vector to a length of 1 while preserving its direction.
+
+## Vector Addition
+
+Adding two vectors together (regardless of the number of dimensions) is as simple as separately adding together their components.
+
+```
+vector e: (2, 1)
+vector f: (3, 5)
+
+vector g = e + f
+vector g = (2 + 3, 1 + 5)
+vector g = (5, 6)
+```
+
+## Visual Vector Addition
+
+Adding vectors can also be performed visually on a 2D plane. We can add two vectors by drawing them "tip to tale", where tip means the tip of the arrow and tale means the start of the vector.
+
+To visually add to vectors, we draw our first vector starting at the origin.
+
+Example e = (2,1)
+
+![Vector e](sum_part1.png)
+
+Next, the second vector's "tale" (starting place) is drawn at the "tip" (end) of the first vector.
+
+Example f = (3,5)
+
+![Vectors e and f](sum_part2.png)
+
+The resulting visual sum can be seen by connecting the origin to the tip of the second vector.
+
+Example g = e + f = (5, 6)
+
+![Vectors e + f = g](sum_part3.png)
