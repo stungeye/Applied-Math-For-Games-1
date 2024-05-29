@@ -8,7 +8,7 @@ nav_order: 1
 # Numeric Representation 
 {: .no_toc }
 
-This module dives into the different types of numbers used in mathematics and how they relate to each other.
+In mathematics there are different types of numbers, each with a unique place in the numeric family tree.
 
 ## Table of Contents
 {: .no_toc .text-delta }  

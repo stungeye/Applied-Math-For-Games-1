@@ -8,7 +8,7 @@ nav_order: 3
 # Numeric Representation
 {: .no_toc }
 
-TBW
+Computers must use approximations when storing certain numbers because their binary system can't precisely represent all decimal values.
 
 ## Table of Contents
 {: .no_toc .text-delta }  

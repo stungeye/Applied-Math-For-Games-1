@@ -8,7 +8,7 @@ nav_order: 4
 # Numeral Systems 
 {: .no_toc }
 
-TBW
+**Numeral systems** enable us to represent numbers using a consistent set of symbols and rules.
 
 ## Table of Contents
 {: .no_toc .text-delta }  
