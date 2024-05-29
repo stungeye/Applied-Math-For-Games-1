@@ -88,6 +88,8 @@ So if we called our example vector (5,3) "c" it might be written in a textbook a
 
 ![Math Vector](math_vector.png)
 
+When talking about vectors in this modules we won't be using this arrow notion, but it is used in [our textbook](https://natureofcode.com/).
+
 ## Interactive 2D Vector Grid
 
 <iframe src="https://editor.p5js.org/stungeye/embed/wFj8pPBGe" scrolling="no" frameborder="no"  width="400" height="442"></iframe>
@@ -120,22 +122,22 @@ vector g = (5, 6)
 
 ## Visual Vector Addition
 
-Adding vectors can also be performed visually on a 2D plane. We can add two vectors by drawing them "tip to tale", where tip means the tip of the arrow and tale means the start of the vector.
+Adding vectors can also be performed visually on a 2D plane. We can add two vectors by drawing them "tip to tail", where tip means the tip of the arrow and tail means the start of the vector.
 
 To visually add to vectors, we draw our first vector starting at the origin.
 
-Example e = (2,1)
+Example: e = (2,1)
 
 ![Vector e](sum_part1.png)
 
-Next, the second vector's "tale" (starting place) is drawn at the "tip" (end) of the first vector.
+Next, the second vector's "tail" (starting place) is drawn at the "tip" (end) of the first vector.
 
-Example f = (3,5)
+Example: f = (3,5)
 
 ![Vectors e and f](sum_part2.png)
 
 The resulting visual sum can be seen by connecting the origin to the tip of the second vector.
 
-Example g = e + f = (5, 6)
+Example: g = e + f = (5, 6)
 
 ![Vectors e + f = g](sum_part3.png)
