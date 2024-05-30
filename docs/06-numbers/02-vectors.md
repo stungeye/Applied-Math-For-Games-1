@@ -126,18 +126,77 @@ Adding vectors can also be performed visually on a 2D plane. We can add two vect
 
 To visually add to vectors, we draw our first vector starting at the origin.
 
-Example: e = (2,1)
+**Example: e = (2,1)**
 
 ![Vector e](sum_part1.png)
 
 Next, the second vector's "tail" (starting place) is drawn at the "tip" (end) of the first vector.
 
-Example: f = (3,5)
+**Example: f = (3,5)**
 
 ![Vectors e and f](sum_part2.png)
 
 The resulting visual sum can be seen by connecting the origin to the tip of the second vector.
 
-Example: g = e + f = (5, 6)
+**Example: g = e + f = (5, 6)**
 
 ![Vectors e + f = g](sum_part3.png)
+
+## Properties of Vector Addition
+
+Just like the addition of regular numbers, vector addition follows the commutative and associative rules:
+
+**Cummutative Rule:** a + b = b + a
+
+Regular Numbers Example:
+
+`3 + 5 = 5 + 3 = 8`
+
+Vector Example:
+
+`(2, 1) + (3, 5) = (3, 5) + (2, 1) = (5, 6)`
+
+**Associative Rule:** u + (v + w) = (u + v) + w
+
+Regular Numbers Example:
+
+(3 + 2) + 1 = 3 + (2 + 1) = 6
+
+Vector Example:
+
+`(2, 1) + ((3, 5) + (4, 4)) = ((2, 1) + (3, 5)) + (4, 4) `
+
+## Vector Negation
+
+## Vector Subtraction
+
+## Vector Multiplication
+
+## Vector Division
+
+## Vector Magnitude with [Pythagoras](https://plato.stanford.edu/entries/pythagoras/)
+
+Every vector can be thought of as a the hypotenuse of a [right-angle triangle](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle). Therefore, we can calculate the length of a vector by returning to high school math class and rediscovering the Pythagorean theorem.
+
+If we return to our example vector at (5, 3) then the length of the vector is:
+
+![Vector as Right Triangle](vector_as_triangle.png)
+
+```
+c² =  a² + b²
+c  =  √(a² + b²)
+c  =  √(5² + 3²)
+c  =  √(25 + 9)
+c  =  √34
+c  ≅  5.83095189
+```
+
+⏳ Wait For It:
+{: .label .label-blue}
+
+We'll dig deeper into [the trigonometry of right triangles in our Oscillation module](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle).
+{: .d-inline-block}
+
+## Vector Normalization
+
+## Dot Product

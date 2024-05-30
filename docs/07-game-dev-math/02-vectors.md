@@ -198,11 +198,9 @@ let blueVector = p5.Vector.mult(redVector, scaleFactor);
 - 📜 [`.mult() & p5.Vector.mult()`](https://p5js.org/reference/#/p5.Vector/mult) - Vector multiplication methods.
 - 📜 [`.div() & p5.Vector.div()`](https://p5js.org/reference/#/p5.Vector/div) - Vector division methods.
 
-## Vector Magnitude with [Pythagoras](https://plato.stanford.edu/entries/pythagoras/)
+## Vector Magnitude with p5.js
 
-Every vector can be thought of as a the hypotenuse of a [right-angle triangle](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle). Therefore, we can calculate the length of a vector by returning to high school math class and rediscovering the Pythagorean theorem.
-
-If we return to our example vector at (5, 3) then the length of the vector is:
+In our vector math module we saw that a vector's magnitude can be calculated using the Pythagorean theorem.
 
 ![Vector as Right Triangle](vector_as_triangle.png)
 
@@ -214,14 +212,6 @@ c  =  √(25 + 9)
 c  =  √34
 c  ≅  5.83095189
 ```
-
-⏳ Wait For It:
-{: .label .label-blue}
-
-We'll dig deeper into [the trigonometry of right triangles in our Oscillation module](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle).
-{: .d-inline-block}
-
-## Vector Magnitude with p5.js
 
 With p5.js we can skip the high school math and use `.mag()` or `p5.Vector.mag()`:
 
