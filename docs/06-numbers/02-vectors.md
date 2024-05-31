@@ -27,12 +27,13 @@ By the end of this module you should be able to:
 - Calculate the result of 2D vector addition, subtraction, and multiplication.
 - Calculate the length/magnitude of a given 2D vector.
 - Calculate the normalized unit vector from a given 2D vector.
+- Understand and apply the dot product to determine the angle between two vectors and their directional relationship.
 
 ## The Vector
 
 The main building block for the math in this course is **the vector**, specifically the 2-dimensional vector.
 
-In linear algebra, when we use the word vector we mean a **Euclidean Vector**, a mathematical entity that has both a magnitude and a director.
+In linear algebra, when we use the word vector we mean a **Euclidean Vector**, a mathematical entity that has both a magnitude and a direction.
 
 ## Scalars vs Vectors by Example
 
@@ -71,7 +72,7 @@ Descartes famously proposed that all truth begins with "cogito, ergo sum", or "I
 
 ## Vector Components
 
-A vector is written as an ordered pair of **components**. A two-dimensional (2D) vector has two component.
+A vector is written as an ordered pair of **components**. A two-dimensional (2D) vector has two components.
 
 ```
 Order pair of components: (x, y)
@@ -173,7 +174,7 @@ Vector Example:
 
 The negative of a vector is a vector of the same length in the opposite direction.
 
-Numerically, this means that both components of the negated vector have had their signs flipped.
+Numerically, this means that each component of the negated vector has its sign flipped.
 
 Example:
 
@@ -204,7 +205,7 @@ h = (2 - 3, 1 - 5)
 h = (-1, -4)
 ```
 
-Visually, we are subtracting by drawing `e` and `-f` tip to tale.
+Visually, we are subtracting by drawing `e` and `-f` tip to tail.
 
 ![Vector Subtraction](vector_subtraction.png)
 
@@ -248,7 +249,7 @@ In the example above, the vector `h` is three times shorter than the vector `e`.
 
 ## Vector Magnitude with [Pythagoras](https://plato.stanford.edu/entries/pythagoras/)
 
-Every vector can be thought of as a the hypotenuse of a [right-angle triangle](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle). Therefore, we can calculate the length of a vector by returning to high school math class and rediscovering the Pythagorean theorem.
+Every vector can be thought of as the hypotenuse of a [right-angle triangle](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle). Therefore, we can calculate the length of a vector by returning to high school math class and rediscovering the Pythagorean theorem.
 
 If we have a vector (5, 3) then the length of the vector is:
 
@@ -326,24 +327,24 @@ a ⋅ b = ∣a∣ * ∣b∣ * cos(θ)
 
 Where `∣a∣` and `∣b∣` are the magnitudes of `a` and `b`, respectively.
 
-# Using the Dot Product to Compare Vector Directions
+## Using the Dot Product to Compare Vector Directions
 
-The dot product of two vectors can be normalized to compare their directions. This involves comparing the dot product of the normalized unit vectors.
+The dot product of two vectors can be used to compare their directions by normalizing the vectors first. This involves calculating the dot product of their unit vectors.
 
-This value can help determine if two vectors are pointing in the same direction, opposite directions, or somewhere in between.
+The dot product helps determine if two vectors are pointing in the same direction, opposite directions, or somewhere in between.
 
-Steps to Compare Directions
+### Steps to Compare Directions
 
-- Normalize the Vectors: Convert each vector to its unit vector.
+- Normalize the Vectors: Convert each vector to its unit vector by dividing each component by the vector's magnitude.
 - Calculate the Dot Product of the Unit Vectors: This will give a value between -1 and 1.
 
-The result can be interpreted as follows:
+### Interpretation of the Result
 
 - 1: The vectors are pointing in exactly the same direction.
 - 0: The vectors are orthogonal (perpendicular) to each other.
 - -1: The vectors are pointing in exactly opposite directions.
-- Between 0 and 1: The angle between the vectors is greater than 0 but less than 90 degrees.
-- Between -1 and 0: The angle between the vectors is greater than 90 degrees but less than 180 degrees.
+- Between 0 and 1: The vectors form an acute angle (less than 90 degrees).
+- Between -1 and 0: The vectors form an obtuse angle (greater than 90 degrees).
 
 ## Summary
 
