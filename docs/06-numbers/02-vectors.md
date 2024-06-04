@@ -83,9 +83,12 @@ The first number in a 2D vector represents the vector's `x` component and the se
 
 ## Interactive 2D Vector Grid
 
+Hover your mouse over this grid to explore a 2D Cartesian grid of floating point vectors.
+
 <iframe src="https://editor.p5js.org/stungeye/embed/wFj8pPBGe" scrolling="no" frameborder="no"  width="400" height="442"></iframe>
 
-☝️ _Hover your mouse over this grid to explore vectors on a 2D cartesian grid. If you're curious you can [check out how this was coded here](https://editor.p5js.org/stungeye/sketches/wFj8pPBGe)._
+🎵 Note: _If you're curious you can [check out how this was coded here](https://editor.p5js.org/stungeye/sketches/wFj8pPBGe)._'
+{: .label .label-yellow}
 
 ## Vectors in Math Textbooks
 
