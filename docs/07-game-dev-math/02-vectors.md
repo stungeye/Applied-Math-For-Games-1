@@ -10,7 +10,7 @@ nav_order: 3
 
 A **vector** is a quantity fully described by its magnitude and its direction.
 
-Vectors are a powerful tool for modeling physical behaviour like motion and gravity.
+Vectors are a powerful tool for modelling physical behaviour like motion and gravity.
 
 ## Table of Contents
 {: .no_toc .text-delta }  
