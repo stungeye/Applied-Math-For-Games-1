@@ -5,7 +5,7 @@ nav_order: 1
 ---
 
 <!--prettier-ignore-start-->
-# Numeric Representation 
+# Different Types of Numbers
 {: .no_toc }
 
 In mathematics there are different types of numbers, each with a unique place in the numeric family tree.
