@@ -30,7 +30,7 @@ By the end of this module you should be able to:
 
 ## Textbook Chapter
 
-[Chapter 3 - Oscillation - Nature of Code]([/Applied-Math-For-Games-1/assets/pdf/noc_chp3_2020_draft.pdf](https://natureofcode.com/oscillation/)
+[Chapter 3 - Oscillation - Nature of Code](https://natureofcode.com/oscillation/)
 
 ## Oscillation
 
