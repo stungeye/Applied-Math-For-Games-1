@@ -322,13 +322,19 @@ a ⋅ b = 11
 
 ### Geometric Interpretation
 
-The dot product can also be used to find the angle θ between two vectors:
+The dot product can also be calculated by using vector magnitudes and the cosine trigonometric function. 
 
 ```
 a ⋅ b = ∣a∣ * ∣b∣ * cos(θ)
 ```
 
-Where `∣a∣` and `∣b∣` are the magnitudes of `a` and `b`, respectively.
+Where `∣a∣` and `∣b∣` are the magnitudes of `a` and `b`, respectivel, and θ is the angle between the two vectors. The cosine of θ (`cos(θ)`) can be determined with a calculator. Most programming languages also have functions for calculating this value. 
+
+⏳ Wait For It:
+{: .label .label-blue}
+
+We'll dig deeper into [the trigonometry in our Oscillation module](/Applied-Math-For-Games-1/docs/07-game-dev-math/04-oscillation.html#the-right-triangle).
+{: .d-inline-block}
 
 ## Using the Dot Product to Compare Vector Directions
 
