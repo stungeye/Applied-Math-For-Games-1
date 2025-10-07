@@ -237,11 +237,11 @@ Height comes close to being what is called a "Normal" distribution, which is som
 
 ## `random()` vs `gaussianRandom()`
 
-In p5.js we can use the `gaussianRadom()` function to generate numbers with a normal distribution.
+In p5.js we can use the `gaussianRandom()` function to generate numbers with a normal distribution.
 
-When called without any arguments `gaussianRadom()` will return floating point numbers clustered around 0. The majority of these numbers will be between -1 and 1 but numbers further outside that range will also appear from time to time.
+When called without any arguments `gaussianRandom()` will return floating point numbers clustered around 0. The majority of these numbers will be between -1 and 1 but numbers further outside that range will also appear from time to time.
 
-When calling `gaussianRadom()` with two arguments:
+When calling `gaussianRandom()` with two arguments:
 
 - The first argument will be the average value that generated numbers will cluster around.
 - The second argument will be average spread of the generated numbers around the first argument.
