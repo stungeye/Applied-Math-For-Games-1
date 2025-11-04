@@ -142,7 +142,7 @@ applyForce(force) {
 }
 ```
 
-In order to allow multiple forces to act of a `Mover` we need the forces to accumulate:
+In order to allow multiple forces to act on a `Mover` we need the forces to accumulate:
 
 ```javascript
 applyForce(force) {
