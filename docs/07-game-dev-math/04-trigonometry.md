@@ -106,7 +106,7 @@ This is the basis for **Radians**, which reframes rotation as **distanced travel
 
 ## Radians Related to Radius
 
-![Radius Relate to Radius](radians_and_radius.png){:class .medium .inline}
+![Radius Relates to Radius](radians_and_radius.png){:class .medium .inline}
 
 The distance of an arc around a circle depends on the size of the circle, so radians are measured in terms of a circle's radius.
 
@@ -124,7 +124,7 @@ Pi is an [irrational number](/Applied-Math-For-Games-1/docs/06-numbers/01-number
 
 Pi is _baked_ into radian measurements:
 
-- A full circular rotation (360 degress) is 2 \* π radians.
+- A full circular rotation (360 degres) is 2 \* π radians.
 - A half circle (180 degrees) is π radians.
 - A quarter circle (90 degrees) is π/2 radians.
 
@@ -207,7 +207,7 @@ Much easier to think about and no pesky π.
 
 ## Processing Angles
 
-p5.js has a number of helper functions and constants that will come in handing when working with angles:
+p5.js has a number of helper functions and constants that will come in handy when working with angles:
 
 - 📜 [`angleMode()`](https://p5js.org/reference/#/p5/) - Switch between radians (default) and degrees.
 - 📜 [p5.Vector's `heading()`](https://p5js.org/reference/#/p5.Vector/heading) - Returns the angle of a vector.
@@ -249,7 +249,7 @@ We can apply our knowledge of Newton's laws from the previous module to modify t
 // Determine acceleration based on mouse position.
 angularAcceleration = map(mouseX, 0, width, -0.01, 0.01);
 
-// Forces 101: Acceleration changes veleocity.
+// Forces 101: Acceleration changes velocity.
 angularVelocity += angularAcceleration;
 angularVelocity = constrain(angularVelocity, -0.2, 0.2);
 
@@ -318,14 +318,14 @@ Trigonometry also reveals the hidden concepts that relate circles to triangles.
 We can use trigonometry to:
 
 - Determine the rotation of a vector.
-- Find the angle two given points. (Think simple AI steering and aiming.)
+- Find the angle between two given points. (Think simple AI steering and aiming.)
 - Find the distance between two points. (Think simple collision detection.)
 - Simulate physical systems that involve harmonic motion (waves, pendulums, springs).
 
 ⏳ Wait For It:
 {: .label .label-blue}
 
-The `heading()` secret mention above will be [revealed below](#drawing-vectors-using-trig).
+The `heading()` secret mentioned above will be [revealed below](#drawing-vectors-using-trig).
 {: .d-inline-block}
 
 ## The Right Triangle
@@ -365,8 +365,7 @@ Some people remember these relationships using the catch phrase: SOH CAH TOA
 
 ### Resources
 
-- 📚 [Magnitude wit
-  h Pythagoras in our Vector Modules](/Applied-Math-For-Games-1/docs/07-game-dev-math/02-vectors.html#vector-magnitude-with-pythagoras).
+- 📚 [Magnitude with Pythagoras in our Vector Modules](/Applied-Math-For-Games-1/docs/07-game-dev-math/02-vectors.html#vector-magnitude-with-pythagoras).
 
 ## The Triangle and The Circle
 
@@ -426,7 +425,7 @@ The change in x around a circle is a cosine wave.
 
 ## Polar vs Cartesian Coordinates
 
-We can now see that any point can be equally describe by:
+We can now see that any point can be equally described by:
 
 - An x and y coordinate.
 - An angle around the origin paired with a distance (radius) from the origin.
@@ -506,7 +505,7 @@ endShape(CLOSE);
 
 Remember [when I promised](#trigonometry) to reveal the secret of the P5.Vector `heading()` method?
 
-We used `heading()` to get the angle of of a vector in the [Spin It! demo](#spin-it). In our physical simulations we can also use it to have objects point in the direction of motion.
+We used `heading()` to get the angle of a vector in the [Spin It! demo](#spin-it). In our physical simulations we can also use it to have objects point in the direction of motion.
 
 We previously handled the indication of direction in the [Mouse Seeking Mover Sketch](/Applied-Math-For-Games-1/docs/07-game-dev-math/02-vectors.html#extending-motion-simulation-with-acceleration) (lines 41 to 43 of `mover.js` shown below) using a copy of the velocity vector:
 
@@ -614,11 +613,20 @@ let tinyChange = frameCount / 100;
 let dayBackground = color("skyBlue");
 let nightBackground = color("black");
 
-// Pairing sin with map and lerpColor to change values over time.
-// Offset the moon and the sun by PI to put them on either side of the wave.
-let yPositionMoon = map(sin(tinyChange), -1, 1, 100, height * 2);
-let yPositionSun = map(sin(tinyChange + PI), -1, 1, 80, height * 4);
-let skyColor = lerpColor(nightBackground, dayBackground, sin(tinyChange));
+// Map the -1 to 1 swings of the changing sine output to the moon's
+// verticle position on and off the screen.
+let yPositionMoon = map(sin(tinyChange), -1, 1, 75, height * 3);
+
+// Offset sin input by PI to place the sun and the moon on opposite "sides"
+// of the wave. The moon peaks when the sun valleys, and vice versa.
+let yPositionSun = map(sin(tinyChange + PI), -1, 1, 75, height * 4);
+
+// Manually normalizing the sin wave between 0 and 1, instead of using map.
+// Equivalent to: let lerpPosition = map(sin(tinyChange), -1, 1, 0, 1); 
+let lerpPosition = 0.5 * sin(tinyChange) + 0.5;
+  
+// Linear interpolation between the day and night sky. 
+let skyColor = lerpColor(nightBackground, dayBackground, lerpPosition);
 ```
 
 <iframe src="https://preview.p5js.org/stungeye/embed/nfTctFrdW" scrolling="no" frameborder="no"  width="400" height="267"></iframe>
@@ -663,13 +671,13 @@ Oscillation speed is sometimes measured in terms of **frequency**, which is 1 ov
 
 ## Angular Velocity in 2D
 
-Let's take this knowledge a use it to simulate a collection balls swinging around on perfectly elastic strings. Click the canvas to respawn the oscillators.
+Let's take this knowledge and use it to simulate a collection balls swinging around on perfectly elastic strings. Click the canvas to respawn the oscillators.
 
 <iframe src="https://preview.p5js.org/stungeye/embed/JlZElsCCM" scrolling="no" frameborder="no"  width="400" height="442"></iframe>
 
 [Edit the Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/JlZElsCCM)
 
-In this sketch each ball has a fixed 2D velocity, but this velocity doesn't feed directly into it's position. Instead, the velocity is used to control two slowly increasing angles fed into `sin()`. Each oscillator also has a 2D amplitude which controls how far it will swing back and forth in the x and y directions.
+In this sketch each ball has a fixed 2D velocity, but this velocity doesn't feed directly into its position. Instead, the velocity is used to control two slowly increasing angles fed into `sin()`. Each oscillator also has a 2D amplitude which controls how far it will swing back and forth in the x and y directions.
 
 Once per frame the oscillator's position is updated like this:
 
