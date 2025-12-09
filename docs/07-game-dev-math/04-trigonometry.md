@@ -525,6 +525,8 @@ The simplest solution would be to call `heading()` on the velocity to get rotati
 
 Here's an updated version of our mouse seeking mover sketch that uses image sprites.
 
+Click for more space ships, then press any key to see a debug line representing their velocity vectors.
+
 <iframe src="https://preview.p5js.org/stungeye/embed/pYnanrdai" scrolling="no" frameborder="no"  width="400" height="442"></iframe>
 
 [Explore the Full Code Using p5.js Web Editor](https://editor.p5js.org/stungeye/sketches/pYnanrdai)
