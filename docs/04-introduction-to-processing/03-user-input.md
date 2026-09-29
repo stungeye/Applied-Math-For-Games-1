@@ -29,7 +29,7 @@ circle(mouseX, mouseY, 50);
 
 The state of the mouse buttons is available via 📜 [`mouseIsPressed`](https://p5js.org/reference/p5/mouseIsPressed/) and 📜 [`mouseButton`](https://p5js.org/reference/p5/mouseButton/).
 
-In p5.js v2, `mouseButton` is an object with `left`, `right`, and `center` Boolean properties:
+In p5.js `mouseButton` is an object with `left`, `right`, and `center` Boolean properties:
 
 ```javascript
 if (mouseIsPressed) {
@@ -148,13 +148,16 @@ There are several variables related to the state of keys pressed on the keyboard
 * 📜 [`keyIsPressed`](https://p5js.org/reference/p5/keyIsPressed/) - Boolean that is `true` if any key is currently pressed.
 * 📜 [`key`](https://p5js.org/reference/p5/key/) - String containing the value of the most recently typed key. This is most useful for printable characters.
 * 📜 [`keyCode`](https://p5js.org/reference/p5/keyCode/) - Numeric code for the last key pressed.
-
+* 📜 [`keyIsDown()`](https://p5js.org/reference/p5/keyIsDown/) - Check if a particular is is being held down.
+  
 p5.js also provides constants for common special keys, including `BACKSPACE`, `DELETE`, `ENTER`, `RETURN`, `TAB`, `ESCAPE`, `SHIFT`, `CONTROL`, `OPTION`, `ALT`, `UP_ARROW`, `DOWN_ARROW`, `LEFT_ARROW`, and `RIGHT_ARROW`.
 
-In p5.js v2, the recommended way to check whether a particular key is currently held down is 📜 [`keyIsDown()`](https://p5js.org/reference/p5/keyIsDown/):
+# Is a Key being Held Down?
+
+We use `keyIsDown()` to test if I key is currently being held down. 
 
 ```javascript
-if (keyIsDown(UP_ARROW)) {
+if (keyIsDown(UP_ARROW)) { // returns true if the UP Arrow is being held down.
   // Move up.
 }
 ```
@@ -167,7 +170,14 @@ if (keyIsDown(LEFT_ARROW) && keyIsDown(UP_ARROW)) {
 }
 ```
 
-In p5.js v2, `keyIsDown()` accepts p5.js key constants or string values such as `"x"` and `"ArrowLeft"`. Numeric keycodes are no longer supported by `keyIsDown()`.
+We can also check for all other keyboard keys using a search argument:
+
+```javascript
+if (keyIsDown("q")) {
+  // User is holding down the q key.
+}
+```
+
 
 ## Keyboard Events
 
@@ -177,19 +187,7 @@ Like with the mouse, there are special functions you can define to respond to ke
 * 📜 [`keyReleased()`](https://p5js.org/reference/p5/keyReleased/) - Called when any key is released.
 * 📜 [`keyTyped()`](https://p5js.org/reference/p5/keyTyped/) - Called when a key that produces a printable character is pressed.
 
-For continuous input, such as moving a game character while a key is held down, use 📜 [`keyIsDown()`](https://p5js.org/reference/p5/keyIsDown/) rather than testing `key` inside `draw()`:
-
-```javascript
-function draw() {
-  if (keyIsDown(LEFT_ARROW)) {
-    // Move left.
-  }
-
-  if (keyIsDown(RIGHT_ARROW)) {
-    // Move right.
-  }
-}
-```
+For continuous input, such as moving a game character while a key is held down, use 📜 [`keyIsDown()`](https://p5js.org/reference/p5/keyIsDown/) as shown above.
 
 ### Resources
 
