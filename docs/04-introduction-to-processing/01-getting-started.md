@@ -143,12 +143,6 @@ At the heart of every p5.js application are the `setup` and `draw` methods.
 
 The speed at which p5.js will attempt to call the `draw` method is controlled by the target framerate, which is set by calling 📜 [`frameRate()`](https://p5js.org/reference/#/p5/framerate) in `setup()`.
 
-🎵 Note:
-{: .label .label-yellow}
-
-This is also an optional 📜 [`preload()`](https://p5js.org/reference/#/p5/preload) function for preloading assets.
-{: .d-inline-block }
-
 ### Resources
 
 - 📜 [`frameCount`](https://p5js.org/reference/#/p5/frameCount) - Number of frames displayed since the sketch began.
