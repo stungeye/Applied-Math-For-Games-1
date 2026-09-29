@@ -37,7 +37,7 @@ Global variables can be a source of hard to find bugs. Use them sparingly.
 
 Images, fonts, sounds, and other external files take time to load.
 
-In p5.js v2, assets are loaded using `await` inside an `async setup()` function. The sketch waits at the `await` statement until the asset has finished loading.
+In p5.js assets are loaded using `await` inside an `async setup()` function. The sketch waits at the `await` statement until the asset has finished loading.
 
 For example:
 
@@ -51,7 +51,11 @@ async function setup() {
 }
 ```
 
-Older p5.js v1 sketches often use a special `preload()` function instead. New p5.js v2 sketches should use `async` and `await`.
+🎵 Note:
+{: .label .label-yellow}
+
+Older p5.js v1 sketches often use a special `preload()` function instead. 
+{: .d-inline-block }
 
 ## Adding Images to a Sketch
 
@@ -113,7 +117,6 @@ The Result:
 - 📜 [`background()`](https://p5js.org/reference/p5/background/) - Can also use a `p5.Image` as the canvas background.
 - 📜 [`tint()`](https://p5js.org/reference/p5/tint/) - Apply color or transparency to an image.
 - 📜 [`p5.Image.mask()`](https://p5js.org/reference/p5.Image/mask/) - Use another image as an alpha mask.
-- 🏷️ [More p5.js Examples](https://p5js.org/examples/)
 
 ## Processing Image Pixels
 
@@ -193,7 +196,6 @@ The Result:
 - 📜 [`loadFont()`](https://p5js.org/reference/p5/loadFont/) and 📜 [`textFont()`](https://p5js.org/reference/p5/textFont/) - Load and set a font.
 - 📜 [`textWidth()`](https://p5js.org/reference/p5/textWidth/) - Measure the tight visual width of text. In p5.js v2, leading and trailing spaces are ignored.
 - 📜 [`fontWidth()`](https://p5js.org/reference/p5/fontWidth/) - Measure text using the font's normal spacing.
-- 🏷️ [More p5.js Examples](https://p5js.org/examples/)
 
 ## p5.js Sounds
 
@@ -265,4 +267,3 @@ The Result:
 - 🏷️ [Playback Rate Example](https://p5js.org/reference/p5.SoundFile/rate/)
 - 🏷️ [Frequency Analysis Example](https://p5js.org/reference/p5.sound/p5.FFT/)
 - 🏷️ [Sound Generation with Oscillator Example](https://p5js.org/reference/p5.sound/p5.Oscillator/)
-- 🏷️ [More p5.js Examples](https://p5js.org/examples/)
