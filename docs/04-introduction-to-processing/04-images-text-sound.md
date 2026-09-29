@@ -6,7 +6,7 @@ nav_order: 4
 
 <!-- prettier-ignore-start -->
 
-# Images, Text, and Sound 
+# Images, Text, and Sound
 {: .no_toc }
 
 This section will demonstrate how to display images, render text, and play sounds.
@@ -21,9 +21,11 @@ This section will demonstrate how to display images, render text, and play sound
 
 ## Persistent Variables
 
-The variables we've dealt with so far have been function parameters and local variables, both of which go out of scope after each frame. To preserve state across frames we can define global variables outside of the `setup()` and `draw()` functions.
+The variables we've dealt with so far have been function parameters and local variables. Variables created inside a function can only be accessed within that function, and local variables in `draw()` are recreated each frame.
 
-The next two sections give us the opportunity to work with global variables defined in this manner.
+To preserve state across frames, or to share a value between functions, we can define global variables outside of the `setup()` and `draw()` functions.
+
+The next sections give us the opportunity to work with global variables defined in this manner.
 
 ⚡ Warning:
 {: .label .label-red}
@@ -31,9 +33,25 @@ The next two sections give us the opportunity to work with global variables defi
 Global variables can be a source of hard to find bugs. Use them sparingly.
 {: .d-inline-block }
 
-## Preloading Assets
+## Loading Assets
 
-Anytime we are loading a media asset like an image, or a font, or a sound, we need to do so inside of a the special `preload()` function which is called before the `setup()` function.
+Images, fonts, sounds, and other external files take time to load.
+
+In p5.js v2, assets are loaded using `await` inside an `async setup()` function. The sketch waits at the `await` statement until the asset has finished loading.
+
+For example:
+
+```javascript
+let ramImage;
+
+async function setup() {
+  createCanvas(300, 300);
+
+  ramImage = await loadImage("assets/goat.png");
+}
+```
+
+Older p5.js v1 sketches often use a special `preload()` function instead. New p5.js v2 sketches should use `async` and `await`.
 
 ## Adding Images to a Sketch
 
@@ -45,7 +63,7 @@ If you are using the p5.js web editor you will need to expand the "Sketch Files"
 
 ## Loading Images
 
-With p5.js we can load, display, resize, and manipulate images in png, jpg, or gif format.
+With p5.js we can load, display, resize, and manipulate images in PNG, JPG, or GIF format.
 
 First we define a global variable at the top of the file:
 
@@ -53,32 +71,30 @@ First we define a global variable at the top of the file:
 let ramImage;
 ```
 
-Images must be loaded in a special `preload()` function:
+Then we load the image using `await` inside an `async setup()` function:
 
 ```javascript
-function preload() {
-  ramImage = loadImage("assets/goat.png"); // Preload the image.
-}
-```
-
-In `setup()` we can optionally scale the image:
-
-```javascript
-function setup() {
+async function setup() {
   createCanvas(300, 300);
+
+  ramImage = await loadImage("assets/goat.png");
+
   // Scale the image by one third:
   ramImage.resize(ramImage.width / 3, ramImage.height / 3);
+
   frameRate(1); // One frame per second please.
 }
 ```
 
 And then draw it from within `draw()`:
 
-```cpp
+```javascript
 function draw() {
-  background(255); // White background
+  background(255); // White background.
+
   let xPos = random(0, width - ramImage.width);
-  let  yPos = random(0, height - ramImage.height);
+  let yPos = random(0, height - ramImage.height);
+
   image(ramImage, xPos, yPos); // Place image randomly within canvas.
 }
 ```
@@ -87,72 +103,81 @@ function draw() {
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/wiYQhrMBY" scrolling="no" frameborder="no"  width="300" height="342"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/wiYQhrMBY" scrolling="no" frameborder="no" width="300" height="342"></iframe>
 
 ### Resources
 
-- 📜 [`loadImage()`](https://p5js.org/reference/#/p5/loadImage) - Load an image file to a variable.
-- 📜 [`image()`](https://p5js.org/reference/#/p5/image) - Draw an image variable to the canvas.
-- 📜 [`p5.Image` Class](https://p5js.org/reference/#/p5/p5.Image)
-- 🏷️ [Background Image Example](https://p5js.org/examples/image-background-image.html)
-- 🏷️ [Image Transparency Example](https://p5js.org/examples/image-transparency.html)
-- 🏷️ [Alpha Mask Example](https://p5js.org/examples/image-alpha-mask.html)
+- 📜 [`loadImage()`](https://p5js.org/reference/p5/loadImage/) - Load an image file.
+- 📜 [`image()`](https://p5js.org/reference/p5/image/) - Draw an image to the canvas.
+- 📜 [`p5.Image` Class](https://p5js.org/reference/p5/p5.Image/)
+- 📜 [`background()`](https://p5js.org/reference/p5/background/) - Can also use a `p5.Image` as the canvas background.
+- 📜 [`tint()`](https://p5js.org/reference/p5/tint/) - Apply color or transparency to an image.
+- 📜 [`p5.Image.mask()`](https://p5js.org/reference/p5.Image/mask/) - Use another image as an alpha mask.
+- 🏷️ [More p5.js Examples](https://p5js.org/examples/)
 
 ## Processing Image Pixels
 
-The RGBA color value of any image pixel can be retrieved and set:
+The RGBA color value of any image pixel can be retrieved and changed:
 
 ```javascript
-let color = ram.get(45, 55); // Get the p5.color value at x = 45 and y = 55
-ram.set(5, 10, color("red")); // Set the pixel at (5,10) red.
-ram.updatePixels(); // The set() must be paired with an updatePixels().
+let pixelColor = ramImage.get(45, 55); // Get the color at x = 45 and y = 55.
+
+ramImage.set(5, 10, color("red")); // Set the pixel at (5, 10) to red.
+ramImage.updatePixels(); // set() must be paired with updatePixels().
 ```
 
 ### Resources
 
-- 📜 [`p5.image get()`](https://p5js.org/reference/#/p5.Image/get) - Get and image pixel or region.
-- 📜 [`p5.image set()`](https://p5js.org/reference/#/p5.Image/set) - Set and image pixel or region.
-- 📜 [`p5.image pixels`](https://p5js.org/reference/#/p5.Image/pixels) - The get/set operations are slow so we can request access to the raw pixel array.
+- 📜 [`p5.Image.get()`](https://p5js.org/reference/p5.Image/get/) - Get an image pixel or region.
+- 📜 [`p5.Image.set()`](https://p5js.org/reference/p5.Image/set/) - Set an image pixel or region.
+- 📜 [`p5.Image.pixels`](https://p5js.org/reference/p5.Image/pixels/) - The `get()` and `set()` operations are slow, so we can request access to the raw pixel array.
 
 ## Simple Text
 
 We can draw text to the screen with a default font using:
 
-```cpp
+```javascript
 textSize(30); // Set the text size.
-text("Hello Whirled", 100, 200); // Write text to x = 100, y = 200.
-fill(0, 102, 153); // Text uses the fill color.
-text("Hello Whirled", 100, 240); // Write text to x = 100, y = 240.
+
+text("Hello Whirled", 100, 200); // Write text at x = 100, y = 200.
+
+fill(0, 102, 153); // Text uses the current fill color.
+text("Hello Whirled", 100, 240); // Write more text.
 ```
 
 ### Resources
 
-- 📜 [`text()`](https://p5js.org/reference/#/p5/text) - Draw text to the canvas.
-- 📜 [`textSize()`](https://p5js.org/reference/#/p5/textSize) and 📜 [`TextAlign()`](https://p5js.org/reference/#/p5/textAlign) - Change size and alignment.
+- 📜 [`text()`](https://p5js.org/reference/p5/text/) - Draw text to the canvas.
+- 📜 [`textSize()`](https://p5js.org/reference/p5/textSize/) and 📜 [`textAlign()`](https://p5js.org/reference/p5/textAlign/) - Change text size and alignment.
 
 ## Text and Fonts
 
-To draw text of any size we need to use a TrueType or OpenFont font.
+p5.js includes default fonts, but we can also load a custom TrueType (`.ttf`) or OpenType (`.otf`) font.
 
-Grab a font from your `c:\windows\fonts` folder or a free font source like [fontlibrary.org](https://fontlibrary.org) a put it in a `assets` folder in your project. For the sake of example, let's say you grabbed [`lemon.ttf`](https://fontlibrary.org/en/font/lemon).
+Grab a font from your `c:\windows\fonts\` folder or a free font source like [fontlibrary.org](https://fontlibrary.org) and put it in the `assets` folder in your project.
+
+For the sake of example, let's say you grabbed [`lemon.ttf`](https://fontlibrary.org/en/font/lemon).
 
 ```javascript
-function preload() {
-  lemon = loadFont("assets/lemon.ttf"); // Load our TrueType font.
-}
+let lemon;
 
-function setup() {
-  createCanvas(200, 200); // Set the canvas size.
-  textFont(lemon); // Set the font to be our lemon.ttf loaded above.
+async function setup() {
+  createCanvas(200, 200);
+
+  lemon = await loadFont("assets/lemon.ttf");
+
+  textFont(lemon); // Use our loaded font.
   textSize(width / 8); // Set the font size.
-  textAlign(CENTER, CENTER); // Centered horizontal and vertical allignment.
+  textAlign(CENTER, CENTER); // Center horizontally and vertically.
   fill(255); // Draw the text in white.
 }
 
 function draw() {
   background(0); // Clear the background in black.
+
   translate(width / 2, height / 2); // Translate to the middle of the canvas.
   rotate(frameCount / 100); // Rotate based on the frame count.
+
   text("upsidedown", 0, 0); // Display our text string.
 }
 ```
@@ -161,41 +186,57 @@ function draw() {
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/WihYLEDbq" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/WihYLEDbq" scrolling="no" frameborder="no" width="200" height="242"></iframe>
 
 ### Resources
 
-- 📜 [`loadFont()`](https://p5js.org/reference/#/p5/loadFont) and 📜 [`textFont()`](https://p5js.org/reference/#/p5/textFont) - Load and set font.
-- 📜 [`textWidth()`](https://p5js.org/reference/#/p5/textWidth) - Determine pixel length of text.
-- 🏷️ [Draw Grid of Letters Example](https://p5js.org/examples/typography-letters.html)
-- 🏷️ [Text Alignment Example](https://p5js.org/examples/typography-words.html)
+- 📜 [`loadFont()`](https://p5js.org/reference/p5/loadFont/) and 📜 [`textFont()`](https://p5js.org/reference/p5/textFont/) - Load and set a font.
+- 📜 [`textWidth()`](https://p5js.org/reference/p5/textWidth/) - Measure the tight visual width of text. In p5.js v2, leading and trailing spaces are ignored.
+- 📜 [`fontWidth()`](https://p5js.org/reference/p5/fontWidth/) - Measure text using the font's normal spacing.
+- 🏷️ [More p5.js Examples](https://p5js.org/examples/)
 
-## P5.js Sounds
+## p5.js Sounds
 
-p5.js sketches can optionally support the loading and playing of sound files in a variety of formats. If you are developing locally ensure that your `index.html` file is loading the `p5.sound.min.js` file from the `libraries` folder.
+p5.js sketches can optionally support the loading and playing of sound files using the separate `p5.sound` library.
 
-Depending on your web browser you should be able to load and play mp3, ogg, wav, and m4a/acc file. For extra compatibility you can provide your sound file in a variety of formats using the 📜 [`soundFormats()`](https://p5js.org/reference/#/p5/soundFormats) function.
+If you are developing locally, make sure your `index.html` includes a current version of `p5.sound` in addition to p5.js. Older versions of `p5.sound` bundled with p5.js v1 are not compatible with p5.js v2.
+
+See the [p5.js Download page](https://p5js.org/download/) for the current `p5.sound` download and CDN information.
+
+A typical setup using the CDN looks like this:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/p5@2/lib/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5.sound@0.4.1/dist/p5.sound.min.js"></script>
+```
+
+Different browsers support different audio formats. If you want to provide the same sound in multiple formats, `loadSound()` can accept an array of files:
+
+```javascript
+kaChing = await loadSound([
+  "assets/ka-ching.mp3",
+  "assets/ka-ching.ogg"
+]);
+```
 
 ## Loading and Playing a Sound
 
-Like images and fonts, you should load sounds in the `preload()` function.
+Like images and fonts, sounds are loaded using `await` inside an `async setup()` function.
 
-There's so much you can do with sounds in p5.js, but here we'll simply show how to load and play [an mp3 file](ka-ching.mp3) in the `assets` folder:
+There's so much you can do with sounds in p5.js, but here we'll simply show how to load and play [an MP3 file](ka-ching.mp3) in the `assets` folder:
 
 ```javascript
 let kaChing;
 
-function preload() {
-  kaChing = loadSound("assets/ka-ching.mp3"); // Preload the sound.
-}
+async function setup() {
+  createCanvas(200, 200);
 
-function setup() {
-  createCanvas(200, 200); // Set the canvas size.
+  kaChing = await loadSound("assets/ka-ching.mp3");
 }
 
 function draw() {
   if (kaChing.isPlaying()) {
-    background(0, 255, 0); // Green while sound is play.
+    background(0, 255, 0); // Green while sound is playing.
   } else {
     background(255, 0, 0); // Red while sound is not playing.
   }
@@ -210,17 +251,18 @@ function mousePressed() {
 
 The Result:
 
-<iframe src="https://editor.p5js.org/stungeye/embed/c9RUrmBvu" scrolling="no" frameborder="no"  width="200" height="242"></iframe>
+<iframe src="https://editor.p5js.org/stungeye/embed/c9RUrmBvu" scrolling="no" frameborder="no" width="200" height="242"></iframe>
 
 ### Resources
 
-- 📜 [`loadSound()`](https://p5js.org/reference/#/p5/loadSound)
-- 📜 [`play()`](https://p5js.org/reference/#/p5.SoundFile/play)
-- 📜 [`pause()`](https://p5js.org/reference/#/p5.SoundFile/pause)
-- 📜 [`stop()`](https://p5js.org/reference/#/p5.SoundFile/stop)
-- 📜 [`loop()`](https://p5js.org/reference/#/p5SoundFile/loop)
-- 📜 [The Full `p5.sound` API](https://p5js.org/reference/#/libraries/p5.sound) - SO MUCH MOAR!
-- 🏷️ [Playback Rate Example](https://p5js.org/examples/sound-playback-rate.html)
-- 🏷️ [Frequency Analysis of Microphone Example](https://p5js.org/examples/sound-frequency-spectrum.html)
-- 🏷️ [Sound Generation with Oscillator Example](https://p5js.org/examples/sound-oscillator-frequency.html)
-- 🏷️ [Many More Examples Under "Sound"](https://p5js.org/examples/)
+- 📜 [`loadSound()`](https://p5js.org/reference/p5/loadSound/)
+- 📜 [`p5.SoundFile`](https://p5js.org/reference/p5.sound/p5.SoundFile/)
+- 📜 [`play()`](https://p5js.org/reference/p5.SoundFile/play/)
+- 📜 [`pause()`](https://p5js.org/reference/p5.SoundFile/pause/)
+- 📜 [`stop()`](https://p5js.org/reference/p5.SoundFile/stop/)
+- 📜 [`loop()`](https://p5js.org/reference/p5.SoundFile/loop/)
+- 📜 [The Full `p5.sound` API](https://p5js.org/reference/p5.sound/)
+- 🏷️ [Playback Rate Example](https://p5js.org/reference/p5.SoundFile/rate/)
+- 🏷️ [Frequency Analysis Example](https://p5js.org/reference/p5.sound/p5.FFT/)
+- 🏷️ [Sound Generation with Oscillator Example](https://p5js.org/reference/p5.sound/p5.Oscillator/)
+- 🏷️ [More p5.js Examples](https://p5js.org/examples/)
